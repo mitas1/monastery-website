@@ -1,0 +1,12 @@
+common:
+  aboutUs: About us
+  collection: Collection
+index:
+  collection:
+    title: Zbierka na dokončenie
+    subtitle: exteriéru kláštora
+  shortArticleWithAside:
+    title: Benediktínky
+    subtitle: Rád sv. benedikta
+    text: >
+      Sme mníšska komunita, ktorá žije podľa Reguly, napísanej sv.Benediktom pred 1600 rokmi. Hľadáme Boha a jeho milosrdenstvo v očisťovaní srdca a v sesterskej láske.

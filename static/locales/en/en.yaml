@@ -1,0 +1,104 @@
+common:
+  home: Home
+  aboutUs: About us
+  collection: Collection
+  contact: Contact
+  arrowBack: Back to home page
+  linkFooter: Contact
+  footer:
+    title: Bohoslužby
+    official: The official website of the Benedictine monastery in Horné Orešany
+    workdays:
+      title: Working days
+      elems:
+        - time: "05:00"
+          title: Ofícium
+        - time: "06:00"
+          title: Ranné chvály
+        - time: variabilné
+          title: Tercia - 15 min pred sv. omšou
+        - time: variabilné
+          title: Svätá omša
+        - time: "12:10"
+          title: Sexta
+        - time: "12:30"
+          title: Obed
+        - time: "14:15"
+          title: Nona, ruženec
+        - time: "16:45"
+          title: Vešpery
+        - time: "19:00"
+          title: Večera
+        - time: "20:00"
+          title: Kompletórium
+    holidays:
+      title: Sviatok
+      elems:
+        - time: "05:30"
+          title: Ofícium
+        - time: "07:00"
+          title: Ranné chvály
+        - time: "08:30"
+          title: Tercia
+        - time: "09:00"
+          title: Svätá omša
+        - time: "11:40"
+          title: Sexta
+        - time: "12:00"
+          title: Obed
+        - time: "15:00"
+          title: Nona, ruženec s adoráciou
+        - time: "17:00"
+          title: Vešpery
+        - time: "18:30"
+          title: Večera
+        - time: "20:00"
+          title: Kompletórium
+index:
+  collection:
+    title: Zbierka na dokončenie kláštora
+    readMore: Viac o projekte
+  article01:
+    title: Život v kláštore
+    text: >
+      Modlitba a pokánie: najdôležitejšou prácou mníšok je uskutočňovať neustálu modlitbu v mene
+      celého ľudstva.
+  article02:
+    title: Prijímanie hostí
+    text: >
+      Prijímame hostí. Kohokoľvek, kto túži prehĺbiť svoj vzťah s Bohom, zúčastniť sa našej
+      liturgie, porozprávať sa alebo odpočinúť si v tichu.
+  article03:
+    title: Skúsenosti
+    text: >
+      Kláštor z pohľadu návštevníkov.
+  shortArticleWithAside:
+    title: Benediktínky
+    subtitle: Rád sv. benedikta
+    text: >
+      Sme mníšska komunita ktorá žije podľa Reguly, napísanej sv.Benediktom pred
+      1600 rokmi. Hľadáme Boha a jeho milosrdenstvo v očisťovaní srdca a v
+      sesterskej láske.
+    acronym:
+      title: Skratka
+      text: OSB (Ordo sancti Benedicti)
+    imageLabel: >
+      — Detail: Kopf des Hl. Benedikt, Fra Angelico
+contact:
+  heading: Contact
+  address:
+    title: Address
+    text: |
+      Kláštor najsvätejšej Bohorodičky<br>
+      č.d. 841<br>
+      919 03 Horné Orešany
+  bank_account:
+    title: Číslo Účtu
+    text: >
+      IBAN: SK80 1111 0000 0066 2697 3004
+  tel:
+    title: Tel
+    text: +421 / 917 350 255
+  email:
+    title: Email
+    text: benediktinky@hotmail.com

@@ -1,12 +1,27 @@
-const locales = {
-    en: import ('../static/locales/en/common.json'),
-    sk: import ('../static/locales/sk/common.json')
-}
+import { LANGUAGES } from "../constants";
 
-export async function getTranslation(lang) {
-    return {
-        [lang]: {
-            common: await locales[lang]
+const mdFiles = {
+    aboutUs: "aboutus",
+    collection: "collection",
+    monasteryLife: "monastery_life",
+    hostReception: "host_reception"
+};
+
+export async function getTranslations() {
+    const res = {};
+
+    for (const lang of LANGUAGES) {
+        const markdown = {};
+        for (const md in mdFiles) {
+            markdown[md] = await require(`../static/locales/${lang}/${
+                mdFiles[md]
+            }.md`);
         }
+        res[lang] = {
+            ...(await require(`../static/locales/${lang}/${lang}.yaml`)),
+            markdown
+        };
     }
+
+    return res;
 }

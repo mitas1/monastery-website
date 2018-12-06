@@ -1,12 +1,12 @@
-import i18n from 'i18next'
+import i18n from "i18next";
 
-const startI18n = (files, lang) => i18n.init({
-    lng: lang,
-    fallbackLng: 'sk',
-    resources: files,
-    ns: ['common'],
-    defaultNS: 'common',
-    debug: false
-})
-
-export default startI18n
+export default (resources, lng) =>
+    i18n.init({
+        debug: false,
+        defaultNS: "common",
+        fallbackLng: false,
+        lng,
+        ns: ["common", "index", "aboutUs"],
+        resources,
+        returnObjects: true
+    });

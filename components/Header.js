@@ -66,7 +66,7 @@ export default withRouter(
                                         query: { lng: language }
                                     }}
                                     as={{
-                                        pathname: path.join("/collection", language)
+                                        pathname: path.join("/", language)
                                     }}
                                 >
                                     <a
@@ -81,21 +81,24 @@ export default withRouter(
                                 </Link>
                                 <Link
                                     href={{
-                                        pathname: "/collection",
+                                        pathname: "/offerings",
                                         query: { lng: language }
                                     }}
                                     as={{
-                                        pathname: path.join("/collection", language)
+                                        pathname: path.join(
+                                            "/offerings",
+                                            language
+                                        )
                                     }}
                                 >
                                     <a
                                         className={
-                                            pathname === "/collection"
+                                            pathname === "/offerings"
                                                 ? "link active"
                                                 : "link"
                                         }
                                     >
-                                        {t("collection")}
+                                        {t("offerings")}
                                     </a>
                                 </Link>
                                 <Link
@@ -104,7 +107,10 @@ export default withRouter(
                                         query: { lng: language }
                                     }}
                                     as={{
-                                        pathname: path.join("/contact", language)
+                                        pathname: path.join(
+                                            "/contact",
+                                            language
+                                        )
                                     }}
                                 >
                                     <a

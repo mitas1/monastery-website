@@ -82,7 +82,7 @@ export default withNamespaces(["common"])(({ background, t }) => (
             }
             .heading {
                 color: #fff;
-                font-family: "Roboto", sans-serif;
+                font-family: "Martel", serif;
                 font-size: 50px;
                 font-weight: 300;
                 margin: 130px 0 100px 0;

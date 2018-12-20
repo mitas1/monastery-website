@@ -39,20 +39,20 @@ module.exports = {
                     lng: "en"
                 }
             },
-            "/collection": {
-                page: "/collection",
+            "/offerings": {
+                page: "/offerings",
                 query: {
                     lng: "sk"
                 }
             },
-            "/collection/sk": {
-                page: "/collection",
+            "/offerings/sk": {
+                page: "/offerings",
                 query: {
                     lng: "sk"
                 }
             },
-            "/collection/en": {
-                page: "/collection",
+            "/offerings/en": {
+                page: "/offerings",
                 query: {
                     lng: "en"
                 }

@@ -1,3 +1,6 @@
-# Aby bol vo všetkom oslávený Boh
+# May God be glorified in all things!
 
-Keďže sme klauzúrna komunita, svoju činnosť vykonávame v exteriéri a interiéri kláštora: Je to spoločná modlitba sedemkrát za deň, ktorá sa predlžuje do osobnej modlitby. Lectio Divina (rozjímavé čítanie Svätého písma), ktoré jeden deň v týždni ponúkame aj veriacim.
+Since we are closed community, we perform our activities in the exterior and the interior of the
+Monastery - the common prayers performed seven times per day, which are followed by the personal
+prayers. Lectio Divina (contemplative reading of the Holly Bible), which is available to believers
+once per week as well.

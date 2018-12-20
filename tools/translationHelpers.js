@@ -2,7 +2,7 @@ import { LANGUAGES } from "../constants";
 
 const mdFiles = {
     aboutUs: "aboutus",
-    collection: "collection",
+    offerings: "offerings",
     monasteryLife: "monastery_life",
     guests: "guests",
     experiences: "experiences"

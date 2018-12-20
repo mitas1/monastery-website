@@ -5,8 +5,8 @@ preamble:
         “Thank you for each contribution. We pray for our benefactors daily and once a month a
         Holy Mass is celebrated for their intentions. We organize for those who are interested
         among our benefactors a spiritual renewal in our monastery twice a year.”
-    author: Sestry benediktínky
-    img: /static/images/collection.jpg
+    author: The Benedictine sisters
+    img: /static/images/offerings.jpg
 ---
 
 This monastery of the Most Holy Mother of God was founded in the year 2006 by our mother
@@ -24,7 +24,7 @@ to the fulfilment of this noble aim, either financially or with your prayers!
 
 <div class="image-full">
     <img src="/static/images/article01-1.jpg">
-    <p>Benedictine monastery (Horné orešany)</p>
+    <p>The Monastery of the Most Holy Mother of God (Horne Oresany)</p>
 </div>
 
 # Monastic architecture
@@ -70,11 +70,11 @@ and vocation.
 <div class="image-side-by-side">
     <div class="left">
         <img src="/static/images/article01-2.jpg">
-        <p>Vonkajšia stavba</p>
+        <p>External composition</p>
     </div>
     <div class="right">
         <img src="/static/images/article01-3.jpg">
-        <p>Interiér kostola</p>
+        <p>Interior of the Church</p>
     </div>
 </div>
 
@@ -99,7 +99,7 @@ comes from Christ, hidden in the tabernacle.
 
 <div class="image-full">
     <img src="/static/images/article01-4.jpg">
-    <p>Kláštor najsvätejšej Bohorodičky (Horné orešany)</p>
+    <p>The Monastery of the Most Holy Mother of God (Horne Oresany)</p>
 </div>
 
 ### The Monastery courtyard
@@ -138,3 +138,5 @@ heat, often deformed, without depth, balance and beauty, in constant pains due t
 search for the meaning of life, love and happiness. The encounter of these two worlds can be
 the chance for both of them if they are laid at Jesus&#39; feet and beautified by prayer: they 
 will be a mirror to each other that can lead to restoration and to growth ... to light.
+
+Voluntary offerings for the completion of the monastery can be sent to the following bank account:

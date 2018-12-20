@@ -7,11 +7,11 @@ preamble:
         organizujeme pre záujemcov s radov našich darcov duchovnú obnovu v našom
         kláštore.”
     author: Sestry benediktínky
-    img: /static/images/collection.jpg
+    img: /static/images/offerings.jpg
 ---
 
 Kláštor najsvätejšej Bohorodičky bol založený v&nbsp;r.&nbsp;2006 Kláštorom Sv.&nbsp;Marka
-v&nbsp;Offide. O&nbsp;dva roky neskôr bola započatá stavba. Dokončená časť Kláštora už dnes 
+v&nbsp;Offide. O&nbsp;dva roky neskôr bola započatá stavba. Dokončená časť Kláštora už&nbsp;dnes 
 umožňuje prijímať tých, ktorí sa potrebujú stíšiť a&nbsp;načerpať silu. Avšak kláštorný komplex
 je&nbsp; stále vo výstavbe. Chýbajú exteriérové omietky, izolácie, kostol – len hrubá stavba... 
 Pôsobením poveternostných vplyvov dochádza ku&nbsp;postupnému znehodnoteniu nedokončených častí 
@@ -43,18 +43,31 @@ klauzúru, kruh pre sektor, ktorý sa týka pohostinnosti voči svetu.
 
 ### Prístup do Kláštora
 
-Pre umocnenie čo najväčšej otvorenosti konceptu, sa polkruhovitá forma, ktorá ohraničuje hosťovskú časť s&nbsp;kostolom, smerom k&nbsp;príjazdovej ceste, predlžuje do&nbsp;vejára: „Pozrite, prichádzajú zďaleka, títo od&nbsp;severu a&nbsp;od&nbsp;západu…” (Iz 49,12). Podľa tohto kruhového rozvrhnutia prístupového areálu vedú všetky kroky jedným smerom, čo v&nbsp;hosťovi vyvoláva pocit, že&nbsp;existuje stred, ktorý treba objaviť; jadro, ktoré priťahuje a&nbsp;zároveň vyžaruje. V&nbsp;polkruhovej línii periférie tejto vstupnej časti, sa týči vo forme stél (pamätníkov) dvanásť „strážcov” bdejúcich nad&nbsp;naším Kláštorom: „dvanásť stél pre dvanásť kmeňov Izraela” (Ex 24,4), „s dvanástimi menami dvanástich Baránkových apoštolov” (Zjv 21, 14). Hosťovi je&nbsp;teda rezervovaná moderná časť budovy, čím sa&nbsp;mu pri prvom kontakte s&nbsp;jemu neznámym kláštorným svetom poskytne možnosť „aklimatizovať sa”. Ale aj napriek tomu, nie je&nbsp;prístup k&nbsp;hosťovskej časti úplne bezprostredný: žiada od&nbsp;návštevníka postupný proces približovania sa cez takzvané kulisy, ktoré viackrát obtáčajú priečelie kláštora smerom k&nbsp;prístupovej ceste.
+Pre umocnenie čo najväčšej otvorenosti konceptu, sa polkruhovitá forma, ktorá ohraničuje hosťovskú 
+časť s&nbsp;kostolom, smerom k&nbsp;príjazdovej ceste, predlžuje do&nbsp;vejára: „Pozrite, 
+prichádzajú zďaleka, títo od&nbsp;severu a&nbsp;od&nbsp;západu…” (Iz 49,12). Podľa tohto kruhového 
+rozvrhnutia prístupového areálu vedú všetky kroky jedným smerom, čo v&nbsp;hosťovi vyvoláva pocit, 
+že&nbsp;existuje stred, ktorý treba objaviť; jadro, ktoré priťahuje a&nbsp;zároveň vyžaruje.
+V&nbsp;polkruhovej línii periférie tejto vstupnej časti, sa týči vo forme stél (pamätníkov) 
+dvanásť „strážcov” bdejúcich nad&nbsp;naším Kláštorom: „dvanásť stél pre dvanásť kmeňov Izraela” 
+(Ex 24,4), „s dvanástimi menami dvanástich Baránkových apoštolov” (Zjv 21, 14). Hosťovi
+je&nbsp;teda rezervovaná moderná časť budovy, čím sa&nbsp;mu pri prvom kontakte s&nbsp;jemu 
+neznámym kláštorným svetom poskytne možnosť „aklimatizovať sa”. Ale aj napriek tomu, nie je&nbsp 
+prístup k&nbsp;hosťovskej časti úplne bezprostredný: žiada od&nbsp;návštevníka postupný proces 
+približovania sa cez takzvané kulisy, ktoré viackrát obtáčajú priečelie kláštora smerom k&nbsp;
+prístupovej ceste.
 
 ### Architektúra stavby
 
-Na jednej strane tieto impozantné stĺpové kulisy, vysoké ako nebo’ (Ž 78,69) zacláňajú a
-vzbudzujú dojem, že chcú odhovoriť od vstupu. Na druhej strane tým, že majú mnohé priepusty,
-pozývajú návštevníka vchádzať cez ne krok po kroku. Hosť sa tak nestretne jedným vrzom s neznámym
-svetom, ale na miesto, ktoré Božiu prítomnosť ukrýva, no zároveň odhaľuje, vstupuje postupne.
-Okná hosťovských izieb, prirodzene, nesmerujú do vnútra Kláštora, srdca kláštornej architektúry;
-ale k prístupovému areálu, ktorým sa prichádza do Kláštora, pretože hosť, obnovený na tele a na
-duši „z potoka tvojich rozkoší” (Ž 36,9), je volaný k tomu, aby sa neodcudzil v takom spôsobe
-života ktorý nie je jeho; ale aby sa vrátil do vlastného sveta a povolania.
+Na&nbsp;jednej strane tieto impozantné stĺpové kulisy, vysoké ako nebo’ (Ž 78,69) zacláňajú a
+vzbudzujú dojem, že&nbsp;chcú odhovoriť od&nbsp;vstupu. Na&nbsp;druhej strane tým, že&nbsp;majú 
+mnohé priepusty, pozývajú návštevníka vchádzať cez ne krok po&nbsp;kroku. Hosť sa tak&nbsp;
+nestretne jedným vrzom s&nbsp;neznámym svetom, ale na&nbsp;miesto, ktoré Božiu prítomnosť ukrýva, 
+no&nbsp;zároveň odhaľuje, vstupuje postupne. Okná hosťovských izieb, prirodzene, nesmerujú do&nbsp;
+vnútra Kláštora, srdca kláštornej architektúry; ale k&nbsp;prístupovému areálu, ktorým sa 
+prichádza do&nbsp;Kláštora, pretože hosť, obnovený na&nbsp;tele a&nbsp;na duši „z potoka tvojich 
+rozkoší” (Ž 36,9), je&nbsp;volaný k&nbsp;tomu, aby&nbsp;sa neodcudzil v&nbsp;takom spôsobe
+života ktorý nie je&nbsp;jeho; ale aby&nbsp;sa vrátil do&nbsp;vlastného sveta a&nbsp;povolania.
 
 <div class="image-side-by-side">
     <div class="left">
@@ -69,12 +82,13 @@ duši „z potoka tvojich rozkoší” (Ž 36,9), je volaný k tomu, aby sa neod
 
 ### Kostol
 
-Hosťovská časť a kostol tvoria jednotný architektonický komplex v tvare ryby – symbolu Krista. Vo
-„vnútornostiach” a v „chvoste”, spomínanej ryby, je umiestnená hosťovská časť. „Hlava”, zas
-uzatvára kláštorný kostol. Oltár, ktorý je tiež symbolom Krista, má svoje miesto v oku; mníšsky
-chór, ktorý ho obkolesuje sú „žiabre“, pretože je to práve z modlitby, kde Cirkev Kristovo telo
-získava dych a vitalitu. Absida, zodpovedajúca „ústam“ ryby je otvorená smerom k východu, odkiaľ
-očakávame Kristov príchod v deň Jeho slávneho návratu.
+Hosťovská časť a&nbsp;kostol tvoria jednotný architektonický komplex v&nbsp;tvare ryby – symbolu 
+Krista. Vo „vnútornostiach” a&nbsp;v&nbsp;„chvoste”, spomínanej ryby, je&nbsp;umiestnená hosťovská 
+časť. „Hlava”, zas uzatvára kláštorný kostol. Oltár, ktorý je&nbsp;tiež symbolom Krista, má svoje 
+miesto v&nbsp;oku; mníšsky chór, ktorý ho obkolesuje sú „žiabre“, pretože je&nbsp;to&nbsp;práve
+z&nbsp;modlitby, kde&nbsp;Cirkev Kristovo telo získava dych a&nbsp;vitalitu. Absida, zodpovedajúca 
+„ústam“ ryby je&nbsp;otvorená smerom k&nbsp;východu, odkiaľ očakávame Kristov príchod v&nbsp;deň 
+Jeho slávneho návratu.
 
 > „Lebo ako blesk vzíde na východe a vidno ho až po západ, taký bude aj príchod Syna Človeka”
 > — (Mt 24,27).

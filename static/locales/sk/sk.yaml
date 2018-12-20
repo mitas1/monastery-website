@@ -1,7 +1,7 @@
 common:
   home: Domov
   aboutUs: O nas
-  collection: Zbierka
+  offerings: Zbierka
   contact: Kontakt
   arrowBack: Späť na hlavnú stránku
   linkFooter: Kontakt
@@ -56,7 +56,7 @@ common:
           title: Kompletórium
 index:
   readMore: Čítať viac
-  collection:
+  offerings:
     title:
       firstLine: Zbierka na dokončenie
       secondLine: kláštora

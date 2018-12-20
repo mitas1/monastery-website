@@ -1,4 +1,5 @@
 import Link from "next/link";
+import path from "path";
 import { withNamespaces } from "react-i18next";
 import { ParallaxBanner } from "react-scroll-parallax";
 
@@ -25,31 +26,31 @@ export default withNamespaces(["index"])(
                         }
                     ]}
                 >
-                    <div className="collection-heading-wrapper">
-                        <h1 className="collection-heading">
-                            {t("collection.title.firstLine")}
+                    <div className="offerings-heading-wrapper">
+                        <h1 className="offerings-heading">
+                            {t("offerings.title.firstLine")}
                             <br />
-                            {t("collection.title.secondLine")}
+                            {t("offerings.title.secondLine")}
                         </h1>
                         <Link
                             href={{
-                                pathname: "/collection",
+                                pathname: "/offerings",
                                 query: { lng: language }
                             }}
-                            as={{ pathname: "/collection" }}
+                            as={{ pathname: path.join("/offerings", language) }}
                         >
-                            <div className="collection-button">
-                                <span>{t("collection.readMore")}</span>
+                            <div className="offerings-button">
+                                <span>{t("offerings.readMore")}</span>
                                 <img src="/static/images/arrow.svg" />
                             </div>
                         </Link>
                     </div>
                     <style jsx>{`
-                        .collection-heading-wrapper {
+                        .offerings-heading-wrapper {
                             width: ${CONTENT_WIDTH};
                             margin: 0 auto;
                         }
-                        .collection-heading {
+                        .offerings-heading {
                             color: #fff;
                             font-family: "Martel", serif;
                             font-size: 50px;
@@ -62,7 +63,7 @@ export default withNamespaces(["index"])(
                         .baner {
                             height: 700px;
                         }
-                        .collection-button {
+                        .offerings-button {
                             align-items: center;
                             background-color: #fff;
                             border-radius: 3px;
@@ -78,7 +79,7 @@ export default withNamespaces(["index"])(
                             transition: all 0.2s;
                             width: 200px;
                         }
-                        .collection-button:hover {
+                        .offerings-button:hover {
                             box-shadow: 0 1px 5px #777;
                             cursor: pointer;
                         }

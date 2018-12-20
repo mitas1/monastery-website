@@ -14,7 +14,7 @@ Deň sa začína modlitbou o piatej. Modlitbami, omšou a osobným rozjímaním,
 do večera. Čas majú mníšky vyčlenený aj na prácu v záhrade, kuchyni a na maľovanie paškálnych
 sviec, ktoré sú hlavným zdrojom činnosti benediktínok. Denný režim má svoj pravidelný rytmus v
 striedaní modlitby a práce, čo vychádza z tradície púštnych otcov. Sv. Silván z Athosu vysvetľuje
-žiovot mníchov takto:
+život mníchov takto:
 
 > “Svet verí, že mnísi sú jedna neužitočná rasa. Nechápe, že mních je ten, čo sa modlí za celý
 > svet. Nevidí jeho modlitby a nevie s akým milosrdenstvom ich Pán prijíma. Mnísi vedú tvrdý boj

@@ -49,11 +49,11 @@ Pre umocnenie čo najväčšej otvorenosti konceptu, sa polkruhovitá forma, kto
 
 Na jednej strane tieto impozantné stĺpové kulisy, vysoké ako nebo’ (Ž 78,69) zacláňajú a
 vzbudzujú dojem, že chcú odhovoriť od vstupu. Na druhej strane tým, že majú mnohé priepusty,
-po-zývajú návštevníka vchádzať cez ne krok po kroku. Hosť sa tak nestretne jedným vrzom s neznámym
-sve-tom, ale na miesto, ktoré Božiu prítomnosť ukrýva, no zároveň odhaľuje, vstupuje postupne.
+pozývajú návštevníka vchádzať cez ne krok po kroku. Hosť sa tak nestretne jedným vrzom s neznámym
+svetom, ale na miesto, ktoré Božiu prítomnosť ukrýva, no zároveň odhaľuje, vstupuje postupne.
 Okná hosťovských izieb, prirodzene, nesmerujú do vnútra Kláštora, srdca kláštornej architektúry;
 ale k prístupovému areálu, ktorým sa prichádza do Kláštora, pretože hosť, obnovený na tele a na
-duši „z po-toka tvojich rozkoší” (Ž 36,9), je volaný k tomu, aby sa neodcudzil v takom spôsobe
+duši „z potoka tvojich rozkoší” (Ž 36,9), je volaný k tomu, aby sa neodcudzil v takom spôsobe
 života ktorý nie je jeho; ale aby sa vrátil do vlastného sveta a povolania.
 
 <div class="image-side-by-side">
@@ -69,17 +69,17 @@ duši „z po-toka tvojich rozkoší” (Ž 36,9), je volaný k tomu, aby sa neo
 
 ### Kostol
 
-Hosťovská časť a kostol tvoria jednotný architektonic-ký komplex v tvare ryby – symbolu Krista. Vo
+Hosťovská časť a kostol tvoria jednotný architektonický komplex v tvare ryby – symbolu Krista. Vo
 „vnútornostiach” a v „chvoste”, spomínanej ryby, je umiestnená hosťovská časť. „Hlava”, zas
 uzatvára kláštorný kostol. Oltár, ktorý je tiež symbolom Krista, má svoje miesto v oku; mníšsky
-chór, ktorý ho ob-kolesuje sú „žiab-re“, pretože je to práve z modlitby, kde Cirkev-Kristo-vo telo
-získava dych a vitalitu. Absida, zodpove-dajúca „ústam“ ryby je otvorená smerom k výcho-du, odkiaľ
-očaká-vame Kristov príchod v deň Jeho slávneho návratu.
+chór, ktorý ho obkolesuje sú „žiabre“, pretože je to práve z modlitby, kde Cirkev Kristovo telo
+získava dych a vitalitu. Absida, zodpovedajúca „ústam“ ryby je otvorená smerom k východu, odkiaľ
+očakávame Kristov príchod v deň Jeho slávneho návratu.
 
-> „Lebo ako blesk vzíde na východe a vidno ho až po zá-pad, taký bude aj príchod Syna Človeka”
+> „Lebo ako blesk vzíde na východe a vidno ho až po západ, taký bude aj príchod Syna Človeka”
 > — (Mt 24,27).
 
-Otvor v&nbsp;abside siaha až do&nbsp;vysokopoloženej plochej strechy kostola, ktorá je&nbsp;takýmto spôsobom rozštie-pená po&nbsp;celej svojej dĺžke. Táto trhlina, ktorá umožňuje oku zablúdiť v&nbsp;nebeskej klenbe, vzbudzuje tuše-nie nepotlačiteľnej dynamiky Kristovho Vzkriesenia. Tento lúč svetla, ktorý nám umožňuje ‚kontemplovať otvorené nebo’ (porov. Sk 7,56) a&nbsp;‚myslieť na&nbsp;veci čo sú hore’ (porov. Kol 3,2), vychádza z&nbsp;Krista, ukrytého v&nbsp;bohostánku.
+Otvor v&nbsp;abside siaha až do&nbsp;vysokopoloženej plochej strechy kostola, ktorá je&nbsp;takýmto spôsobom rozštiepená po&nbsp;celej svojej dĺžke. Táto trhlina, ktorá umožňuje oku zablúdiť v&nbsp;nebeskej klenbe, vzbudzuje tušenie nepotlačiteľnej dynamiky Kristovho Vzkriesenia. Tento lúč svetla, ktorý nám umožňuje ‚kontemplovať otvorené nebo’ (porov. Sk 7,56) a&nbsp;‚myslieť na&nbsp;veci čo sú hore’ (porov. Kol 3,2), vychádza z&nbsp;Krista, ukrytého v&nbsp;bohostánku.
 
 <div class="image-full">
     <img src="/static/images/article01-4.jpg">
@@ -94,12 +94,34 @@ prameňa života – vytekajú v tvare kríža štyri potôčiky regulované v m
 prekročení stĺporadia viditeľne pretínajú štyri strany Kláštora, aby sa potom postupne stratili v
 okolitom teréne.
 
-> „Z Edenu vytekala rieka, ktorá mala zavlažo-vať raj, a rozdeľovala sa odtiaľ a tvorila štyri
-> toky“
-> — (Gn 2,10).
+> „Z Edenu vytekala rieka, ktorá mala zavlažovať raj, a rozdeľovala sa odtiaľ a tvorila štyri
+> toky“ — (Gn 2,10).
 
-Bez tohto neustáleho duchovného zavlažovania, prichádzajúceho od&nbsp;Krista, ktorý je&nbsp;nevyčerpateľným prameňom, by&nbsp;kláštorný život vyschol. Ale „kto sa napije z&nbsp;vody, ktorú&nbsp;mu ja dám, nebude žízniť naveky” (Jn 4,14). Jeho voda nám nielen uhasí smäd, či&nbsp;prinesie občerstvenie, ale odstráni každý druh duchovného znečistenia. Symbol kríža zanecháva svoje stopy nielen v&nbsp;zemi a&nbsp;v&nbsp;dlažbe, ale aj na&nbsp;samotnej budove: v&nbsp;zhode s&nbsp;trasou štyroch potôčikov je&nbsp;znak kríža architektonicky zakomponovaný hlbokými zárezmi vo všetkých vonkajších stenách, a&nbsp;aj v&nbsp;krove badateľnými zárezmi.
+Bez tohto neustáleho duchovného zavlažovania, prichádzajúceho od&nbsp;Krista, ktorý je&nbsp;
+nevyčerpateľným prameňom, by&nbsp;kláštorný život vyschol. Ale „kto sa napije z&nbsp;vody,
+ktorú&nbsp;mu ja dám, nebude žízniť naveky” (Jn 4,14). Jeho voda nám nielen uhasí smäd, či&nbsp;
+prinesie občerstvenie, ale odstráni každý druh duchovného znečistenia. Symbol kríža zanecháva 
+svoje stopy nielen v&nbsp;zemi a&nbsp;v&nbsp;dlažbe, ale aj na&nbsp;samotnej budove: v&nbsp;zhode 
+s&nbsp;trasou štyroch potôčikov je&nbsp;znak kríža architektonicky zakomponovaný hlbokými zárezmi 
+vo všetkých vonkajších stenách, a&nbsp;aj v&nbsp;krove badateľnými zárezmi.
 
-Prostredníctvom architektúry je&nbsp;vyjadrené, že&nbsp;tajomstvo kríža, ktoré poznačuje život každého človeka nezmazateľným spôsobom, má svoj primát aj v&nbsp;Kláštore: vytvára z&nbsp;neho neodstrániteľný stred. Významným je, že&nbsp;stretnutie sa so svetským svetom je&nbsp;najviac evidentné práve na&nbsp;kláštornom dvore, ktorý je&nbsp;najintímnejším a&nbsp;najchránenejším miestom Kláš-tora. Dve tretiny kláštorného dvora pripomínajú kla-sickú architektúru stredovekého kláštora: štítová strecha okrášlená pôvabnými vikiermi, pravidelné striedanie murovaných stien s&nbsp;oknami izieb. Protiľahlá strana, sledujúca parametre modernej ar-chitektúry, tvorí želaný kontrast: plochú strechu, sa-mostatne stojace nadrozmerné okno, holú gigantickú stenu zo železobetónu (zadná stena kostola) bez aké-hokoľvek otvoru či&nbsp;architektonického prvku. Mohol to&nbsp;byť kláštorný dvor podľa kánonu: symetrický, vyváže-ný, harmonický; nádhera dosahujúca až dokonalosť, kus raja na&nbsp;zemi – ako sa klasicky definuje. Náš je&nbsp;ale nepohodlný: každodenne nás vyzýva neuzavrieť sa egoisticky v&nbsp;romanticko- idylickom kútiku, ktorý je&nbsp;re-zervovaný a&nbsp;prístupný len pre tých, čo v&nbsp;ňom bývajú; ale vziať na&nbsp;seba dnešný svet taký, aký je: poznačený nedostatkom duchovného svetla a&nbsp;tepla, častokrát deformovaný, bez hĺbky, rovnováhy a&nbsp;krásy, v&nbsp;neustá-lych bolestiach kvôli kŕčovitému hľadaniu zmyslu ži-vota, lásky a&nbsp;šťastia. Stretnutie týchto dvoch svetov môže byť pre oboch šancou, keď bude položené k&nbsp;Ježišovým nohám a&nbsp;zú-rodnené modlitbou: budeme si navzájom zrkadlom, pohnútkou k&nbsp;obnove a&nbsp;rastu…k svetlu.
+Prostredníctvom architektúry je&nbsp;vyjadrené, že&nbsp;tajomstvo kríža, ktoré poznačuje život 
+každého človeka nezmazateľným spôsobom, má svoj primát aj v&nbsp;Kláštore: vytvára z&nbsp;neho 
+neodstrániteľný stred. Významným je, že&nbsp;stretnutie sa so svetským svetom je&nbsp;najviac 
+evidentné práve na&nbsp;kláštornom dvore, ktorý je&nbsp;najintímnejším a&nbsp;najchránenejším 
+miestom Kláštora. Dve tretiny kláštorného dvora pripomínajú klasickú architektúru stredovekého 
+kláštora: štítová strecha okrášlená pôvabnými vikiermi, pravidelné striedanie murovaných stien
+s&nbsp;oknami izieb. Protiľahlá strana, sledujúca parametre modernej architektúry, tvorí želaný 
+kontrast: plochú strechu, samostatne stojace nadrozmerné okno, holú gigantickú stenu zo 
+železobetónu (zadná stena kostola) bez akéhokoľvek otvoru či&nbsp;architektonického prvku. Mohol 
+to&nbsp;byť kláštorný dvor podľa kánonu: symetrický, vyvážený, harmonický; nádhera dosahujúca až 
+dokonalosť, kus raja na&nbsp;zemi – ako sa klasicky definuje. Náš je&nbsp;ale nepohodlný: 
+každodenne nás vyzýva neuzavrieť sa egoisticky v&nbsp;romanticko-idylickom kútiku, ktorý je&nbsp;
+rezervovaný a&nbsp;prístupný len pre tých, čo v&nbsp;ňom bývajú; ale vziať na&nbsp;seba dnešný 
+svet taký, aký je: poznačený nedostatkom duchovného svetla a&nbsp;tepla, častokrát deformovaný, 
+bez hĺbky, rovnováhy a&nbsp;krásy, v&nbsp;neustálych bolestiach kvôli kŕčovitému hľadaniu zmyslu 
+života, lásky a&nbsp;šťastia. Stretnutie týchto dvoch svetov môže byť pre oboch šancou, keď bude 
+položené k&nbsp;Ježišovým nohám a&nbsp;zúrodnené modlitbou: budeme si navzájom zrkadlom, pohnútkou 
+k&nbsp;obnove a&nbsp;rastu…k svetlu.
 
 Toto dielo môžete podporiť finančne zaslaním príspevku na číslo:

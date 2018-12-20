@@ -75,38 +75,56 @@ module.exports = {
                     lng: "en"
                 }
             },
-            "/monastery-life": {
-                page: "/monastery_life",
+            "/monasterylife": {
+                page: "/monasterylife",
                 query: {
                     lng: "sk"
                 }
             },
-            "/monastery-life/sk": {
-                page: "/monastery_life",
+            "/monasterylife/sk": {
+                page: "/monasterylife",
                 query: {
                     lng: "sk"
                 }
             },
-            "/monastery-life/en": {
-                page: "/monastery_life",
+            "/monasterylife/en": {
+                page: "/monasterylife",
                 query: {
                     lng: "en"
                 }
             },
-            "/host-reception": {
-                page: "/host_reception",
+            "/guests": {
+                page: "/guests",
                 query: {
                     lng: "sk"
                 }
             },
-            "/host-reception/sk": {
-                page: "/host_reception",
+            "/guests/sk": {
+                page: "/guests",
                 query: {
                     lng: "sk"
                 }
             },
-            "/host-reception/en": {
-                page: "/host_reception",
+            "/guests/en": {
+                page: "/guests",
+                query: {
+                    lng: "en"
+                }
+            },
+            "/experiences": {
+                page: "/experiences",
+                query: {
+                    lng: "sk"
+                }
+            },
+            "/experiences/sk": {
+                page: "/experiences",
+                query: {
+                    lng: "sk"
+                }
+            },
+            "/experiences/en": {
+                page: "/experiences",
                 query: {
                     lng: "en"
                 }

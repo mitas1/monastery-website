@@ -1,67 +1,79 @@
 ---
-title: Život v kláštore
+title: Life in a Monastery
 preamble:
     text: >
-        „Čo je nám sladšie, najdrahší bratia, nad Pánov hlas, ktorý nás pozýva? Hľa svojou vernou 
-        láskou nám Pán ukazuje cestu života.“
-    author: Sv. Benedikt
+        “What, dear brothers, is sweeter than the voice of the Lord calling to us? See
+        how the Lord in His love shows us the way of life.”
+    author: St. Benedict
     img: /static/images/article01.jpg
 ---
 
-## Najdôležitejšou prácou mníšok je uskutočňovať neustálu modlitbu v mene celého ľudstva.
+## The most important task of nuns is to pray constantly on behalf of all mankind.
 
-Deň sa začína modlitbou o piatej. Modlitbami, omšou a osobným rozjímaním, je potom popretkávaný až
-do večera. Čas majú mníšky vyčlenený aj na prácu v záhrade, kuchyni a na maľovanie paškálnych
-sviec, ktoré sú hlavným zdrojom činnosti benediktínok. Denný režim má svoj pravidelný rytmus v
-striedaní modlitby a práce, čo vychádza z tradície púštnych otcov. Sv. Silván z Athosu vysvetľuje
-žiovot mníchov takto:
+The day starts with the morning prayers at 5 a.m. Prayers, Holy Mass
+and contemplation are the most important part of the day. Nuns spend
+time also working in the garden, in the kitchen and painting the
+Paschal candles, which represent the main source of income for the
+Monastery. The daily routine consists of trading prayers for work, as
+prescribed by the tradition of Desert Fathers.
 
-> “Svet verí, že mnísi sú jedna neužitočná rasa. Nechápe, že mních je ten, čo sa modlí za celý
-> svet. Nevidí jeho modlitby a nevie s akým milosrdenstvom ich Pán prijíma. Mnísi vedú tvrdý boj
-> proti žiadostivostiam a pre tento ich zápas sú milí Bohu. Pán je nám veľmi blízko, bližšie ako
-> vzduch, čo dýchame. Vzduch vojde do tela a príde až k srdcu, ale Pán je vo vnútri srdca
-> človeka. Hľa, naša radosť: Pán je s nami a v nás. Aj keď je mních zaneprázdnený pozemskými
-> vecami (potrebnými na zabezpečenie živobytia), po celý čas horí jeho duch láskou k Bohu. Tiež
-> keď pracuje rukami, aj vtedy zostáva mysľou v Bohu. Mních upokoruje svoju dušu a pokorou ďaleko
-> vyháňa od seba nepriateľa a aj od tých, čo ho prosia o modlitby.”
+St. Silvan from Athos explains the life of monks as follows:
 
-## Čo sa stane v živote človeka, ktorý dokázal opustiť svet, v ktorom dovtedy fungoval, s odhodlaním, že to bude navždy?
-### Sestra Raffaela
+> “The outside world believes that monks live quite an unuseful life if comparing with an ordinary
+> man outside of the Monastery. It does not understand that the Monk is the one who prays for
+> the outside world. The world can´t see the Monk´s prayers and can´t understand how by grace
+> the Lord accepts these prayers. Monks fight against their appetites and desires and this is why
+> they are dear to God. The Lord is very close to us, closer than the air we breathe. Air gets into
+> the man´s body and it comes to the heart, but the Lord is inside the man´s heart. Our joy: the
+> Lord is with us and inside us! Despite the fact that the Monk is busy with ordinary tasks, all 
+> day long his soul is full of love for God. Even if manually working, the Monk is connected with 
+> God in his mind. The Monk humbles his soul and protects himself as well as those he prays for 
+> against the Enemy.”
 
-> „Vonku som nenachádzala pokoj, ani na horách, ani na zábavách, vždy bolo nejaké
-> miesto v mojom vnútri prázdne. Zaplnilo sa až vtedy, keď som prvýkrát prekročila brány kláštora
-> v Offide v Taliansku. Chcela som si vyskúšať život mníšky, i keď som sa ňou najskôr nechcela
-> stať. Bol to pekný zápas. Ísť, neísť, skôr som hľadala dôvody, ako neísť. Máte blízkych,
-> materiálne veci všetko, čo máte radi. No rozhodla som sa to zanechať. Aj keď som najskôr chcela
-> pána Boha presvedčiť o tom, že sa pomýlil! Bol vytrvalý a ja som nakoniec povedala - dobre,
-> vzdávam sa. Ten hlboký pokoj, ktorý som prvýkrát zažila v kláštore, ma toľko prenasledoval, až
-> nado mnou zvíťazil. Keď som sa so svojím rozhodnutím zdôverila priateľom, zažila som rôzne
-> reakcie. Niektorí mi fandili, tešili sa so mnou, iní boli proti alebo hovorili, že konám z
-> vypočítavosti, pretože v živote nebudem musieť pracovať. Otec to prijal veľmi dobre, pretože už
-> bol u Pána. Mama tak, ako každá mama, keď jej odchádza dcéra. No povedala, že nemôže brániť
-> Božej vôli.“ Regula tohto rádu hovorí, že benediktínky budú žiť spolu v komunite celý život na
-> jednom mieste, odlúčené od sveta bez návratu do civilného života. “Predstava ľudí je, že
-> nemôžeme odísť z kláštora. Pravdou však je, že my po tom netúžime. Náš domov je tu.“
+## What happens in the life of a man who has the courage to leave the outside world he lived in, with the aim to live a different life forever?
 
-### Sestra Salome
+### Sister Raffaela
 
-> „Vždy som chcela byť šťastná a šťastie som hľadala vo všetkom. Mala som veľa skúseností,
-> no napriek tomu som ho nenašla. Šťastie, teda plnosť. Bola som aj spokojná, no mala som pocit,
-> že mi niečo chýba. Mala som lásky, no ani jedna z nich neprerástla do manželstva. Začala som
-> chodiť do kresťanskej komunity. Postupne som si uvedomila, že mojím problém bolo moje prázdno,
-> môj hlad a smäd. Skúsenosti s touto skupinou a Božím slovom ma nasycovali. Trvalo to roky, a
-> potom pán Ježiš urobil svoje. Keď som mala 36 rokov, vstúpila som do kláštora. Keď som vstúpila
-> do kláštora, pocítila som, že tu je tá plnosť. To, čo som hľadala vonku, našla som vo vnútri.
-> Pre mňa nie je žiaden rozdiel medzi zaľúbením sa do nejakého muža a do Ježiša Krista. Ľudí
-> vonku obdivujem. Ani my tu nie sme nevinní. Prežili sme si, čo znamená svet vonku. Preto
-> poznáme, ako trpia ľudia, aké majú mladí problémy. Rozumieme im, lebo sme to tiež žili.“
+> “I couldn´t find peace in the outside world; there was still an empty place in my heart. This 
+> emptiness disappeared once I entered the Monastery´s door in Offida, Italy. At the beginning, I
+> didn´t want to became a Nun, I just wanted to experience the nun´s life. It was a beautiful 
+> battle: to become or not to become a nun – it was more about to find the reasons why to not 
+> become a nun: you love your family, the material stuff and the outside world. I still tried to 
+> persuade the Lord that he is mistaken in thinking that I can become a nun! But the Lord was 
+> enduring and I finally said to Lord: OK, I give up and I decided to abandon all in the outside 
+> world. That true and deep peace I experienced once I entered the Monastery chased me all the 
+> time and it finally won me over. When I told my friends about my decision, I experienced various 
+> reactions. Some of them were happy for me, while others were against my decision. My father 
+> accepted my decision since he was already in the Lord´s Heaven. My mother´s reaction was as 
+> would be expected from any mother letting her daughter leave home. Finally she said that she 
+> can´t go against the God´s will. The Rules of St. Benedict prescribes that the nuns should live 
+> together as one community for all their lives in one place, separated from the outside world and 
+> with no possibility to go back into civil life. The vision of the outside world is, that the nun 
+> can´t leave the Monastery. The truth is that we don´t want to leave the Monastery – this is our 
+> home!”
 
-### Sestra Debora
+### Sister Salome
 
-> “Do kláštora v Offide som vstúpila, keď som mala 33 rokov. Dovtedy som pracovala ako
-> typografka v tlačiarni. Boh sa mi dal pochopiť. Je ako snúbenec, ktorý ti dvorí. Dá ti aj dary,
-> aj znaky, ale dá ti aj utrpenie. Presvedčí ťa tým, že bez neho trpíš a toto bolo aj mojim
-> dôvodom, aby som ho postavila do centra môjho života. Aby som urobila veľmi rozhodnú voľbu,
-> ktorú som predtým nemohla urobiť. Pred vstupom do kláštora som mala priateľa, s ktorým som bola
-> sedem rokov. Tento vzťah som pre svoje rozhodnutie ukončila. Bolo to ťažké, ale čo sa dá robiť.
-> Je to boj, ale keď ho vyhráš, máš pokoj.“
+> “I was always looking for happiness in everything I did. I experienced a lot in the outside 
+> world but despite so many experiences I didn´t find real happiness. Happiness means fullness for
+> me. I was happy but I still had the feeling that I was missing something. I dated men and I was 
+> in love with a few of them, but none of these relationships ended in marriage. I realized that 
+> my problem consisted of my emptiness, my hunger and my thirst for something. I was in a 
+> Christian community in which we read the Holy Bible and the Lord´s word fed me… This situation 
+> lasted for several years and then God realized his plan with me. When I was 36 years old, I 
+> entered in a Monastery. In the Monastery I found the happiness I was searching
+> for so long. As for me, there is no difference between falling in love with Jesus Christ or with 
+> some man. I admire people in the outside world. We are aware of life outside: the suffering, the 
+> problems of young people, the hunger for goodness and love… We understand all
+> this because we lived this life.”
+
+### Sister Debora
+
+> “I entered the Monastery in Offida when I was 33 years old. Until then, I was working as a 
+> typographer in a private printing company. God made me understand His will. God is like your
+> fiancé who is trying to capture your attention. He gives you gifts, signs but also suffering – 
+> He convinces you that you can´t make it without His help. Without Him I was suffering and this 
+> was the reason why I put Him in the center of my life and why I made this decision to leave
+> the outside life. Before entering the Monastery, I had a boyfriend – we were together for seven 
+> years. I decided to end this relationship as well. It wasn’t easy at all, but my thirst for God 
+> was greater than the fear of losing my boyfriend. I won this battle and then peace came.”

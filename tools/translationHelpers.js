@@ -4,7 +4,8 @@ const mdFiles = {
     aboutUs: "aboutus",
     collection: "collection",
     monasteryLife: "monastery_life",
-    hostReception: "host_reception"
+    guests: "guests",
+    experiences: "experiences"
 };
 
 export async function getTranslations() {

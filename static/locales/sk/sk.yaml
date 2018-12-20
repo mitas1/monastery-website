@@ -55,8 +55,11 @@ common:
         - time: "20:00"
           title: Kompletórium
 index:
+  readMore: Čítať viac
   collection:
-    title: Zbierka na dokončenie kláštora
+    title:
+      firstLine: Zbierka na dokončenie
+      secondLine: kláštora
     readMore: Viac o projekte
   article01:
     title: Život v kláštore

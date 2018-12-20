@@ -1,4 +1,5 @@
 import React from "react";
+import path from "path";
 import Link from "next/link";
 import { withNamespaces } from "react-i18next";
 
@@ -10,7 +11,14 @@ import Content from "../components/Content";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 
-const ShortArticle = ({ heading, content, number, lng, pathname }) => (
+const ShortArticle = ({
+    heading,
+    content,
+    number,
+    readMore,
+    lng,
+    pathname
+}) => (
     <article className="short-article">
         <span className="number">{number}</span>
         <h1 className="heading">{heading}</h1>
@@ -20,15 +28,15 @@ const ShortArticle = ({ heading, content, number, lng, pathname }) => (
                 pathname,
                 query: { lng }
             }}
-            as={{ pathname }}
+            as={{ pathname: path.join(pathname, lng) }}
         >
-            <a className="link">Čítať viac</a>
+            <a className="link">{readMore}</a>
         </Link>
         <style jsx>{`
             .short-article {
                 color: #0c1a24;
                 flex: 1;
-                padding: 0 80px 0 50px;
+                padding: 0 70px 0 50px;
                 margin: 50px 0 58px;
                 border-left: 1px dotted #979797;
             }
@@ -41,7 +49,7 @@ const ShortArticle = ({ heading, content, number, lng, pathname }) => (
                 color: #757c81;
             }
             .heading {
-                font-size: 33px;
+                font-size: 28px;
                 font-family: "Martel", serif;
                 font-weight: 600;
                 margin: 0 0 8px;
@@ -51,6 +59,7 @@ const ShortArticle = ({ heading, content, number, lng, pathname }) => (
                 font-size: 16px;
                 font-weight: 300;
                 line-height: 30px;
+                padding: 0 0 0 0;
             }
             .link {
                 margin: 26px 0;
@@ -78,7 +87,9 @@ const ShortArticleWithAside = ({ t }) => (
         <div className="wrapper">
             <Subheading text={t("shortArticleWithAside.subtitle")} />
             <h1 className="heading">{t("shortArticleWithAside.title")}</h1>
+            <p className="text">
             <Paragraph>{t("shortArticleWithAside.text")}</Paragraph>
+            </p>
             <span>
                 <Subheading
                     text={t("shortArticleWithAside.acronym.title")}
@@ -112,8 +123,11 @@ const ShortArticleWithAside = ({ t }) => (
                 width: 390px;
             }
             .wrapper {
-                padding: 90px 200px 70px 114px;
+                padding: 90px 0 70px 114px;
                 overflow: hidden;
+            }
+            .text {
+                max-width: 420px;
             }
             .acronym {
                 margin: 0 0 0 20px;
@@ -138,23 +152,26 @@ export default withI18next()(
                     <ShortArticle
                         number="01"
                         lng={language}
-                        pathname="/monastery-life"
+                        pathname="/monasterylife"
                         heading={t("article01.title")}
                         content={t("article01.text")}
+                        readMore={t("readMore")}
                     />
                     <ShortArticle
                         number="02"
                         lng={language}
-                        pathname="/host-reception"
+                        pathname="/guests"
                         heading={t("article02.title")}
                         content={t("article02.text")}
+                        readMore={t("readMore")}
                     />
                     <ShortArticle
                         number="03"
-                        pathname="/host-reception"
+                        pathname="/experiences"
                         lng={language}
                         heading={t("article03.title")}
                         content={t("article03.text")}
+                        readMore={t("readMore")}
                     />
                 </div>
             </Content>

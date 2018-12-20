@@ -6,7 +6,7 @@ common:
   arrowBack: Back to home page
   linkFooter: Contact
   footer:
-    title: Bohoslužby
+    title: Worship
     official: The official website of the Benedictine monastery in Horné Orešany
     workdays:
       title: Working days
@@ -32,7 +32,7 @@ common:
         - time: "20:00"
           title: Kompletórium
     holidays:
-      title: Sviatok
+      title: Holiday
       elems:
         - time: "05:30"
           title: Ofícium
@@ -55,32 +55,35 @@ common:
         - time: "20:00"
           title: Kompletórium
 index:
+  readMore: Read more
   collection:
-    title: Zbierka na dokončenie kláštora
-    readMore: Viac o projekte
+    title:
+      firstLine: Offerings for the completion
+      secondLine:  of the monastery building
+    readMore: More about the project
   article01:
-    title: Život v kláštore
+    title: Life in a Monastery
     text: >
       Modlitba a pokánie: najdôležitejšou prácou mníšok je uskutočňovať neustálu modlitbu v mene
       celého ľudstva.
   article02:
-    title: Prijímanie hostí
+    title: Receiving guests
     text: >
       Prijímame hostí. Kohokoľvek, kto túži prehĺbiť svoj vzťah s Bohom, zúčastniť sa našej
       liturgie, porozprávať sa alebo odpočinúť si v tichu.
   article03:
-    title: Skúsenosti
+    title: Experiences
     text: >
       Kláštor z pohľadu návštevníkov.
   shortArticleWithAside:
-    title: Benediktínky
-    subtitle: Rád sv. benedikta
+    title: Benedictines
+    subtitle: Order of st. Benedictine
     text: >
       Sme mníšska komunita ktorá žije podľa Reguly, napísanej sv.Benediktom pred
       1600 rokmi. Hľadáme Boha a jeho milosrdenstvo v očisťovaní srdca a v
       sesterskej láske.
     acronym:
-      title: Skratka
+      title: Acronym
       text: OSB (Ordo sancti Benedicti)
     imageLabel: >
       — Detail: Kopf des Hl. Benedikt, Fra Angelico
@@ -93,11 +96,11 @@ contact:
       č.d. 841<br>
       919 03 Horné Orešany
   bank_account:
-    title: Číslo Účtu
+    title: Bank Account
     text: >
       IBAN: SK80 1111 0000 0066 2697 3004
   tel:
-    title: Tel
+    title: Phone
     text: +421 / 917 350 255
   email:
     title: Email

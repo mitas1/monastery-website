@@ -6,7 +6,7 @@ import { withI18next } from "../lib/withI18next";
 import Article from "../components/Article";
 
 export default withI18next()(
-    withNamespaces(["markdown", "common"])(({ t, i18n }) => (
-        <Article content={t("markdown:hostReception")} contact />
+    withNamespaces(["markdown"])(({ t }) => (
+        <Article content={t("markdown:experiences")} />
     ))
 );

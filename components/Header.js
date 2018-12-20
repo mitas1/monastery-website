@@ -55,7 +55,7 @@ export default withRouter(
                                     pathname: "/",
                                     query: { lng: language }
                                 }}
-                                as={{ pathname: "/" }}
+                                as={{ pathname: path.join("/", language) }}
                             >
                                 <a className="title">benediktinky.sk</a>
                             </Link>
@@ -65,7 +65,9 @@ export default withRouter(
                                         pathname: "/",
                                         query: { lng: language }
                                     }}
-                                    as={{ pathname: "/" }}
+                                    as={{
+                                        pathname: path.join("/collection", language)
+                                    }}
                                 >
                                     <a
                                         className={
@@ -82,7 +84,9 @@ export default withRouter(
                                         pathname: "/collection",
                                         query: { lng: language }
                                     }}
-                                    as={{ pathname: "/collection" }}
+                                    as={{
+                                        pathname: path.join("/collection", language)
+                                    }}
                                 >
                                     <a
                                         className={
@@ -99,7 +103,9 @@ export default withRouter(
                                         pathname: "/contact",
                                         query: { lng: language }
                                     }}
-                                    as={{ pathname: "/contact" }}
+                                    as={{
+                                        pathname: path.join("/contact", language)
+                                    }}
                                 >
                                     <a
                                         className={

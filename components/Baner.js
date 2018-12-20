@@ -27,7 +27,9 @@ export default withNamespaces(["index"])(
                 >
                     <div className="collection-heading-wrapper">
                         <h1 className="collection-heading">
-                            {t("collection.title")}
+                            {t("collection.title.firstLine")}
+                            <br />
+                            {t("collection.title.secondLine")}
                         </h1>
                         <Link
                             href={{
@@ -55,7 +57,7 @@ export default withNamespaces(["index"])(
                             line-height: 1.3;
                             padding: 250px 0 70px 0;
                             position: relative;
-                            width: 600px;
+                            width: 800px;
                         }
                         .baner {
                             height: 700px;

@@ -1,6 +1,6 @@
 ---
-title: Receiving guests
 preamble:
+    title: Receiving guests
     text: >
         “Find your delight in the LORD who will give you your heart’s desire. Commit your way to 
         the LORD; trust in him and he will act.”

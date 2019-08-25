@@ -1,0 +1,19 @@
+{
+    "heading": "Kontakt",
+    "address": {
+        "title": "Adresa",
+        "text": "Kláštor najsvätejšej Bohorodičky<br>\nč.d. 841<br>\n919 03 Horné Orešany\n"
+    },
+    "bank_account": {
+        "title": "Číslo Účtu",
+        "text": "IBAN: SK80 1111 0000 0066 2697 3004\n"
+    },
+    "tel": {
+        "title": "Tel",
+        "text": "+421 / 917 350 255"
+    },
+    "email": {
+        "title": "Email",
+        "text": "osb@rehole.sk"
+    }
+}

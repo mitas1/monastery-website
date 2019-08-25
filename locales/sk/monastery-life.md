@@ -1,6 +1,6 @@
 ---
-title: Život v kláštore
 preamble:
+    title: Život v kláštore
     text: >
         „Čo je nám sladšie, najdrahší bratia, nad Pánov hlas, ktorý nás pozýva? Hľa svojou vernou 
         láskou nám Pán ukazuje cestu života.“

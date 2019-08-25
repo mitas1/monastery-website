@@ -34,17 +34,17 @@ export const Wrapper = ({ children }) => (
     </div>
 );
 
-export default ({ title, preamble }) => (
+export default ({ title, text, author, img }) => (
     <div>
         <Wrapper>
             <Heading title={title} />
             <blockquote className="blockquote">
-                <i>{preamble.text}</i>
+                <i>{text}</i>
             </blockquote>
-            <div className="author">{preamble.author}</div>
+            <div className="author">{author}</div>
         </Wrapper>
         <div className="crop">
-            <img className="image" src={preamble.img} />
+            <img className="image" src={img} />
         </div>
         <style jsx>{`
             .blockquote {

@@ -1,35 +1,31 @@
 import React from "react";
-import path from "path";
 import Link from "next/link";
-import { withNamespaces } from "react-i18next";
 
-import { withI18next } from "../lib/withI18next";
+import { ParallaxProvider } from "react-scroll-parallax";
+
+import { withTranslation } from "../lib/i18n";
 
 import { NarrowMarkdown, Subheading, Paragraph } from "../components/Markdown";
 import Baner from "../components/Baner";
 import Content from "../components/Content";
-import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 
+const AboutUs = withTranslation("aboutUs")(({ t }) => (
+    <NarrowMarkdown>{t("__content")}</NarrowMarkdown>
+));
+
 const ShortArticle = ({
-    heading,
-    content,
+    title,
+    text,
     number,
     readMore,
-    lng,
-    pathname
+    pathname,
 }) => (
     <article className="short-article">
         <span className="number">{number}</span>
-        <h1 className="heading">{heading}</h1>
-        <p className="text">{content}</p>
-        <Link
-            href={{
-                pathname,
-                query: { lng }
-            }}
-            as={{ pathname: path.join(pathname, lng) }}
-        >
+        <h1 className="heading">{title}</h1>
+        <p className="text">{text}</p>
+        <Link href={pathname}>
             <a className="link">{readMore}</a>
         </Link>
         <style jsx>{`
@@ -86,9 +82,11 @@ const ShortArticleWithAside = ({ t }) => (
         <img className="aside-image" src="/static/images/benedikt.jpg" />
         <div className="wrapper">
             <Subheading text={t("shortArticleWithAside.subtitle")} />
-            <h1 className="heading">{t("shortArticleWithAside.title")}</h1>
+            <h1 className="heading">
+                {t("shortArticleWithAside.title")}
+            </h1>
             <p className="text">
-            <Paragraph>{t("shortArticleWithAside.text")}</Paragraph>
+                <Paragraph>{t("shortArticleWithAside.text")}</Paragraph>
             </p>
             <span>
                 <Subheading
@@ -143,56 +141,60 @@ const ShortArticleWithAside = ({ t }) => (
     </article>
 );
 
-export default withI18next()(
-    withNamespaces(["index", "markdown"])(({ t, i18n: { language } }) => (
-        <Layout addTopListener={true}>
-            <Baner />
-            <Content>
-                <div className="short-articles-wrapper">
-                    <ShortArticle
-                        number="01"
-                        lng={language}
-                        pathname="/monasterylife"
-                        heading={t("article01.title")}
-                        content={t("article01.text")}
-                        readMore={t("readMore")}
-                    />
-                    <ShortArticle
-                        number="02"
-                        lng={language}
-                        pathname="/guests"
-                        heading={t("article02.title")}
-                        content={t("article02.text")}
-                        readMore={t("readMore")}
-                    />
-                    <ShortArticle
-                        number="03"
-                        pathname="/experiences"
-                        lng={language}
-                        heading={t("article03.title")}
-                        content={t("article03.text")}
-                        readMore={t("readMore")}
-                    />
-                </div>
-            </Content>
-            <div className="content-gray">
+const Index = ({ t }) => {
+    return (
+        <ParallaxProvider>
+            <Layout
+                header={{ addTopListener: true }}
+                footer={{ background: true }}
+            >
+                <Baner />
                 <Content>
-                    <ShortArticleWithAside t={t} />
+                    <div className="short-articles-wrapper">
+                        <ShortArticle
+                            number="01"
+                            pathname="/monasterylife"
+                            {...t("article01")}
+                            readMore={t("readMore")}
+                        />
+                        <ShortArticle
+                            number="02"
+                            pathname="/guests"
+                            {...t("article02")}
+                            readMore={t("readMore")}
+                        />
+                        <ShortArticle
+                            number="03"
+                            pathname="/experiences"
+                            {...t("article03")}
+                            readMore={t("readMore")}
+                        />
+                    </div>
                 </Content>
-            </div>
-            <Content>
-                <NarrowMarkdown content={t("markdown:aboutUs").html} />
-            </Content>
-            <Footer background />
-            <style jsx>{`
-                .short-articles-wrapper {
-                    display: flex;
-                    flex-direction: row;
-                }
-                .content-gray {
-                    background-color: #fafafa;
-                }
-            `}</style>
-        </Layout>
-    ))
-);
+                <div className="content-gray">
+                    <Content>
+                        <ShortArticleWithAside t={t} />
+                    </Content>
+                </div>
+                <Content>
+                    <AboutUs />
+                </Content>
+                <style jsx>{`
+                    .short-articles-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    .content-gray {
+                        background-color: #fafafa;
+                    }
+                `}</style>
+            </Layout>
+        </ParallaxProvider>
+    );
+};
+
+Index.getInitialProps = async () => ({
+    namespacesRequired: ["index", "aboutus", "footer", "header"],
+});
+
+export default withTranslation("index")(Index);

@@ -1,8 +1,9 @@
 import React from "react";
-import App, { Container } from "next/app";
+import App from "next/app";
 import NProgress from "nprogress";
 import Router from "next/router";
-import { ParallaxProvider } from "react-scroll-parallax";
+
+import { appWithTranslation } from "../lib/i18n";
 
 Router.events.on("routeChangeStart", url => {
     NProgress.start();
@@ -10,25 +11,12 @@ Router.events.on("routeChangeStart", url => {
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
-export default class MyApp extends App {
-    static async getInitialProps({ Component, ctx }) {
-        let pageProps = {};
-
-        if (Component.getInitialProps) {
-            pageProps = await Component.getInitialProps(ctx);
-        }
-
-        return { pageProps };
-    }
-
+class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props;
-        return (
-            <Container>
-                <ParallaxProvider>
-                    <Component {...pageProps} />
-                </ParallaxProvider>
-            </Container>
-        );
+
+        return (<Component {...pageProps} />);
     }
 }
+
+export default appWithTranslation(MyApp);

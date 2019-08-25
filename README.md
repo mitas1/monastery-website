@@ -32,3 +32,24 @@ $ npm run export
 ```
 
 This command will create `out` directory. Read more about the static export [here](https://nextjs.org/docs/#static-html-export).
+
+## Development
+
+To install the dependencies, type the following:
+
+```
+$ npm install
+```
+
+Create `.env` file and set the following variables:
+
+```
+SANITY_PROJECT_ID="<PROJECT_ID>"
+SANITY_DATASET="<DATASET>"
+```
+
+To build and serve the app run:
+
+```
+$ npm run dev
+```

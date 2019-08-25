@@ -1,11 +1,13 @@
 import React from "react";
 
 import Header from "../components/Header";
+import Footer from "./Footer";
 
-export default ({ children, ...other }) => (
+export default ({ children, header, footer }) => (
     <div className="content">
-        <Header {...other} />
+        <Header {...header} />
         {children}
+        <Footer {...footer} />
         <style jsx>{`
             .content {
                 background-color: #fff;

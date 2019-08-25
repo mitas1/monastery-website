@@ -1,6 +1,6 @@
 ---
-title: Life in a Monastery
 preamble:
+    title: Life in a Monastery
     text: >
         “What, dear brothers, is sweeter than the voice of the Lord calling to us? See
         how the Lord in His love shows us the way of life.”

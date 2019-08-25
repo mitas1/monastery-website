@@ -1,6 +1,5 @@
-import Link from "next/link";
 import Parser from "html-react-parser";
-import { withNamespaces } from "react-i18next";
+import { withTranslation, Link } from "../lib/i18n";
 
 const subHeadingStyles = `
     color: rgb(150, 150, 150);
@@ -42,29 +41,17 @@ export const Paragraph = ({ children }) => (
     </p>
 );
 
-const FooterActions = withNamespaces("common")(({ t, i18n, contact }) => (
+const FooterActions = withTranslation("article")(({ t, contactLink }) => (
     <div className="footer-actions">
-        {contact && (
-            <Link
-                href={{
-                    pathname: "/contact",
-                    query: { lng: i18n.language }
-                }}
-                as={{ pathname: "/contact" }}
-            >
-                <a className="button-link">{t("common:linkFooter")}</a>
+        {contactLink && (
+            <Link href="/contact">
+                <a className="button-link">{t("linkFooter")}</a>
             </Link>
         )}
-        <Link
-            href={{
-                pathname: "/",
-                query: { lng: i18n.language }
-            }}
-            as={{ pathname: "/" }}
-        >
+        <Link href="/">
             <a className="link">
                 <img height={8} src="/static/images/arrow_back.svg" />
-                {t("common:arrowBack")}
+                {t("arrowBack")}
             </a>
         </Link>
         <style jsx>
@@ -96,7 +83,7 @@ const FooterActions = withNamespaces("common")(({ t, i18n, contact }) => (
     </div>
 ));
 
-const IBAN = withNamespaces("contact")(({ t }) => (
+const IBAN = withTranslation("contact")(({ t }) => (
     <div className="iban">
         {t("bank_account.text")}
         <style jsx>{`
@@ -110,161 +97,159 @@ const IBAN = withNamespaces("contact")(({ t }) => (
     </div>
 ));
 
-export const Markdown = ({ content, contact, iban }) => {
+export const Markdown = ({ content, iban, ...other }) => {
     return (
-        <div>
-            <article className="markdown">
-                {Parser(content)}
-                {iban && <IBAN />}
-                <div className="dot" />
-                <FooterActions contact={contact} />
-                <style jsx>{`
-                    .markdown {
-                        background-color: #fff;
-                        font-family: "Roboto", sans-serif;
-                        font-size: 17px;
-                        font-weight: 300;
-                        line-height: 26px;
-                        margin: 0 auto;
-                        padding: 46px 120px;
-                        position: relative;
-                        width: 640px;
-                    }
-                    .markdown :global(p) {
-                        font-family: "Roboto", sans-serif;
-                        margin-bottom: 26px;
-                        line-height: 26px;
-                    }
-                    .markdown :global(> p:first-of-type::first-letter) {
-                        display: block;
-                        float: left;
-                        font-family: "Martel", serif;
-                        font-size: 50px;
-                        font-weight: 400;
-                        padding-left: 3px;
-                        padding-right: 8px;
-                        padding-top: 18px;
-                        position: relative;
-                    }
-                    .markdown :global(h1) {
-                        display: block;
-                        font-family: "Martel", serif;
-                        font-size: 40px;
-                        font-weight: 600;
-                        line-height: 1.5;
-                        margin-bottom: 16px;
-                        padding: 10px 0 10px;
-                        text-align: center;
-                    }
-                    .markdown :global(h2) {
-                        display: block;
-                        font-family: "Martel", serif;
-                        font-size: 23px;
-                        font-weight: 400;
-                        line-height: 1.5;
-                        margin-bottom: 16px;
-                        padding: 10px 0 10px;
-                    }
-                    .markdown :global(h3) {
-                        color: #575757;
-                        display: block;
-                        font-family: "Roboto", serif;
-                        font-size: 13px;
-                        font-weight: 500;
-                        line-height: 1.5;
-                        margin-bottom: 16px;
-                        padding: 10px 0 10px;
-                        text-align: center;
-                        text-transform: uppercase;
-                    }
-                    .markdown :global(blockquote p) {
-                        border-left: 4px solid #e9e9e9;
-                        font-style: italic;
-                        font-weight: 300;
-                        padding: 0 0 0 30px;
-                    }
-                    .markdown :global(.image-full) {
-                        margin: 24px 0 24px -255px;
-                        max-height: 590px;
-                        overflow: hidden;
-                        position: relative;
-                        width: 1150px;
-                    }
-                    .markdown :global(.image-full::before) {
-                        background-image: url("/static/images/gradient.png");
-                        background-repeat: repeat-x;
-                        bottom: 0;
-                        content: "";
-                        height: 82px;
-                        position: absolute;
-                        width: 100%;
-                    }
-                    .markdown :global(.image-full img) {
-                        width: 100%;
-                    }
-                    .markdown :global(.image-full p) {
-                        bottom: 0px;
-                        color: #fff;
-                        font-size: 12px;
-                        font-weight: 500;
-                        left: 24px;
-                        position: absolute;
-                    }
-                    .markdown :global(.image-side-by-side) {
-                        display: flex;
-                        flex-direction: row;
-                        margin: 24px 0 24px -255px;
-                        max-height: 500px;
-                        width: 1150px;
-                    }
-                    .markdown :global(.image-side-by-side div::before) {
-                        background-image: url("/static/images/gradient.png");
-                        background-repeat: repeat-x;
-                        bottom: 0;
-                        content: "";
-                        height: 82px;
-                        position: absolute;
-                        width: 100%;
-                    }
-                    .markdown :global(.image-side-by-side img) {
-                        width: 100%;
-                    }
-                    .markdown :global(.image-side-by-side .left) {
-                        flex: 2;
-                        margin: 0 24px 0 0;
-                        overflow: hidden;
-                        position: relative;
-                    }
-                    .markdown :global(.image-side-by-side .right) {
-                        flex: 1;
-                        overflow: hidden;
-                        position: relative;
-                    }
-                    .markdown :global(.image-side-by-side p) {
-                        bottom: 0px;
-                        color: #fff;
-                        font-size: 12px;
-                        font-weight: 500;
-                        left: 24px;
-                        position: absolute;
-                    }
-                    .dot {
-                        width: 9px;
-                        height: 9px;
-                        border-radius: 50%;
-                        background-color: #000;
-                        display: block;
-                        margin-top: 60px;
-                    }
-                `}</style>
-            </article>
-        </div>
+        <article className="markdown">
+            {Parser(content)}
+            {iban && <IBAN />}
+            <div className="dot" />
+            <FooterActions {...other}/>
+            <style jsx>{`
+                .markdown {
+                    background-color: #fff;
+                    font-family: "Roboto", sans-serif;
+                    font-size: 17px;
+                    font-weight: 300;
+                    line-height: 26px;
+                    margin: 0 auto;
+                    padding: 46px 120px;
+                    position: relative;
+                    width: 640px;
+                }
+                .markdown :global(p) {
+                    font-family: "Roboto", sans-serif;
+                    margin-bottom: 26px;
+                    line-height: 26px;
+                }
+                .markdown :global(> p:first-of-type::first-letter) {
+                    display: block;
+                    float: left;
+                    font-family: "Martel", serif;
+                    font-size: 50px;
+                    font-weight: 400;
+                    padding-left: 3px;
+                    padding-right: 8px;
+                    padding-top: 18px;
+                    position: relative;
+                }
+                .markdown :global(h1) {
+                    display: block;
+                    font-family: "Martel", serif;
+                    font-size: 40px;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-bottom: 16px;
+                    padding: 10px 0 10px;
+                    text-align: center;
+                }
+                .markdown :global(h2) {
+                    display: block;
+                    font-family: "Martel", serif;
+                    font-size: 23px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    margin-bottom: 16px;
+                    padding: 10px 0 10px;
+                }
+                .markdown :global(h3) {
+                    color: #575757;
+                    display: block;
+                    font-family: "Roboto", serif;
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    margin-bottom: 16px;
+                    padding: 10px 0 10px;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+                .markdown :global(blockquote p) {
+                    border-left: 4px solid #e9e9e9;
+                    font-style: italic;
+                    font-weight: 300;
+                    padding: 0 0 0 30px;
+                }
+                .markdown :global(.image-full) {
+                    margin: 24px 0 24px -255px;
+                    max-height: 590px;
+                    overflow: hidden;
+                    position: relative;
+                    width: 1150px;
+                }
+                .markdown :global(.image-full::before) {
+                    background-image: url("/static/images/gradient.png");
+                    background-repeat: repeat-x;
+                    bottom: 0;
+                    content: "";
+                    height: 82px;
+                    position: absolute;
+                    width: 100%;
+                }
+                .markdown :global(.image-full img) {
+                    width: 100%;
+                }
+                .markdown :global(.image-full p) {
+                    bottom: 0px;
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 500;
+                    left: 24px;
+                    position: absolute;
+                }
+                .markdown :global(.image-side-by-side) {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 24px 0 24px -255px;
+                    max-height: 500px;
+                    width: 1150px;
+                }
+                .markdown :global(.image-side-by-side div::before) {
+                    background-image: url("/static/images/gradient.png");
+                    background-repeat: repeat-x;
+                    bottom: 0;
+                    content: "";
+                    height: 82px;
+                    position: absolute;
+                    width: 100%;
+                }
+                .markdown :global(.image-side-by-side img) {
+                    width: 100%;
+                }
+                .markdown :global(.image-side-by-side .left) {
+                    flex: 2;
+                    margin: 0 24px 0 0;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .markdown :global(.image-side-by-side .right) {
+                    flex: 1;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .markdown :global(.image-side-by-side p) {
+                    bottom: 0px;
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 500;
+                    left: 24px;
+                    position: absolute;
+                }
+                .dot {
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    background-color: #000;
+                    display: block;
+                    margin-top: 60px;
+                }
+            `}</style>
+        </article>
     );
 };
 
-export const NarrowMarkdown = ({ content }) => (
-    <div className="markdown">
-        <article dangerouslySetInnerHTML={{ __html: content }} />
+export const NarrowMarkdown = ({ children }) => (
+    <article className="markdown">
+        {Parser(children)}
         <style jsx>{`
             .markdown {
                 margin: 0 0 130px 390px;
@@ -294,5 +279,5 @@ export const NarrowMarkdown = ({ content }) => (
                 width: 530px;
             }
         `}</style>
-    </div>
+    </article>
 );

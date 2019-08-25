@@ -1,6 +1,6 @@
 ---
-title: Experiences
 preamble:
+    title: Experiences
     text: >
         “Come to me, all you who are weary and burdened, and I will give you rest.”
     author: (Matthew 11:28)

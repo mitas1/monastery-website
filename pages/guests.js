@@ -1,12 +1,18 @@
 import React from "react";
-import { withNamespaces } from "react-i18next";
 
-import { withI18next } from "../lib/withI18next";
+import { withTranslation } from "../lib/i18n";
 
 import Article from "../components/Article";
 
-export default withI18next()(
-    withNamespaces(["markdown", "common"])(({ t }) => (
-        <Article content={t("markdown:guests")} contact />
-    ))
+const Guests = ({ t }) => (
+    <Article
+        content={t("__content")}
+        preamble={t("preamble")}
+    />
 );
+
+Guests.getInitialProps = async () => ({
+    namespacesRequired: ["guests", "footer", "header"],
+});
+
+export default withTranslation("guests")(Guests);

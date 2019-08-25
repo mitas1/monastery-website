@@ -1,6 +1,6 @@
 ---
-title: Prijíjmanie hostí
 preamble:
+    title: Prijíjmanie hostí
     text: >
         „Hľadaj radosť v Pánovi a dá ti, za čím túži tvoje srdce. Pánovi zver svoje cesty a jemu 
         dôveruj, on sa už postará.“

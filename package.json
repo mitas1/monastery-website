@@ -5,11 +5,11 @@
         "dev": "node server.js",
         "static": "node lib/collectStatic",
         "build": "npm run static && next build",
-        "export": "npm run build && next export",
-        "start": "next start"
+        "gcp-build": "npm run static && next build",
+        "start": "NODE_ENV=production node server.js"
     },
     "license": "ISC",
-    "devDependencies": {
+    "dependencies": {
         "express": "^4.17.1",
         "html-react-parser": "^0.9.1",
         "markdown-it": "^9.1.0",

@@ -23,15 +23,13 @@ $ npm run dev
 
 ## Deployment
 
-Currently the website is hosted via [netlify.com](https://www.netlify.com/).
+Currently the website is hosted via [Google Cloud](https://cloud.google.com/).
 
-To export the site run the following:
+To deploy the site run the following:
 
 ```sh
-$ npm run export
+$ gcloud app deploy
 ```
-
-This command will create `out` directory. Read more about the static export [here](https://nextjs.org/docs/#static-html-export).
 
 ## Development
 

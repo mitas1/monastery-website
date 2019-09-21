@@ -19,13 +19,31 @@ export default withTranslation("footer")(({ background, t }) => {
                                 <h2 className="subheading">
                                     {t("workdays.title")}
                                 </h2>
-                                
+                                {t("workdays.elems").map((elem, index) => (
+                                    <div className="inner-row" key={index}>
+                                        <span className="time">
+                                            {elem.time}
+                                        </span>
+                                        <span className="title">
+                                            {elem.title}
+                                        </span>
+                                    </div>
+                                ))}
                             </div>
                             <div className="column">
                                 <h2 className="subheading">
                                     {t("holidays.title")}
                                 </h2>
-                                
+                                {t("holidays.elems").map((elem, index) => (
+                                    <div className="inner-row" key={index}>
+                                        <span className="time">
+                                            {elem.time}
+                                        </span>
+                                        <span className="title">
+                                            {elem.title}
+                                        </span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>

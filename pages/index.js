@@ -10,7 +10,7 @@ import Baner from "../components/Baner";
 import Content from "../components/Content";
 import Layout from "../components/Layout";
 
-const AboutUs = withTranslation("aboutUs")(({ t }) => (
+const AboutUs = withTranslation("aboutus")(({ t }) => (
     <NarrowMarkdown>{t("__content")}</NarrowMarkdown>
 ));
 

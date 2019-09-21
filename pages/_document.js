@@ -1,6 +1,7 @@
 import Document, { Head, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
+
     render() {
         return (
             <html>
@@ -11,7 +12,7 @@ export default class MyDocument extends Document {
                     />
                     <meta
                         name="viewport"
-                        content="width=1200"
+                        content="width=device-width, initial-scale=1"
                     />
                 </Head>
                 <body>

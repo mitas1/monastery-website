@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 
 import sanity from "../lib/sanity";
 import { withTranslation } from "../lib/i18n";
@@ -6,33 +7,6 @@ import { withTranslation } from "../lib/i18n";
 import { Wrapper, Heading } from "../components/Preamble";
 import Layout from "../components/Layout";
 import BlockContent from "@sanity/block-content-to-react";
-
-const CircleDate = ({ src }) => (
-    <div className="wrapper">
-        <span className="primary">19</span>
-        <span>Sep</span>
-        <style jsx>{`
-            .wrapper {
-                color: #fff;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                background-color: #262626;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-                float: left;
-                font-size: 12px;
-                font-weight: 300;
-            }
-            .primary {
-                font-size: 20px;
-                font-weight: 400;
-            }
-        `}</style>
-    </div>
-);
 
 const Announcement = ({ content }) => (
     <div className="rich-text">
@@ -66,19 +40,32 @@ const Announcement = ({ content }) => (
 );
 
 const Announcements = ({ t, item }) => {
+    const date = moment(item.publishedAt).format("D. MMMM YYYY");
+
     return (
         <Layout>
             <Wrapper>
                 <Heading title={t("heading")}></Heading>
                 <div className="date-wrapper">
-                    <CircleDate />
+                    Aktualizované: <strong>{date}</strong>
+                    <br />
+                    {item.author && (
+                        <span className="author">{item.author.name}</span>
+                    )}
                 </div>
                 <Announcement content={item.body} />
             </Wrapper>
             <style jsx>{`
                 .date-wrapper {
-                    display: flex;
-                    justify-content: center;
+                    text-align: center;
+                    line-height: 28px;
+                    margin-top: -24px;
+                }
+                .author {
+                    text-transform: uppercase;
+                    color: #777;
+                    font-size: 14px;
+                    font-weight: 500;
                 }
             `}</style>
         </Layout>
@@ -93,6 +80,7 @@ Announcements.getInitialProps = async () => {
             title,
             _id,
             publishedAt,
+            author->{name},
             body
           } | order(_createdAt desc) [0]`),
     };

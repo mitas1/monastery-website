@@ -23,5 +23,8 @@
         "react-dom": "^16.9.0",
         "react-scroll-parallax": "^2.1.2",
         "yaml-front-matter": "^4.0.0"
+    },
+    "devDependencies": {
+        "moment": "^2.24.0"
     }
 }

@@ -43,9 +43,11 @@ export default ({ title, text, author, img }) => (
             </blockquote>
             <div className="author">{author}</div>
         </Wrapper>
-        <div className="crop">
-            <img className="image" src={img} />
-        </div>
+        {img && (
+            <div className="crop">
+                <img className="image" src={img} />
+            </div>
+        )}
         <style jsx>{`
             .blockquote {
                 display: block;

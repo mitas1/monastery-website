@@ -1,10 +1,9 @@
-import Document, { Head, Main, NextScript } from "next/document";
-
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 export default class MyDocument extends Document {
 
     render() {
         return (
-            <html>
+            <Html>
                 <Head>
                     <link
                         href="https://fonts.googleapis.com/css?family=Martel:600,700,900|Roboto:300,300i,400,400i,500,700"
@@ -19,7 +18,7 @@ export default class MyDocument extends Document {
                     <Main />
                     <NextScript />
                 </body>
-            </html>
+            </Html>
         );
     }
 }

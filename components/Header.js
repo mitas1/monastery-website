@@ -53,6 +53,17 @@ const Header = ({ addTopListener, t, i18n }) => {
                             {t("offerings")}
                         </a>
                     </Link>
+                    <Link href="/announcements">
+                        <a
+                            className={
+                                pathname === "/announcements"
+                                    ? "link active"
+                                    : "link"
+                            }
+                        >
+                            {t("announcements")}
+                        </a>
+                    </Link>
                     <Link href="/contact">
                         <a
                             className={

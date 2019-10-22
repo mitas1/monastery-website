@@ -85,9 +85,9 @@ const ShortArticleWithAside = ({ t }) => (
             <h1 className="heading">
                 {t("shortArticleWithAside.title")}
             </h1>
-            <p className="text">
+            <div className="text">
                 <Paragraph>{t("shortArticleWithAside.text")}</Paragraph>
-            </p>
+            </div>
             <span>
                 <Subheading
                     text={t("shortArticleWithAside.acronym.title")}

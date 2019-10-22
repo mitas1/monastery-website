@@ -89,7 +89,7 @@ Announcements.getInitialProps = async () => {
     return {
         namespacesRequired: ["announcements", "footer", "header"],
         item: await sanity.fetch(`
-        *[_type == "post"]{
+        *[_type == "announcement"]{
             title,
             _id,
             publishedAt,

@@ -64,12 +64,12 @@ const Contact = ({ t }) => (
         </div>
         <div className="map">
             <iframe
-                src="https://www.google.com/maps/embed?key=AIzaSyALytxfAEHyoB1OXEqFWifQ08Odpavl_5g&pb=!1m18!1m12!1m3!1d3156.8249944713557!2d17.445837090180323!3d48.46845163582786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476ca4e61ff63565%3A0xd34656e8201f7ce4!2zS2zDocWhdG9yIE5hanN2w6R0ZWrFoWVqIEJvaG9yb2RpxI1reQ!5e0!3m2!1sen!2ssk!4v1544362285429"
-                width="1150"
-                height="550"
-                frameBorder="0"
-                allowFullScreen
-            />
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5290.7719196383005!2d17.448451!3d48.46831!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd34656e8201f7ce4!2zS2zDocWhdG9yIE5hanN2w6R0ZWrFoWVqIEJvaG9yb2RpxI1reQ!5e0!3m2!1sen!2ssk!4v1571779579264!5m2!1sen!2ssk"
+                width={1150}
+                height={550}
+                frameBorder={0}
+                allowFullScreen={true}
+            ></iframe>
         </div>
         <style jsx>{`
             .column-wrapper {

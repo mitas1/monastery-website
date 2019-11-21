@@ -13,6 +13,7 @@ export default class MyDocument extends Document {
                         name="viewport"
                         content="width=1200"
                     />
+                    <meta name="google-site-verification" content="2B3Hj3Ab_Mtbhc4YIiCOLCdksRr-GLdeeA1339ZVmLI" />
                 </Head>
                 <body>
                     <Main />

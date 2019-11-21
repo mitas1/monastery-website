@@ -16,6 +16,7 @@
         "express": "^4.17.1",
         "html-react-parser": "^0.9.1",
         "markdown-it": "^9.1.0",
+        "moment": "^2.24.0",
         "next": "^9.0.5",
         "next-i18next": "^1.1.0",
         "nprogress": "^0.2.0",
@@ -23,8 +24,5 @@
         "react-dom": "^16.9.0",
         "react-scroll-parallax": "^2.1.2",
         "yaml-front-matter": "^4.0.0"
-    },
-    "devDependencies": {
-        "moment": "^2.24.0"
     }
 }

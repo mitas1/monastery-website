@@ -1,0 +1,32 @@
+{
+    "readMore": "Read more",
+    "offerings": {
+        "title": {
+            "firstLine": "Offerings for the completion",
+            "secondLine": "of the monastery building"
+        },
+        "readMore": "More about the project"
+    },
+    "article01": {
+        "title": "Life in a Monastery",
+        "text": "Prayers and penance: the most important duty of nuns is to perform the permanent prayers.\n"
+    },
+    "article02": {
+        "title": "Receiving guests",
+        "text": "Receiving guests: Anyone who desires to deepen the relationship with God, to participate in our liturgy, to talk or to rest in silence\n"
+    },
+    "article03": {
+        "title": "Experiences",
+        "text": "Monastery from a visitor´s perspective.\n"
+    },
+    "shortArticleWithAside": {
+        "title": "Benedictines",
+        "subtitle": "The order of St. Benedictine",
+        "text": "We are a community of nuns following the Rule of Saint Benedict written 1600 years ago. We are searching for God and his mercy through the purification of the heart, work and sisterly love.\n",
+        "acronym": {
+            "title": "Acronym",
+            "text": "OSB (Ordo sancti Benedicti)"
+        },
+        "imageLabel": "— Detail: Kopf des Hl. Benedikt, Fra Angelico\n"
+    }
+}

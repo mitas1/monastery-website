@@ -1,0 +1,92 @@
+{
+    "title": "Bohoslužby",
+    "official": "Oficiálna stránka benediktínskeho kláštora v Horných Orešanoch",
+    "workdays": {
+        "title": "Pracovné dni",
+        "elems": [{
+                "time": "05:00",
+                "title": "Ofícium"
+            },
+            {
+                "time": "06:00",
+                "title": "Ranné chvály"
+            },
+            {
+                "time": "variabilné",
+                "title": "Tercia - 15 min pred sv. omšou"
+            },
+            {
+                "time": "variabilné",
+                "title": "Svätá omša"
+            },
+            {
+                "time": "12:10",
+                "title": "Sexta"
+            },
+            {
+                "time": "12:30",
+                "title": "Obed"
+            },
+            {
+                "time": "14:15",
+                "title": "Nona, ruženec"
+            },
+            {
+                "time": "16:45",
+                "title": "Vešpery"
+            },
+            {
+                "time": "19:00",
+                "title": "Večera"
+            },
+            {
+                "time": "20:00",
+                "title": "Kompletórium"
+            }
+        ]
+    },
+    "holidays": {
+        "title": "Sviatok",
+        "elems": [{
+                "time": "05:30",
+                "title": "Ofícium"
+            },
+            {
+                "time": "07:00",
+                "title": "Ranné chvály"
+            },
+            {
+                "time": "08:30",
+                "title": "Tercia"
+            },
+            {
+                "time": "09:00",
+                "title": "Svätá omša"
+            },
+            {
+                "time": "11:40",
+                "title": "Sexta"
+            },
+            {
+                "time": "12:00",
+                "title": "Obed"
+            },
+            {
+                "time": "15:00",
+                "title": "Nona, ruženec s adoráciou"
+            },
+            {
+                "time": "17:00",
+                "title": "Vešpery"
+            },
+            {
+                "time": "18:30",
+                "title": "Večera"
+            },
+            {
+                "time": "20:00",
+                "title": "Kompletórium"
+            }
+        ]
+    }
+}

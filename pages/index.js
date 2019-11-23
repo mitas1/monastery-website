@@ -1,64 +1,200 @@
-import React, {
-    Component
-} from 'react'
-import Link from 'next/link'
-import {
-    I18nextProvider
-} from 'react-i18next'
+import React from "react";
+import Link from "next/link";
 
-import startI18n from '../tools/startI18n'
-import {
-    getTranslation
-} from '../tools/translationHelpers'
+import { ParallaxProvider } from "react-scroll-parallax";
 
-export default class Homepage extends Component {
-    static async getInitialProps({
-        query: {
-            lng
-        }
-    }) {
-        const translations = await getTranslation(
-            lng, ['sk', 'en']
-        )
+import { withTranslation } from "../lib/i18n";
 
-        return {
-            lng,
-            translations
-        }
-    }
+import { NarrowMarkdown, Subheading, Paragraph } from "../components/Markdown";
+import Baner from "../components/Baner";
+import Content from "../components/Content";
+import Layout from "../components/Layout";
 
-    constructor(props) {
-        super(props)
+const AboutUs = withTranslation("aboutus")(({ t }) => (
+    <NarrowMarkdown>{t("__content")}</NarrowMarkdown>
+));
 
-        this.i18n = startI18n(props.translations, props.lng)
-    }
+const ShortArticle = ({
+    title,
+    text,
+    number,
+    readMore,
+    pathname,
+}) => (
+    <article className="short-article">
+        <span className="number">{number}</span>
+        <h1 className="heading">{title}</h1>
+        <p className="text">{text}</p>
+        <Link href={pathname}>
+            <a className="link">{readMore}</a>
+        </Link>
+        <style jsx>{`
+            .short-article {
+                color: #0c1a24;
+                flex: 1;
+                padding: 0 70px 0 50px;
+                margin: 50px 0 58px;
+                border-left: 1px dotted #979797;
+            }
+            .short-article:first-child {
+                padding: 0 80px 0 16px;
+                border-left: none;
+            }
+            .number {
+                font-size: 10px;
+                color: #757c81;
+            }
+            .heading {
+                font-size: 28px;
+                font-family: "Martel", serif;
+                font-weight: 600;
+                margin: 0 0 8px;
+            }
+            .text {
+                color: #6c767b;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 30px;
+                padding: 0 0 0 0;
+            }
+            .link {
+                margin: 26px 0;
+                color: #006cb9;
+                text-decoration: none;
+                display: flex;
+            }
+            .link::after {
+                width: 25px;
+                height: 8px;
+                margin: 0 0 0 8px;
+                display: flex;
+                align-self: center;
+                content: "";
+                background-image: url("/static/images/arrow.svg");
+                background-repeat: no-repeat;
+            }
+        `}</style>
+    </article>
+);
 
-    render(props) {
+const ShortArticleWithAside = ({ t }) => (
+    <article id="test" className="short-article-with-aside">
+        <img className="aside-image" src="/static/images/benedikt.jpg" />
+        <div className="wrapper">
+            <Subheading text={t("shortArticleWithAside.subtitle")} />
+            <h1 className="heading">
+                {t("shortArticleWithAside.title")}
+            </h1>
+            <div className="text">
+                <Paragraph>{t("shortArticleWithAside.text")}</Paragraph>
+            </div>
+            <span>
+                <Subheading
+                    text={t("shortArticleWithAside.acronym.title")}
+                    inline
+                />
+                <span className="acronym">
+                    {t("shortArticleWithAside.acronym.text")}
+                </span>
+            </span>
+        </div>
+        <div className="image-title">
+            <i>{t("shortArticleWithAside.imageLabel")}</i>
+        </div>
+        <style jsx>{`
+            .short-article-with-aside {
+                background-color: #fafafa;
+                overflow: auto;
+                position: relative;
+            }
+            .heading {
+                display: block;
+                font-family: "Martel", serif;
+                font-weight: 600;
+                width: 300px;
+                line-height: 1;
+                font-size: 50px;
+                padding: 10px 0 10px;
+            }
+            .aside-image {
+                float: left;
+                width: 390px;
+            }
+            .wrapper {
+                padding: 90px 0 70px 114px;
+                overflow: hidden;
+            }
+            .text {
+                max-width: 420px;
+            }
+            .acronym {
+                margin: 0 0 0 20px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+            .image-title {
+                padding: 0 0 0 114px;
+                overflow: hidden;
+                font-size: 12px;
+            }
+        `}</style>
+    </article>
+);
 
-        return (
-            <I18nextProvider i18n={this.i18n}>
-                <div className='content'>
-                    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800"
-                        rel="stylesheet" />
-                    <style global jsx>{`
-                        * {
-                            margin: 0;
-                            padding: 0;
-                        }
-                        body {
-                            background: #fafafa;
-                            font-family: Roboto;
-                        }
-                    `}</style>
-                    <style jsx>{`
-                        .content {
-                            width: 1000px;
-                            margin: 0 auto;
-                            background-color: #fff;
-                        }
-                    `}</style>
+const Index = ({ t }) => {
+    return (
+        <ParallaxProvider>
+            <Layout
+                header={{ addTopListener: true }}
+                footer={{ background: true }}
+            >
+                <Baner />
+                <Content>
+                    <div className="short-articles-wrapper">
+                        <ShortArticle
+                            number="01"
+                            pathname="/monasterylife"
+                            {...t("article01")}
+                            readMore={t("readMore")}
+                        />
+                        <ShortArticle
+                            number="02"
+                            pathname="/guests"
+                            {...t("article02")}
+                            readMore={t("readMore")}
+                        />
+                        <ShortArticle
+                            number="03"
+                            pathname="/experiences"
+                            {...t("article03")}
+                            readMore={t("readMore")}
+                        />
+                    </div>
+                </Content>
+                <div className="content-gray">
+                    <Content>
+                        <ShortArticleWithAside t={t} />
+                    </Content>
                 </div>
-          </I18nextProvider>
-        )
-    }
-}
+                <Content>
+                    <AboutUs />
+                </Content>
+                <style jsx>{`
+                    .short-articles-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    .content-gray {
+                        background-color: #fafafa;
+                    }
+                `}</style>
+            </Layout>
+        </ParallaxProvider>
+    );
+};
+
+Index.getInitialProps = async () => ({
+    namespacesRequired: ["index", "aboutus", "footer", "header"],
+});
+
+export default withTranslation("index")(Index);

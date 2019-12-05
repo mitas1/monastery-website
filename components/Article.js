@@ -14,6 +14,11 @@ export default ({ content, preamble, ...other }) => (
             .content-ofset {
                 margin-top: -100px;
             }
+            @media screen and (max-width: 992px) {
+                .content-ofset {
+                    margin-top: -50px;
+                }
+            }
         `}</style>
     </Layout>
 );

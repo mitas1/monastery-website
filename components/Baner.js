@@ -69,6 +69,20 @@ const Baner = ({ t }) => (
                     box-shadow: 0 1px 5px #777;
                     cursor: pointer;
                 }
+                @media screen and (max-width: 992px) {
+                    .offerings-heading-wrapper {
+                        width: 100%;
+                    }
+                    .offerings-heading {
+                        width: 100%;
+                        box-sizing: border-box;
+                        font-size: 40px;
+                        padding: 164px 48px 24px 48px;
+                    }
+                    .offerings-button {
+                        margin: 24px 48px;
+                    }
+                }
             `}</style>
         </ParallaxBanner>
     </ParallaxProvider>

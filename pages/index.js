@@ -55,7 +55,7 @@ const ShortArticle = ({
                 font-size: 16px;
                 font-weight: 300;
                 line-height: 30px;
-                padding: 0 0 0 0;
+                padding: 0;
             }
             .link {
                 margin: 26px 0;
@@ -73,6 +73,14 @@ const ShortArticle = ({
                 background-image: url("/images/arrow.svg");
                 background-repeat: no-repeat;
             }
+            @media screen and (max-width: 992px) {
+                .short-article,
+                .short-article:first-child {
+                    padding: 8px 24px;
+                    margin: 0;
+                    border-left: none;
+                }
+            }
         `}</style>
     </article>
 );
@@ -88,7 +96,7 @@ const ShortArticleWithAside = ({ t }) => (
             <div className="text">
                 <Paragraph>{t("shortArticleWithAside.text")}</Paragraph>
             </div>
-            <span>
+            <span className="title">
                 <Subheading
                     text={t("shortArticleWithAside.acronym.title")}
                     inline
@@ -136,6 +144,28 @@ const ShortArticleWithAside = ({ t }) => (
                 padding: 0 0 0 114px;
                 overflow: hidden;
                 font-size: 12px;
+            }
+            @media screen and (max-width: 992px) {
+                .heading {
+                    width: 100%;
+                    padding: 0;
+                }
+                .aside-image {
+                    width: 100%;
+                }
+                .wrapper {
+                    padding: 48px 24px;
+                    float: left;
+                }
+                .title {
+                    display: none;
+                }
+                .image-title {
+                    display: none;
+                }
+                .text {
+                    width: 100%;
+                }
             }
         `}</style>
     </article>
@@ -186,6 +216,12 @@ const Index = ({ t }) => {
                     }
                     .content-gray {
                         background-color: #fafafa;
+                    }
+                    @media screen and (max-width: 992px) {
+                        .short-articles-wrapper {
+                            flex-direction: column;
+                            margin: 16px 0;
+                        }
                     }
                 `}</style>
             </Layout>

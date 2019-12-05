@@ -85,7 +85,7 @@ const FooterActions = withTranslation("article")(({ t, contactLink }) => (
 
 const IBAN = withTranslation("contact")(({ t }) => (
     <div className="iban">
-        {t("bank_account.text")}
+        {t("bankAccount.text")}
         <style jsx>{`
             .iban {
                 text-align: center;
@@ -195,6 +195,7 @@ export const Markdown = ({ content, iban, ...other }) => {
                     font-weight: 500;
                     left: 24px;
                     position: absolute;
+                    line-height: 20px;
                 }
                 .markdown :global(.image-side-by-side) {
                     display: flex;
@@ -233,6 +234,7 @@ export const Markdown = ({ content, iban, ...other }) => {
                     font-weight: 500;
                     left: 24px;
                     position: absolute;
+                    line-height: 20px;
                 }
                 .dot {
                     width: 9px;
@@ -241,6 +243,36 @@ export const Markdown = ({ content, iban, ...other }) => {
                     background-color: #000;
                     display: block;
                     margin-top: 60px;
+                }
+                @media screen and (max-width: 992px) {
+                    .markdown {
+                        width: 100%;
+                        padding: 24px;
+                        box-sizing: border-box;
+                    }
+                    .markdown :global(.image-side-by-side) {
+                        width: 100%;
+                        margin: 0 0 48px;
+                        flex-direction: column;
+                    }
+                    .markdown :global(.image-side-by-side .left) {
+                        margin: 0 0 16px;
+                    }
+                    .markdown :global(.image-full) {
+                        width: 100%;
+                        margin: 0 0 48px;
+                    }
+                    .markdown :global(h1) {
+                        font-size: 30px;
+                        margin: 0 0 0;
+                        padding: 0;
+                        text-align: left;
+                    }
+                    .markdown :global(h3) {
+                        padding: 16px 0 0;
+                        text-align: left;
+                        font-size: 20px;
+                    }
                 }
             `}</style>
         </article>
@@ -277,6 +309,22 @@ export const NarrowMarkdown = ({ children }) => (
             .markdown :global(p) {
                 ${paragraphStyles}
                 width: 530px;
+            }
+
+            @media screen and (max-width: 992px) {
+                .markdown {
+                    margin: 0;
+                }
+                .markdown :global(h1) {
+                    width: 100%;
+                    padding: 48px 24px 0;
+                    box-sizing: border-box;
+                }
+                .markdown :global(p) {
+                    width: 100%;
+                    padding: 0 24px 36px;
+                    box-sizing: border-box;
+                }
             }
         `}</style>
     </article>

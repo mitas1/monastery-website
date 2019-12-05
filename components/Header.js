@@ -1,14 +1,12 @@
 import React from "react";
 import { withTranslation, Link } from "../lib/i18n";
-import { useRouter } from "next/router";
 
+import Menu, { NavLink } from "./Menu";
 import { LANGUAGES, LANGUAGES_LABELS } from "../constants";
 import { CONTENT_WIDTH } from "../constants";
 
-const Header = ({ addTopListener, t, i18n }) => {
+const Header = ({ addTopListener, t, i18n, handleDrawer }) => {
     const [isTop, setIsTop] = React.useState(false);
-
-    const { pathname } = useRouter(null);
 
     const handleScroll = () => {
         setIsTop(window.scrollY < 200);
@@ -26,6 +24,8 @@ const Header = ({ addTopListener, t, i18n }) => {
         }
     }, []);
 
+    const otherLanguage = LANGUAGES.filter((lang) => lang != i18n.language)[0];
+
     return (
         <div className={isTop ? "header-wrapper top" : "header-wrapper"}>
             <header className="header">
@@ -33,59 +33,29 @@ const Header = ({ addTopListener, t, i18n }) => {
                     <a className="title">benediktinky.sk</a>
                 </Link>
                 <nav className="menu">
-                    <Link href="/">
-                        <a
-                            className={
-                                pathname === "/" ? "link active" : "link"
-                            }
-                        >
-                            {t("home")}
-                        </a>
-                    </Link>
-                    <Link href="/offerings">
-                        <a
-                            className={
-                                pathname === "/offerings"
-                                    ? "link active"
-                                    : "link"
-                            }
-                        >
-                            {t("offerings")}
-                        </a>
-                    </Link>
-                    <Link href="/announcements">
-                        <a
-                            className={
-                                pathname === "/announcements"
-                                    ? "link active"
-                                    : "link"
-                            }
-                        >
-                            {t("announcements")}
-                        </a>
-                    </Link>
-                    <Link href="/contact">
-                        <a
-                            className={
-                                pathname === "/contact" ? "link active" : "link"
-                            }
-                        >
-                            {t("contact")}
-                        </a>
-                    </Link>
+                    <Menu t={t} inverse={isTop} />
                     <div className="spacer" />
                     {LANGUAGES.map((lang, key) => (
-                        <a
+                        <NavLink
                             key={key}
+                            inverse={isTop}
+                            active={lang === i18n.language}
                             onClick={() => i18n.changeLanguage(lang)}
-                            className={
-                                lang === i18n.language ? "link active" : "link"
-                            }
-                        >
-                            {LANGUAGES_LABELS[lang]}
-                        </a>
+                            label={LANGUAGES_LABELS[lang]}
+                        />
                     ))}
                 </nav>
+                <div className="smartphone-menu">
+                    <a className="smartphone-language"
+                        onClick={() => i18n.changeLanguage(otherLanguage)}>
+                        {LANGUAGES_LABELS[otherLanguage]}
+                    </a>
+                    <a
+                        onClick={handleDrawer}
+                    >
+                        <img src="/images/menu.svg"/>
+                    </a>
+                </div>
             </header>
             <style jsx>{`
                 .header-wrapper {
@@ -127,36 +97,38 @@ const Header = ({ addTopListener, t, i18n }) => {
                     font-size: 14px;
                     height: 80px;
                 }
-                .link {
-                    align-items: center;
-                    color: #666666;
-                    cursor: pointer;
-                    display: flex;
-                    font-family: "Roboto", sans-serif;
-                    font-weight: 500;
-                    height: 80px;
-                    padding: 0 18px;
-                    text-decoration: none;
-                    transition: color 0.5s ease;
-                }
-                .link.active {
-                    border-bottom: 1px solid #0c1a24;
-                    color: #000;
-                }
-                .top .link.active {
-                    border-bottom: 1px solid #fff;
-                }
-                .top .link {
-                    color: #fff;
-                }
-                .link:hover {
-                    color: #29d;
-                }
                 .spacer {
                     background-color: #ecedee;
                     height: 18px;
                     margin: 31px 10px;
                     width: 1px;
+                }
+                .smartphone-menu {
+                    display: none;
+                }
+                @media screen and (max-width: 992px) {
+                    .header {
+                        width: 100%;
+                        padding: 0 24px;
+                    }
+                    .menu {
+                        display: none;
+                    }
+                    .smartphone-menu {
+                        display: flex;
+                    }
+                    .smartphone-language {
+                        line-height: 24px;
+                        margin: 0 16px 0;
+                        padding: 0 16px;
+                        border-right: 1px solid rgba(0,0,0,.3);
+                    }
+                    .header-wrapper.top {
+                        background-color: #fff;
+                    }
+                    .top .title {
+                        color: #000;
+                    }
                 }
             `}</style>
         </div>

@@ -132,6 +132,42 @@ export default withTranslation("footer")(({ background, t }) => {
                     border-top: 1px solid rgba(255, 255, 255, 0.2);
                     color: rgba(255, 255, 255, 0.7);
                 }
+                @media screen and (max-width: 992px) {
+                    .footer-wrapper {
+                        width: 100%;
+                    }
+                    .footer-table {
+                        margin: 0;
+                        padding: 24px 0;
+                    }
+                    .row {
+                        flex-direction: column;
+                    }
+                    .heading {
+                        margin: 24px 24px 0 24px;
+                        font-size: 36px;
+                    }
+                    .subheading {
+                        font-size: 16px;
+                        margin: 0 0 8px;
+                    }
+                    .column {
+                        margin: 8px 24px 24px;
+                        border-right: none;
+                    }
+                    .footer-wrapper.bottom {
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: 16px 24px;
+                        height: auto;
+                        box-sizing: border-box;
+                        text-align: center;
+                    }
+                    .footer-wrapper.bottom span {
+                        margin: 0;
+                        padding: 0;
+                    }                
+                }
             `}</style>
         </footer>
     );

@@ -16,6 +16,15 @@ export const Heading = ({ title }) => (
                     padding: 0 0 20px 0;
                     text-align: center;
                 }
+                @media screen and (max-width: 992px) {
+                    .heading {
+                        text-align: left;
+                        padding: 24px;
+                        box-sizing: border-box;
+                        width: 100%;
+                        font-size: 35px;
+                    }
+                }
             `}
         </style>
     </h1>
@@ -29,6 +38,13 @@ export const Wrapper = ({ children }) => (
                 margin: 80px auto 0 auto;
                 padding: 80px 0 60px 0;
                 width: 600px;
+            }
+            @media screen and (max-width: 992px) {
+                .preamble-wrapper {
+                    margin: 0;
+                    padding: 80px 0 0;
+                    width: 100%;
+                }
             }
         `}</style>
     </div>
@@ -74,6 +90,20 @@ export default ({ title, text, author, img }) => (
             }
             .image {
                 width: ${CONTENT_WIDTH};
+            }
+            @media screen and (max-width: 992px) {
+                .image {
+                    width: 100%;
+                    padding: 24px;
+                    box-sizing: border-box;
+                }
+                .blockquote {
+                    width: 100%;
+                    padding: 0 24px;
+                    margin: 0;
+                    text-align: left;
+                    box-sizing: border-box;
+                }
             }
         `}</style>
     </div>

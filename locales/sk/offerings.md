@@ -7,7 +7,7 @@ preamble:
         organizujeme pre záujemcov s radov našich darcov duchovnú obnovu v našom
         kláštore.”
     author: Sestry benediktínky
-    img: /static/images/offerings.jpg
+    img: /images/offerings.jpg
 ---
 
 Kláštor najsvätejšej Bohorodičky bol založený v&nbsp;r.&nbsp;2006 Kláštorom
@@ -26,7 +26,7 @@ a&nbsp; raz za&nbsp;mesiac je&nbsp;na&nbsp;ich úmysel slúžená sv.&nbsp;omša
 > nedokončených častí stavby.”
 
 <div class="image-full">
-    <img src="/static/images/article01-1.jpg">
+    <img src="/images/article01-1.jpg">
     <p>Kláštor najsvätejšej Bohorodičky (Horné orešany)</p>
 </div>
 
@@ -81,11 +81,11 @@ a&nbsp;povolania.
 
 <div class="image-side-by-side">
     <div class="left">
-        <img src="/static/images/article01-2.jpg">
+        <img src="/images/article01-2.jpg">
         <p>Vonkajšia stavba</p>
     </div>
     <div class="right">
-        <img src="/static/images/article01-3.jpg">
+        <img src="/images/article01-3.jpg">
         <p>Interiér kostola</p>
     </div>
 </div>
@@ -114,7 +114,7 @@ na&nbsp;veci čo sú hore’ (porov. Kol 3,2), vychádza z&nbsp;Krista, ukrytéh
 v&nbsp;bohostánku.
 
 <div class="image-full">
-    <img src="/static/images/article01-4.jpg">
+    <img src="/images/article01-4.jpg">
     <p>Kláštor najsvätejšej Bohorodičky (Horné orešany)</p>
 </div>
 

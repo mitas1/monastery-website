@@ -5,7 +5,7 @@ preamble:
         „Čo je nám sladšie, najdrahší bratia, nad Pánov hlas, ktorý nás pozýva? Hľa svojou vernou 
         láskou nám Pán ukazuje cestu života.“
     author: Sv. Benedikt
-    img: /static/images/article01.jpg
+    img: /images/article01.jpg
 ---
 
 ## Najdôležitejšou prácou mníšok je uskutočňovať neustálu modlitbu v mene celého ľudstva.

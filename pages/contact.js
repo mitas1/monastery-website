@@ -32,7 +32,7 @@ const Contact = ({ t }) => (
         </Wrapper>
         <div className="column-wrapper">
             <div className="column">
-                <CircleIcon src="/static/images/location.svg" />
+                <CircleIcon src="/images/location.svg" />
                 <div className="column-content">
                     <Subheading text={t("address.title")} />
                     <p
@@ -48,14 +48,14 @@ const Contact = ({ t }) => (
                 </div>
             </div>
             <div className="column">
-                <CircleIcon src="/static/images/tel.svg" />
+                <CircleIcon src="/images/tel.svg" />
                 <div className="column-content">
                     <Subheading text={t("tel.title")} />
                     {t("tel.text")}
                 </div>
             </div>
             <div className="column">
-                <CircleIcon src="/static/images/mail.svg" />
+                <CircleIcon src="/images/mail.svg" />
                 <div className="column-content">
                     <Subheading text={t("email.title")} />
                     {t("email.text")}

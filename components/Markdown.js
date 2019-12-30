@@ -50,7 +50,7 @@ const FooterActions = withTranslation("article")(({ t, contactLink }) => (
         )}
         <Link href="/">
             <a className="link">
-                <img height={8} src="/static/images/arrow_back.svg" />
+                <img height={8} src="/images/arrow_back.svg" />
                 {t("arrowBack")}
             </a>
         </Link>
@@ -177,7 +177,7 @@ export const Markdown = ({ content, iban, ...other }) => {
                     width: 1150px;
                 }
                 .markdown :global(.image-full::before) {
-                    background-image: url("/static/images/gradient.png");
+                    background-image: url("/images/gradient.png");
                     background-repeat: repeat-x;
                     bottom: 0;
                     content: "";
@@ -204,7 +204,7 @@ export const Markdown = ({ content, iban, ...other }) => {
                     width: 1150px;
                 }
                 .markdown :global(.image-side-by-side div::before) {
-                    background-image: url("/static/images/gradient.png");
+                    background-image: url("/images/gradient.png");
                     background-repeat: repeat-x;
                     bottom: 0;
                     content: "";
@@ -265,7 +265,7 @@ export const NarrowMarkdown = ({ children }) => (
                 width: 400px;
             }
             .markdown :global(h1)::before {
-                background-image: url("/static/images/quote.svg");
+                background-image: url("/images/quote.svg");
                 background-repeat: no-repeat;
                 content: "";
                 display: block;

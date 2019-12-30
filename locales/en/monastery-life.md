@@ -5,7 +5,7 @@ preamble:
         “What, dear brothers, is sweeter than the voice of the Lord calling to us? See
         how the Lord in His love shows us the way of life.”
     author: St. Benedict
-    img: /static/images/article01.jpg
+    img: /images/article01.jpg
 ---
 
 ## The most important task of nuns is to pray constantly on behalf of all mankind.

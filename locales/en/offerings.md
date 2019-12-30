@@ -6,7 +6,7 @@ preamble:
         Holy Mass is celebrated for their intentions. We organize for those who are interested
         among our benefactors a spiritual renewal in our monastery twice a year.”
     author: The Benedictine sisters
-    img: /static/images/offerings.jpg
+    img: /images/offerings.jpg
 ---
 
 This monastery of the Most Holy Mother of God was founded in the year 2006 by
@@ -26,7 +26,7 @@ financially or with your prayers!
 > monastery"
 
 <div class="image-full">
-    <img src="/static/images/article01-1.jpg">
+    <img src="/images/article01-1.jpg">
     <p>The Monastery of the Most Holy Mother of God (Horne Oresany)</p>
 </div>
 
@@ -77,11 +77,11 @@ which is not his life but to return to his own world and vocation.
 
 <div class="image-side-by-side">
     <div class="left">
-        <img src="/static/images/article01-2.jpg">
+        <img src="/images/article01-2.jpg">
         <p>External composition</p>
     </div>
     <div class="right">
-        <img src="/static/images/article01-3.jpg">
+        <img src="/images/article01-3.jpg">
         <p>Interior of the Church</p>
     </div>
 </div>
@@ -108,7 +108,7 @@ dynamics of Christ&#39;s Resurrection. This light beam, which allows us to
 from Christ, hidden in the tabernacle.
 
 <div class="image-full">
-    <img src="/static/images/article01-4.jpg">
+    <img src="/images/article01-4.jpg">
     <p>The Monastery of the Most Holy Mother of God (Horne Oresany)</p>
 </div>
 

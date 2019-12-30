@@ -70,7 +70,7 @@ const ShortArticle = ({
                 display: flex;
                 align-self: center;
                 content: "";
-                background-image: url("/static/images/arrow.svg");
+                background-image: url("/images/arrow.svg");
                 background-repeat: no-repeat;
             }
         `}</style>
@@ -79,7 +79,7 @@ const ShortArticle = ({
 
 const ShortArticleWithAside = ({ t }) => (
     <article id="test" className="short-article-with-aside">
-        <img className="aside-image" src="/static/images/benedikt.jpg" />
+        <img className="aside-image" src="/images/benedikt.jpg" />
         <div className="wrapper">
             <Subheading text={t("shortArticleWithAside.subtitle")} />
             <h1 className="heading">

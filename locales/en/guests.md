@@ -5,7 +5,7 @@ preamble:
         “Find your delight in the LORD who will give you your heart’s desire. Commit your way to 
         the LORD; trust in him and he will act.”
     author: (Psalm 37:4-5)
-    img: /static/images/article02.jpg
+    img: /images/article02.jpg
 ---
 
 The modern world is afflicted by a lack of spiritual light; it is often deformed, unbalanced and

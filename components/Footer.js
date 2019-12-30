@@ -65,7 +65,7 @@ export default withTranslation("footer")(({ background, t }) => {
                     overflow: auto;
                 }
                 .footer-container.background {
-                    background-image: url("/static/images/footer.jpg");
+                    background-image: url("/images/footer.jpg");
                     background-size: cover;
                 }
                 .footer-wrapper {

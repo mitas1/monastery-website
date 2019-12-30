@@ -1,5 +1,5 @@
 .next/
 node_modules/
 out/
-static/locales
+public/static/locales/
 .env

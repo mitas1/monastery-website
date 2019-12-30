@@ -4,7 +4,7 @@ preamble:
     text: >
         „Poďte ku mne všetci, ktorí sa namáhate a ste preťažení, a ja vás posilním.”
     author: (Mt 11,28)
-    img: /static/images/offerings.jpg
+    img: /images/offerings.jpg
 ---
 
 ## Kláštor z pohľadu návštevníkov

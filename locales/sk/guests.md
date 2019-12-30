@@ -6,7 +6,7 @@ preamble:
         dôveruj, on sa už postará.“
 
     author: (Žalm 37,4-5)
-    img: /static/images/article02.jpg
+    img: /images/article02.jpg
 ---
 
 Dnešný svet je poznačený nedostatkom duchovného svetla a tepla, častokrát deformovaný, bez

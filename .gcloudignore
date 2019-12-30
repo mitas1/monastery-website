@@ -1,9 +1,5 @@
-.gitignore-style
 .gcloudignore
 .git
 .gitignore
-.next/
-node_modules/
-out/
-static/locales
-node_modules/
+#!include:.gitignore
+README.md

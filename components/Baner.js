@@ -12,7 +12,7 @@ const Baner = ({ t }) => (
             }}
             layers={[
                 {
-                    image: "/static/images/background.jpg",
+                    image: "/images/background.jpg",
                     amount: 0.2,
                     slowerScrollRate: true,
                 },
@@ -27,7 +27,7 @@ const Baner = ({ t }) => (
                 <Link href="/offerings">
                     <div className="offerings-button">
                         <span>{t("offerings.readMore")}</span>
-                        <img src="/static/images/arrow.svg" />
+                        <img src="/images/arrow.svg" />
                     </div>
                 </Link>
             </div>

@@ -4,7 +4,7 @@ preamble:
     text: >
         “Come to me, all you who are weary and burdened, and I will give you rest.”
     author: (Matthew 11:28)
-    img: /static/images/offerings.jpg
+    img: /images/offerings.jpg
 ---
 
 ## Kláštor z pohľadu návštevníkov

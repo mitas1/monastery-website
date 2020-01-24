@@ -145,7 +145,7 @@ desired contrast: flat roof, standalone oversized window, a bare gigantic wall
 of reinforced concentrate without any aperture or architectural element. It
 could have been a monastery courtyard according to the canon: symmetrical,
 balanced and harmonious; the beauty of perfection, a piece of paradise on earth
-- as it is classically defined. This one is uncomfortable: every day, we are
+as it is classically defined. This one is uncomfortable: every day, we are
 encouraged not to enclose ourselves in a romantic and idyllic corner, which is
 reserved and accessible only to those living in it; but take the world of today
 as it is: marked by a lack of spiritual light and heat, often deformed, without

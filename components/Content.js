@@ -3,12 +3,14 @@ import React from "react";
 import { CONTENT_WIDTH } from "../constants";
 
 export default ({ children }) => (
-    <div className={"content"}>
+    <div>
         {children}
         <style jsx>{`
-            .content {
-                width: ${CONTENT_WIDTH};
-                margin: 0 auto;
+            width: ${CONTENT_WIDTH};
+            margin: 0 auto;
+
+            @media screen and (max-width: 992px) {
+                width: 100%;
             }
         `}</style>
     </div>

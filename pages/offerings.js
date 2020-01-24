@@ -14,7 +14,7 @@ const Offerings = ({ t }) => (
 );
 
 Offerings.getInitialProps = async () => ({
-    namespacesRequired: ["contact", "offerings", "footer", "header"],
+    namespacesRequired: ["contact", "offerings", "footer", "header", "article"],
 });
 
 export default withTranslation("offerings")(Offerings);

@@ -35,6 +35,13 @@ const Announcement = ({ content }) => (
                 padding: 0 0 0 30px;
                 line-height: 1.8;
             }
+            @media screen and (max-width: 992px) {
+                .rich-text {
+                    width: 100%;
+                    padding: 24px;
+                    box-sizing: border-box;
+                }
+            }
         `}</style>
     </div>
 );
@@ -66,6 +73,12 @@ const Announcements = ({ t, item }) => {
                     color: #777;
                     font-size: 14px;
                     font-weight: 500;
+                }
+                @media screen and (max-width: 992px) {
+                    .date-wrapper {
+                        text-align: left;
+                        padding: 0 24px;
+                    }
                 }
             `}</style>
         </Layout>

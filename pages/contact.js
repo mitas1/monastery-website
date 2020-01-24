@@ -6,6 +6,7 @@ import { CONTENT_WIDTH } from "../constants";
 import { Subheading } from "../components/Markdown";
 import { Wrapper, Heading } from "../components/Preamble";
 import Layout from "../components/Layout";
+import Content from "../components/Content";
 
 const CircleIcon = ({ src }) => (
     <div className="wrapper">
@@ -43,8 +44,8 @@ const Contact = ({ t }) => (
                             }),
                         }}
                     />
-                    <Subheading text={t("bank_account.title")} />
-                    {t("bank_account.text")}
+                    <Subheading text={t("bankAccount.title")} />
+                    {t("bankAccount.text")}
                 </div>
             </div>
             <div className="column">
@@ -99,6 +100,22 @@ const Contact = ({ t }) => (
             }
             .map iframe {
                 border: 0;
+            }
+            @media screen and (max-width: 992px) {
+                .column-wrapper {
+                    width: 100%;
+                    flex-direction: column;
+                    padding: 24px;
+                }
+                .column {
+                    padding: 0 0 48px;
+                }
+                .map {
+                    width: 100%;
+                }
+                .map iframe {
+                    width: 100%;
+                }
             }
         `}</style>
     </Layout>

@@ -28,7 +28,7 @@ Currently the website is hosted via [Google Cloud](https://cloud.google.com/).
 To deploy the site run the following:
 
 ```sh
-$ gcloud app deploy
+$ gcloud app deploy --no-promote -v <tag>
 ```
 
 ## Development

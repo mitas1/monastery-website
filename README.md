@@ -7,25 +7,11 @@ The official website of the Benedictine monastery in Horné Orešany written in
 
 Make sure you have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed.
 
-## Development
-
-To install the dependencies:
-
-```sh
-$ npm install
-```
-
-To build and serve the site run:
-
-```sh
-$ npm run dev
-```
-
 ## Deployment
 
 Currently the website is hosted via [Google Cloud](https://cloud.google.com/).
 
-To deploy the site run the following:
+To deploy the app run the following:
 
 ```sh
 $ gcloud app deploy --no-promote -v <tag>
@@ -33,7 +19,7 @@ $ gcloud app deploy --no-promote -v <tag>
 
 ## Development
 
-To install the dependencies, type the following:
+Firstly, install the app dependencies:
 
 ```
 $ npm install

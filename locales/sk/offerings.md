@@ -1,4 +1,9 @@
 ---
+title: Zbierka na dokončenie kláštora | Benediktínky | SK
+metaDescription: >-
+    Ďakujeme za každý príspevok. Za našich dobrodincov sa každý deň modlíme a raz za mesiac je na
+    ich úmysel slúžená svätá omša. Dvakrát do roka organizujeme pre záujemcov s radov našich darcov
+    duchovnú.
 preamble:
     title: Zbierka na dokončenie exteriéru kláštora
     text: >

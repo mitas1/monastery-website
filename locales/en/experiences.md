@@ -1,4 +1,6 @@
 ---
+title: Experiences | Benedictines | SK
+metaDescription: Come to me, all you who are weary and burdened, and I will give you rest.
 preamble:
     title: Experiences
     text: >

@@ -1,9 +1,8 @@
-const webpack = require("webpack");
-const withCSS = require("@zeit/next-css");
+require('dotenv').config();
 
-module.exports = withCSS({
-    webpack: config => {
-        config.plugins.push(new webpack.EnvironmentPlugin(process.env));
-        return config;
-    },
-});
+module.exports = {
+    env: {
+        SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
+        SANITY_DATASET: process.env.SANITY_DATASET
+    }
+};

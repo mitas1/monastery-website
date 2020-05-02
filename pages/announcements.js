@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import moment from "moment";
 
 import sanity from "../lib/sanity";
@@ -51,6 +52,9 @@ const Announcements = ({ t, item }) => {
 
     return (
         <Layout>
+            <Head>
+                <title>{t('title')}</title>
+            </Head>
             <Wrapper>
                 <Heading title={t("heading")}></Heading>
                 <div className="date-wrapper">

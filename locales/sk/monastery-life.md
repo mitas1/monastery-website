@@ -1,8 +1,14 @@
 ---
+title:  Život v kláštore | Benediktínky | SK
+metaDescription: >-
+    Deň sa začína modlitbou o piatej. Modlitbami, omšou a osobným rozjímaním, je potom popretkávaný
+    až do večera. Čas majú mníšky vyčlenený aj na prácu v záhrade, kuchyni a na maľovanie paškálnych
+    sviec, ktoré sú hlavným zdrojom činnosti benediktínok. Denný režim má svoj pravidelný rytmus v
+    striedaní modlitby a práce, čo vychádza z tradície púštnych otcov.
 preamble:
     title: Život v kláštore
     text: >
-        „Čo je nám sladšie, najdrahší bratia, nad Pánov hlas, ktorý nás pozýva? Hľa svojou vernou 
+        „Čo je nám sladšie, najdrahší bratia, nad Pánov hlas, ktorý nás pozýva? Hľa svojou vernou
         láskou nám Pán ukazuje cestu života.“
     author: Sv. Benedikt
     img: /images/article01.jpg
@@ -10,19 +16,19 @@ preamble:
 
 ## Najdôležitejšou prácou mníšok je uskutočňovať neustálu modlitbu v mene celého ľudstva.
 
-Deň sa začína modlitbou o&nbsp;piatej. Modlitbami, omšou a&nbsp;osobným rozjímaním, je&nbsp;potom 
+Deň sa začína modlitbou o&nbsp;piatej. Modlitbami, omšou a&nbsp;osobným rozjímaním, je&nbsp;potom
 popretkávaný až do večera. Čas majú mníšky vyčlenený aj na&nbsp;prácu v&nbsp;záhrade, kuchyni
-a&nbsp;na&nbsp;maľovanie paškálnych sviec, ktoré sú hlavným zdrojom činnosti benediktínok. Denný 
-režim má svoj pravidelný rytmus v striedaní modlitby a&nbsp;práce, čo vychádza z&nbsp;tradície 
+a&nbsp;na&nbsp;maľovanie paškálnych sviec, ktoré sú hlavným zdrojom činnosti benediktínok. Denný
+režim má svoj pravidelný rytmus v striedaní modlitby a&nbsp;práce, čo vychádza z&nbsp;tradície
 púštnych otcov. Sv.&nbsp;Silván z&nbsp;Athosu vysvetľuje život mníchov takto:
 
-> “Svet verí, že&nbsp;mnísi sú jedna neužitočná rasa. Nechápe, že&nbsp;mních je&nbsp;ten, čo sa 
-> modlí za&nbsp;celý svet. Nevidí jeho modlitby a&nbsp;nevie s&nbsp;akým milosrdenstvom ich Pán 
-> prijíma. Mnísi vedú tvrdý boj proti žiadostivostiam a&nbsp;pre tento ich zápas sú milí Bohu. Pán 
-> je&nbsp;nám veľmi blízko, bližšie ako vzduch, čo dýchame. Vzduch vojde do&nbsp;tela a&nbsp;príde 
+> “Svet verí, že&nbsp;mnísi sú jedna neužitočná rasa. Nechápe, že&nbsp;mních je&nbsp;ten, čo sa
+> modlí za&nbsp;celý svet. Nevidí jeho modlitby a&nbsp;nevie s&nbsp;akým milosrdenstvom ich Pán
+> prijíma. Mnísi vedú tvrdý boj proti žiadostivostiam a&nbsp;pre tento ich zápas sú milí Bohu. Pán
+> je&nbsp;nám veľmi blízko, bližšie ako vzduch, čo dýchame. Vzduch vojde do&nbsp;tela a&nbsp;príde
 > až k&nbsp;srdcu, ale Pán je&nbsp;vo vnútri srdca človeka. Hľa, naša radosť: Pán je&nbsp;s&nbsp;
 > nami a&nbsp;v&nbsp;nás. Aj keď je&nbsp;mních zaneprázdnený pozemskými vecami (potrebnými na&nbsp;
-> zabezpečenie živobytia), po&nbsp;celý čas horí jeho duch láskou k&nbsp;Bohu. Tiež keď pracuje 
+> zabezpečenie živobytia), po&nbsp;celý čas horí jeho duch láskou k&nbsp;Bohu. Tiež keď pracuje
 > rukami, aj vtedy zostáva mysľou v&nbsp;Bohu. Mních upokoruje svoju dušu a&nbsp;pokorou ďaleko
 > vyháňa od&nbsp;seba nepriateľa a&nbsp;aj od&nbsp;tých, čo ho prosia o&nbsp;modlitby.”
 

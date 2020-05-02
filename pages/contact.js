@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 import { withTranslation } from "../lib/i18n";
 
@@ -6,7 +7,6 @@ import { CONTENT_WIDTH } from "../constants";
 import { Subheading } from "../components/Markdown";
 import { Wrapper, Heading } from "../components/Preamble";
 import Layout from "../components/Layout";
-import Content from "../components/Content";
 
 const CircleIcon = ({ src }) => (
     <div className="wrapper">
@@ -28,6 +28,9 @@ const CircleIcon = ({ src }) => (
 
 const Contact = ({ t }) => (
     <Layout>
+        <Head>
+            <title>{t('title')}</title>
+        </Head>
         <Wrapper>
             <Heading title={t("heading")} />
         </Wrapper>

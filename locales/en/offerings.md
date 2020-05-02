@@ -1,4 +1,9 @@
 ---
+title: Offerings for the completion of the monastery | Benedictines | SK
+metaDescription: >-
+    Thank you for each contribution. We pray for our benefactors daily and once a month a Holy Mass
+    is celebrated for their intentions. We organize for those who are interested among our
+    benefactors a spiritual renewal in our monastery twice a year.
 preamble:
     title: Offerings for the completion of the monastery building
     text: >
@@ -119,7 +124,7 @@ window open to heaven. In its center is situated the well, the symbol of Christ,
 as the Scripture says:“Streams of living water flow from deep within him.“ (John
 7:38). From the well – the source of life - cross-shaped four canals run through
 small channels, which, after crossing the stairway, visibly intersect the four
-sides of the Monastery to be gradually lost in the surrounding terrain: 
+sides of the Monastery to be gradually lost in the surrounding terrain:
 
 > “Now a river flowed out of Eden to water the garden, and from there it
 > branched into four headwaters.” (Genesis 2:10).

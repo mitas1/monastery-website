@@ -17,7 +17,7 @@
         "express": "^4.17.1",
         "html-react-parser": "^0.10.3",
         "markdown-it": "^10.0.0",
-        "moment": "^2.25.1",
+        "moment": "^2.25.3",
         "next": "^9.3.2",
         "next-i18next": "^3.0.1",
         "nprogress": "^0.2.0",

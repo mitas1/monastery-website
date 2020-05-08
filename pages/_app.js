@@ -28,7 +28,7 @@ class MyApp extends App {
                         href="https://fonts.googleapis.com/css?family=Martel:600,700,900|Roboto:300,300i,400,400i,500,700&display=swap"
                         rel="stylesheet"
                     />
-                    <meta name="keywords" content="Benediktínky, kláštor, Horné Orešany" />
+                    <meta name="keywords" content="benediktínky, kláštor, horné orešany, slovensko, monastery, benedictines, slovakia" />
                     <meta
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"

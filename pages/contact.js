@@ -109,6 +109,7 @@ const Contact = ({ t }) => (
                     width: 100%;
                     flex-direction: column;
                     padding: 24px;
+                    box-sizing: border-box;
                 }
                 .column {
                     padding: 0 0 48px;

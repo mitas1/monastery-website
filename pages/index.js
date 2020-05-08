@@ -1,5 +1,7 @@
 import React from "react";
+import Head from "next/head";
 import Link from "next/link";
+
 
 import { ParallaxProvider } from "react-scroll-parallax";
 
@@ -87,7 +89,7 @@ const ShortArticle = ({
 
 const ShortArticleWithAside = ({ t }) => (
     <article id="test" className="short-article-with-aside">
-        <img className="aside-image" src="/images/benedikt.jpg" />
+        <img className="aside-image" src="/images/benedikt.jpg" alt="Detail: Kopf des Hl. Benedikt, Fra Angelico" />
         <div className="wrapper">
             <Subheading text={t("shortArticleWithAside.subtitle")} />
             <h1 className="heading">
@@ -174,6 +176,10 @@ const ShortArticleWithAside = ({ t }) => (
 const Index = ({ t }) => {
     return (
         <ParallaxProvider>
+            <Head>
+                <title>{t('title')}</title>
+                <meta name="description" content={t('metaDescription')} />
+            </Head>
             <Layout
                 header={{ addTopListener: true }}
                 footer={{ background: true }}

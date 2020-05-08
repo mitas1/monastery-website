@@ -1,8 +1,14 @@
 ---
+title: Prijíjmanie hostí | Benediktínky | SK
+metaDescription: >-
+    Kláštor umožňuje prijať hostí, tzn. kohokoľvek, kto túži prehĺbiť svoj vzťah s Bohom, zúčastniť
+    sa našej liturgie, porozprávať sa alebo odpočinúť si v tichu. S Božou pomocou sa nám skrze
+    našich dobrodincov podarilo dostavať celú hosťovskú časť. Dokončená časť kláštora už dnes
+    umožňuje prijímať hostí, ktorí k nám prichádzajú.
 preamble:
     title: Prijíjmanie hostí
     text: >
-        „Hľadaj radosť v Pánovi a dá ti, za čím túži tvoje srdce. Pánovi zver svoje cesty a jemu 
+        „Hľadaj radosť v Pánovi a dá ti, za čím túži tvoje srdce. Pánovi zver svoje cesty a jemu
         dôveruj, on sa už postará.“
 
     author: (Žalm 37,4-5)

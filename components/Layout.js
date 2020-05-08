@@ -1,13 +1,9 @@
 import React from "react";
-
 import Drawer from "@material/react-drawer";
-
 
 import Header from "../components/Header";
 import Footer from "./Footer";
 import Menu from "./Menu";
-
-import "@material/react-drawer/dist/drawer.css";
 
 export default ({ children, header, footer }) => {
     const [open, setOpen] = React.useState(false);

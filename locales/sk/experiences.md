@@ -1,4 +1,6 @@
 ---
+title: Skúsenosti | Benediktínky | SK
+metaDescription: Poďte ku mne všetci, ktorí sa namáhate a ste preťažení, a ja vás posilním.
 preamble:
     title: Skúsenosti
     text: >
@@ -35,9 +37,9 @@ preamble:
 > „Keď som prvýkrát počula o kláštore v Orešanoch, absolútne sa mi tam nechcelo ísť. Ale keď som
 > počula skúsenosti mojich kamarátok, tak ma to tam začalo veľmi lákať. „Pobyt v kláštore”
 > bol veľmi zvláštny. Prinieslo mi to veľký boj do srdca, ktorý som nechápala. Bol tam neskutočný
-> pokoj. Prednášky boli veľmi zaujímavé a&nbsp;pútavé. Veci, ktoré by som chcela, aby mali k nim 
-> ľudia prístup aj bežne v&nbsp;kostoloch. Aby o tom kňazi viac rozprávali v kostoloch. Vďaka Bohu 
-> za sestričky. Sestričky sú veľmi milé, radi sa smejú a sú super kuchárky. Vôbec nie sú také, ako 
+> pokoj. Prednášky boli veľmi zaujímavé a&nbsp;pútavé. Veci, ktoré by som chcela, aby mali k nim
+> ľudia prístup aj bežne v&nbsp;kostoloch. Aby o tom kňazi viac rozprávali v kostoloch. Vďaka Bohu
+> za sestričky. Sestričky sú veľmi milé, radi sa smejú a sú super kuchárky. Vôbec nie sú také, ako
 > ich vníma svet, svätuškárky v sukniach, ktoré kľačia iba na kolenách.”
 
 ### Darina
@@ -49,9 +51,9 @@ preamble:
 
 ### Jana
 
-> „Duchovna obnova na tému „Umenie rozlišovať“ u sestričiek benediktínok v Horných 
-> Orešanoch bola presne tým, čo som v danom momente pre svoj život potrebovala počuť. Prekvapila 
-> ma hĺbka analýzy krátkeho vybraného úryvku z Božieho slova (Gn 1, 1-5), ktoré sme verš po verši 
+> „Duchovna obnova na tému „Umenie rozlišovať“ u sestričiek benediktínok v Horných
+> Orešanoch bola presne tým, čo som v danom momente pre svoj život potrebovala počuť. Prekvapila
+> ma hĺbka analýzy krátkeho vybraného úryvku z Božieho slova (Gn 1, 1-5), ktoré sme verš po verši
 > dôkladné rozluskli. Napriek tomu, že kniha Genezis patri k mojim obľúbeným, nikdy predtým som si
 > neuvedomila, aké dôležité veci mi hovoria do života hneď jej prvé verše :) Veľmi mi pomohlo aj
 > následné praktické cvičenie - sebaanalýza pred eucharistickým Ježišom. Vďaka za tuto službu!“

@@ -41,11 +41,8 @@ export async function getStaticPaths({ locales }) {
             `${process.cwd()}/locales/${locale}/`,
             'utf-8'
         );
-        const markdownFiles = files.filter((fn) => fn.endsWith('.md'));
-
         files.forEach((file) => {
             if (file.endsWith('.md')) {
-                console.log(getSlug(file));
                 paths.push({
                     locale,
                     params: { slug: getSlug(file) },

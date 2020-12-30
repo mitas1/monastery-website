@@ -91,7 +91,7 @@ const FooterActions = ({ contactLink }) => {
 const IBAN = () => {
     return (
         <div className="iban">
-            {t('bankAccount.text')}
+            IBAN: SK80 1111 0000 0066 2697 3004
             <style jsx>{`
                 .iban {
                     text-align: center;

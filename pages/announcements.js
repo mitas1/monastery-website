@@ -15,9 +15,9 @@ const Announcement = ({ content }) => (
         {content && <BlockContent blocks={content} />}
         <style jsx>{`
             .rich-text {
-                width: 600px;
+                width: 586px;
                 margin: 0 auto;
-                line-height: 1.5;
+                line-height: 1.8;
             }
             .rich-text :global(p) {
                 margin: 16px 0;
@@ -48,10 +48,10 @@ const Announcement = ({ content }) => (
     </div>
 );
 
-const Announcements = ({ item }) => {
-    const { t } = useTranslation('common');
+const Announcements = ({ publishedAt, author, body }) => {
+    const { t } = useTranslation('announcements');
 
-    const date = moment(item.publishedAt).format('D. MMMM YYYY');
+    const date = moment(publishedAt).format('D. MMMM YYYY');
 
     return (
         <Layout>
@@ -63,11 +63,9 @@ const Announcements = ({ item }) => {
                 <div className="date-wrapper">
                     Aktualizované: <strong>{date}</strong>
                     <br />
-                    {item.author && (
-                        <span className="author">{item.author.name}</span>
-                    )}
+                    {author && <span className="author">{author.name}</span>}
                 </div>
-                <Announcement content={item.body} />
+                <Announcement content={body} />
             </Wrapper>
             <style jsx>{`
                 .date-wrapper {
@@ -92,17 +90,17 @@ const Announcements = ({ item }) => {
     );
 };
 
-Announcements.getInitialProps = async () => {
+export async function getStaticProps() {
     return {
-        item: await sanity.fetch(`
+        props: await sanity.fetch(`
         *[_type == "announcement"]{
             title,
             _id,
             publishedAt,
             author->{name},
             body
-          } | order(_createdAt desc) [0]`),
+          } | order(publishedAt desc) [0]`),
     };
-};
+}
 
 export default Announcements;

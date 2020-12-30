@@ -3,6 +3,7 @@
     "defaultLocale": "en",
     "pages": {
         "*": ["common"],
+        "/announcements": ["announcements"],
         "/contact": ["contact"],
         "/": ["index"]
     }

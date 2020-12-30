@@ -4,6 +4,7 @@ metaDescription: >-
     Thank you for each contribution. We pray for our benefactors daily and once a month a Holy Mass
     is celebrated for their intentions. We organize for those who are interested among our
     benefactors a spiritual renewal in our monastery twice a year.
+showIban: true
 preamble:
     title: Offerings for the completion of the monastery building
     text: >

@@ -53,12 +53,11 @@ const Header = ({ addTopListener, handleDrawer }) => {
                     ))}
                 </nav>
                 <div className="smartphone-menu">
-                    <a
-                        className="smartphone-language"
-                        onClick={() => i18n.changeLanguage(otherLanguage)}
-                    >
-                        {LANGUAGES_LABELS[otherLanguage]}
-                    </a>
+                    <Link href="/" locale={otherLanguage}>
+                        <a className="smartphone-language">
+                            {LANGUAGES_LABELS[otherLanguage]}
+                        </a>
+                    </Link>
                     <a onClick={handleDrawer}>
                         <img src="/images/menu.svg" />
                     </a>
@@ -125,6 +124,8 @@ const Header = ({ addTopListener, handleDrawer }) => {
                         display: flex;
                     }
                     .smartphone-language {
+                        text-decoration: none;
+                        color: #000;
                         line-height: 24px;
                         margin: 0 16px 0;
                         padding: 0 16px;

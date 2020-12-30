@@ -1,6 +1,4 @@
-import React from "react";
-
-import { CONTENT_WIDTH } from "../constants";
+import { CONTENT_WIDTH } from '../constants';
 
 export const Heading = ({ title }) => (
     <h1 className="heading">
@@ -9,7 +7,7 @@ export const Heading = ({ title }) => (
             {`
                 .heading {
                     display: block;
-                    font-family: "Martel", serif;
+                    font-family: 'Martel', serif;
                     font-size: 50px;
                     font-weight: 700;
                     line-height: 1.5;

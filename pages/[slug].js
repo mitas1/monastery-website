@@ -14,7 +14,7 @@ const Article = ({ data, content }) => {
                 <title>{data.title}</title>
                 <meta name="description" content={data.metaDescription} />
             </Head>
-            <CArticle content={content} preamble={data.preamble} />
+            <CArticle content={content} iban={data.showIban} preamble={data.preamble} />
         </>
     );
 };

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
-
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
 
 import { CONTENT_WIDTH } from '../constants';

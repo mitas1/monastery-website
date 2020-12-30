@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-
 import useTranslation from 'next-translate/useTranslation';
 
 const MENU_ITEMS = [
@@ -99,7 +98,9 @@ export const NavLink = ({
 export default ({ smartphone, inverse }) => {
     const { t } = useTranslation('common');
 
-    const { pathname } = useRouter(null);
+    const {
+        asPath
+    } = useRouter();
 
     return (
         <div className={`${smartphone && 'smartphone'} menu`}>
@@ -110,7 +111,7 @@ export default ({ smartphone, inverse }) => {
                     key={index}
                     small={smartphone}
                     href={item.href}
-                    active={pathname === item.href}
+                    active={asPath === item.href}
                     label={t(`menu.${item.tKey}`)}
                 />
             ))}

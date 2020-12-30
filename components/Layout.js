@@ -1,8 +1,8 @@
 import React from 'react';
 import Drawer from '@material/react-drawer';
 
-import Header from '../components/Header';
 import Footer from './Footer';
+import Header from '../components/Header';
 import Menu from './Menu';
 
 import { CONTENT_WIDTH } from '../constants';

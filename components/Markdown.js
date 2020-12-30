@@ -1,5 +1,6 @@
-import Parser from "html-react-parser";
-import { withTranslation, Link } from "../lib/i18n";
+import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
+import useTranslation from 'next-translate/useTranslation';
 
 const subHeadingStyles = `
     color: rgb(150, 150, 150);
@@ -24,7 +25,7 @@ export const Subheading = ({ text, inline }) => (
         <style jsx>{`
             .subheading {
                 ${subHeadingStyles};
-                ${inline ? "display: inline;" : ""}
+                ${inline ? 'display: inline;' : ''}
             }
         `}</style>
     </div>
@@ -41,73 +42,79 @@ export const Paragraph = ({ children }) => (
     </p>
 );
 
-const FooterActions = withTranslation("article")(({ t, contactLink }) => (
-    <div className="footer-actions">
-        {contactLink && (
-            <Link href="/contact">
-                <a className="button-link">{t("linkFooter")}</a>
-            </Link>
-        )}
-        <Link href="/">
-            <a className="link">
-                <img height={8} src="/images/arrow_back.svg" />
-                {t("arrowBack")}
-            </a>
-        </Link>
-        <style jsx>
-            {`
-                .footer-actions {
-                    margin: 70px 0 80px 0;
-                }
-                .button-link {
-                    background-color: #006cb9;
-                    border-radius: 3px;
-                    color: #fff;
-                    font-size: 15px;
-                    font-weight: 500;
-                    margin: 0 50px 0 0;
-                    padding: 24px 45px;
-                    text-decoration: none;
-                }
-                .link {
-                    color: #006cb9;
-                    font-size: 15px;
-                    font-weight: 400;
-                    text-decoration: none;
-                }
-                .link img {
-                    margin: 0 18px 0 0;
-                }
-            `}
-        </style>
-    </div>
-));
+const FooterActions = ({ contactLink }) => {
+    const { t } = useTranslation('common');
 
-const IBAN = withTranslation("contact")(({ t }) => (
-    <div className="iban">
-        {t("bankAccount.text")}
-        <style jsx>{`
-            .iban {
-                text-align: center;
-                font-family: "Martel", serif;
-                font-size: 24px;
-                font-weight: 600;
-            }
-        `}</style>
-    </div>
-));
+    return (
+        <div className="footer-actions">
+            {contactLink && (
+                <Link href="/contact">
+                    <a className="button-link">{t('linkFooter')}</a>
+                </Link>
+            )}
+            <Link href="/">
+                <a className="link">
+                    <img height={8} src="/images/arrow_back.svg" />
+                    {t('arrowBack')}
+                </a>
+            </Link>
+            <style jsx>
+                {`
+                    .footer-actions {
+                        margin: 70px 0 80px 0;
+                    }
+                    .button-link {
+                        background-color: #006cb9;
+                        border-radius: 3px;
+                        color: #fff;
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin: 0 50px 0 0;
+                        padding: 24px 45px;
+                        text-decoration: none;
+                    }
+                    .link {
+                        color: #006cb9;
+                        font-size: 15px;
+                        font-weight: 400;
+                        text-decoration: none;
+                    }
+                    .link img {
+                        margin: 0 18px 0 0;
+                    }
+                `}
+            </style>
+        </div>
+    );
+};
+
+const IBAN = () => {
+    return (
+        <div className="iban">
+            IBAN: SK80 1111 0000 0066 2697 3004
+            <style jsx>{`
+                .iban {
+                    text-align: center;
+                    font-family: 'Martel', serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            `}</style>
+        </div>
+    );
+};
 
 export const Markdown = ({ content, iban, ...other }) => {
     return (
         <article className="markdown">
-            {Parser(content)}
+            <ReactMarkdown escapeHtml={false} source={content} />
             {iban && <IBAN />}
             <div className="dot" />
-            <FooterActions {...other}/>
+            <FooterActions {...other} />
             <style jsx>{`
                 .markdown {
                     background-color: #fff;
-                    font-family: "Roboto", sans-serif;
+                    font-family: 'Roboto', sans-serif;
                     font-size: 17px;
                     font-weight: 300;
                     line-height: 26px;
@@ -117,14 +124,14 @@ export const Markdown = ({ content, iban, ...other }) => {
                     width: 640px;
                 }
                 .markdown :global(p) {
-                    font-family: "Roboto", sans-serif;
+                    font-family: 'Roboto', sans-serif;
                     margin-bottom: 26px;
                     line-height: 26px;
                 }
                 .markdown :global(> p:first-of-type::first-letter) {
                     display: block;
                     float: left;
-                    font-family: "Martel", serif;
+                    font-family: 'Martel', serif;
                     font-size: 50px;
                     font-weight: 400;
                     padding-left: 3px;
@@ -134,7 +141,7 @@ export const Markdown = ({ content, iban, ...other }) => {
                 }
                 .markdown :global(h1) {
                     display: block;
-                    font-family: "Martel", serif;
+                    font-family: 'Martel', serif;
                     font-size: 40px;
                     font-weight: 600;
                     line-height: 1.5;
@@ -144,7 +151,7 @@ export const Markdown = ({ content, iban, ...other }) => {
                 }
                 .markdown :global(h2) {
                     display: block;
-                    font-family: "Martel", serif;
+                    font-family: 'Martel', serif;
                     font-size: 23px;
                     font-weight: 400;
                     line-height: 1.5;
@@ -154,7 +161,7 @@ export const Markdown = ({ content, iban, ...other }) => {
                 .markdown :global(h3) {
                     color: #575757;
                     display: block;
-                    font-family: "Roboto", serif;
+                    font-family: 'Roboto', serif;
                     font-size: 13px;
                     font-weight: 500;
                     line-height: 1.5;
@@ -177,10 +184,10 @@ export const Markdown = ({ content, iban, ...other }) => {
                     width: 1150px;
                 }
                 .markdown :global(.image-full::before) {
-                    background-image: url("/images/gradient.png");
+                    background-image: url('/images/gradient.png');
                     background-repeat: repeat-x;
                     bottom: 0;
-                    content: "";
+                    content: '';
                     height: 82px;
                     position: absolute;
                     width: 100%;
@@ -205,10 +212,10 @@ export const Markdown = ({ content, iban, ...other }) => {
                     width: 1150px;
                 }
                 .markdown :global(.image-side-by-side div::before) {
-                    background-image: url("/images/gradient.png");
+                    background-image: url('/images/gradient.png');
                     background-repeat: repeat-x;
                     bottom: 0;
-                    content: "";
+                    content: '';
                     height: 82px;
                     position: absolute;
                     width: 100%;
@@ -279,16 +286,16 @@ export const Markdown = ({ content, iban, ...other }) => {
     );
 };
 
-export const NarrowMarkdown = ({ children }) => (
+export const NarrowMarkdown = ({ content }) => (
     <article className="markdown">
-        {Parser(children)}
+        <ReactMarkdown escapeHtml={false} source={content} />
         <style jsx>{`
             .markdown {
                 margin: 0 0 130px 390px;
             }
             .markdown :global(h1) {
                 display: block;
-                font-family: "Martel", serif;
+                font-family: 'Martel', serif;
                 font-size: 33px;
                 font-weight: 700;
                 line-height: 1.5;
@@ -297,9 +304,9 @@ export const NarrowMarkdown = ({ children }) => (
                 width: 400px;
             }
             .markdown :global(h1)::before {
-                background-image: url("/images/quote.svg");
+                background-image: url('/images/quote.svg');
                 background-repeat: no-repeat;
-                content: "";
+                content: '';
                 display: block;
                 height: 60px;
                 margin: 4px 0 0 -60px;

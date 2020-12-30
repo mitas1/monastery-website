@@ -1,11 +1,27 @@
-import React from "react";
-import Drawer from "@material/react-drawer";
+import React from 'react';
+import Drawer from '@material/react-drawer';
 
-import Header from "../components/Header";
-import Footer from "./Footer";
-import Menu from "./Menu";
+import Footer from './Footer';
+import Header from '../components/Header';
+import Menu from './Menu';
 
-export default ({ children, header, footer }) => {
+import { CONTENT_WIDTH } from '../constants';
+
+export const Content = ({ children }) => (
+    <div>
+        {children}
+        <style jsx>{`
+            width: ${CONTENT_WIDTH};
+            margin: 0 auto;
+
+            @media screen and (max-width: 992px) {
+                width: 100%;
+            }
+        `}</style>
+    </div>
+);
+
+export const Layout = ({ children, header, footer }) => {
     const [open, setOpen] = React.useState(false);
 
     return (
@@ -40,7 +56,7 @@ export default ({ children, header, footer }) => {
                     }
                     body {
                         background: #fafafa;
-                        font-family: "Roboto", sans-serif;
+                        font-family: 'Roboto', sans-serif;
                     }
                     #nprogress {
                         pointer-events: none;

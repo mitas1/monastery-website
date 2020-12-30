@@ -1,22 +1,23 @@
-import React from "react";
-import Head from "next/head";
-import moment from "moment";
+import React from 'react';
+import Head from 'next/head';
+import moment from 'moment';
 
-import sanity from "../lib/sanity";
-import { withTranslation } from "../lib/i18n";
+import useTranslation from 'next-translate/useTranslation';
 
-import { Wrapper, Heading } from "../components/Preamble";
-import Layout from "../components/Layout";
-import BlockContent from "@sanity/block-content-to-react";
+import sanity from '../lib/sanity';
+
+import { Wrapper, Heading } from '../components/Preamble';
+import { Layout } from '../components/Layout';
+import BlockContent from '@sanity/block-content-to-react';
 
 const Announcement = ({ content }) => (
     <div className="rich-text">
         {content && <BlockContent blocks={content} />}
         <style jsx>{`
             .rich-text {
-                width: 600px;
+                width: 586px;
                 margin: 0 auto;
-                line-height: 1.5;
+                line-height: 1.8;
             }
             .rich-text :global(p) {
                 margin: 16px 0;
@@ -29,7 +30,7 @@ const Announcement = ({ content }) => (
             }
             .rich-text :global(h1),
             .rich-text :global(h2) {
-                font-family: "Martel", serif;
+                font-family: 'Martel', serif;
                 margin: 16px 0 8px;
             }
             .rich-text :global(ul) {
@@ -47,8 +48,10 @@ const Announcement = ({ content }) => (
     </div>
 );
 
-const Announcements = ({ t, item }) => {
-    const date = moment(item.publishedAt).format("D. MMMM YYYY");
+const Announcements = ({ publishedAt, author, body }) => {
+    const { t } = useTranslation('announcements');
+
+    const date = moment(publishedAt).format('D. MMMM YYYY');
 
     return (
         <Layout>
@@ -56,15 +59,13 @@ const Announcements = ({ t, item }) => {
                 <title>{t('title')}</title>
             </Head>
             <Wrapper>
-                <Heading title={t("heading")}></Heading>
+                <Heading title={t('heading')}></Heading>
                 <div className="date-wrapper">
                     Aktualizované: <strong>{date}</strong>
                     <br />
-                    {item.author && (
-                        <span className="author">{item.author.name}</span>
-                    )}
+                    {author && <span className="author">{author.name}</span>}
                 </div>
-                <Announcement content={item.body} />
+                <Announcement content={body} />
             </Wrapper>
             <style jsx>{`
                 .date-wrapper {
@@ -89,18 +90,17 @@ const Announcements = ({ t, item }) => {
     );
 };
 
-Announcements.getInitialProps = async () => {
+export async function getStaticProps() {
     return {
-        namespacesRequired: ["announcements", "footer", "header"],
-        item: await sanity.fetch(`
+        props: await sanity.fetch(`
         *[_type == "announcement"]{
             title,
             _id,
             publishedAt,
             author->{name},
             body
-          } | order(_createdAt desc) [0]`),
+          } | order(publishedAt desc) [0]`),
     };
-};
+}
 
-export default withTranslation("announcements")(Announcements);
+export default Announcements;

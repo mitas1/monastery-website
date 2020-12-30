@@ -1,8 +1,6 @@
-import React from "react";
-
-import { Markdown } from "../components/Markdown";
-import Layout from "../components/Layout";
-import Preamble from "../components/Preamble";
+import { Layout } from '../components/Layout';
+import { Markdown } from '../components/Markdown';
+import Preamble from '../components/Preamble';
 
 export default ({ content, preamble, ...other }) => (
     <Layout>

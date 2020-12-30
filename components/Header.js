@@ -1,11 +1,17 @@
-import React from "react";
-import { withTranslation, Link } from "../lib/i18n";
+import React from 'react';
+import Link from 'next/link';
+import useTranslation from 'next-translate/useTranslation';
+import { useRouter } from 'next/router';
 
-import Menu, { NavLink } from "./Menu";
-import { LANGUAGES, LANGUAGES_LABELS } from "../constants";
-import { CONTENT_WIDTH } from "../constants";
+import Menu, { NavLink } from './Menu';
+import { LANGUAGES, LANGUAGES_LABELS } from '../constants';
+import { CONTENT_WIDTH } from '../constants';
 
-const Header = ({ addTopListener, t, i18n, handleDrawer }) => {
+const Header = ({ addTopListener, handleDrawer }) => {
+    const { t, lang } = useTranslation('common');
+
+    const { pathname } = useRouter(null);
+
     const [isTop, setIsTop] = React.useState(false);
 
     const handleScroll = () => {
@@ -14,20 +20,20 @@ const Header = ({ addTopListener, t, i18n, handleDrawer }) => {
 
     React.useEffect(() => {
         if (addTopListener) {
-            document.addEventListener("scroll", handleScroll);
+            document.addEventListener('scroll', handleScroll);
 
             handleScroll();
 
             return () => {
-                document.removeEventListener("scroll", handleScroll);
+                document.removeEventListener('scroll', handleScroll);
             };
         }
     }, []);
 
-    const otherLanguage = LANGUAGES.filter((lang) => lang != i18n.language)[0];
+    const otherLanguage = LANGUAGES.filter((_lang) => _lang != lang)[0];
 
     return (
-        <div className={isTop ? "header-wrapper top" : "header-wrapper"}>
+        <div className={isTop ? 'header-wrapper top' : 'header-wrapper'}>
             <header className="header">
                 <Link href="/">
                     <a className="title">benediktinky.sk</a>
@@ -35,25 +41,25 @@ const Header = ({ addTopListener, t, i18n, handleDrawer }) => {
                 <nav className="menu">
                     <Menu t={t} inverse={isTop} />
                     <div className="spacer" />
-                    {LANGUAGES.map((lang, key) => (
+                    {LANGUAGES.map((_lang, key) => (
                         <NavLink
+                            href="/"
                             key={key}
                             inverse={isTop}
-                            active={lang === i18n.language}
-                            onClick={() => i18n.changeLanguage(lang)}
-                            label={LANGUAGES_LABELS[lang]}
+                            active={_lang === lang}
+                            locale={_lang}
+                            label={LANGUAGES_LABELS[_lang]}
                         />
                     ))}
                 </nav>
                 <div className="smartphone-menu">
-                    <a className="smartphone-language"
-                        onClick={() => i18n.changeLanguage(otherLanguage)}>
-                        {LANGUAGES_LABELS[otherLanguage]}
-                    </a>
-                    <a
-                        onClick={handleDrawer}
-                    >
-                        <img src="/images/menu.svg"/>
+                    <Link href="/" locale={otherLanguage}>
+                        <a className="smartphone-language">
+                            {LANGUAGES_LABELS[otherLanguage]}
+                        </a>
+                    </Link>
+                    <a onClick={handleDrawer}>
+                        <img src="/images/menu.svg" />
                     </a>
                 </div>
             </header>
@@ -86,7 +92,7 @@ const Header = ({ addTopListener, t, i18n, handleDrawer }) => {
                 }
                 .title {
                     color: #000;
-                    font-family: "Martel", serif;
+                    font-family: 'Martel', serif;
                     font-size: 16px;
                     font-weight: 900;
                     text-decoration: none;
@@ -118,10 +124,12 @@ const Header = ({ addTopListener, t, i18n, handleDrawer }) => {
                         display: flex;
                     }
                     .smartphone-language {
+                        text-decoration: none;
+                        color: #000;
                         line-height: 24px;
                         margin: 0 16px 0;
                         padding: 0 16px;
-                        border-right: 1px solid rgba(0,0,0,.3);
+                        border-right: 1px solid rgba(0, 0, 0, 0.3);
                     }
                     .header-wrapper.top {
                         background-color: #fff;
@@ -135,4 +143,4 @@ const Header = ({ addTopListener, t, i18n, handleDrawer }) => {
     );
 };
 
-export default withTranslation("header")(Header);
+export default Header;

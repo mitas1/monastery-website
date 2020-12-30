@@ -9,13 +9,7 @@ Make sure you have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs
 
 ## Deployment
 
-Currently the website is hosted via [Google Cloud](https://cloud.google.com/).
-
-To deploy the app run the following:
-
-```sh
-$ gcloud app deploy --no-promote -v <tag>
-```
+Deployed by [Vercel](https://vercel.com/).
 
 ## Development
 
@@ -23,13 +17,6 @@ Firstly, install the app dependencies:
 
 ```
 $ npm install
-```
-
-Create `.env` file and set the following variables:
-
-```
-SANITY_PROJECT_ID="<PROJECT_ID>"
-SANITY_DATASET="<DATASET>"
 ```
 
 To build and serve the app run:

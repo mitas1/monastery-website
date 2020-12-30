@@ -1,0 +1,108 @@
+{
+    "title": "Benedictines | SK",
+    "metaDescription": "We are a community of nuns following the Rule of Saint Benedict written 1600 years ago. We are searching for God and his mercy through the purification of the heart, work and sisterly love.",
+    "menu": {
+        "home": "Home",
+        "aboutUs": "About us",
+        "offerings": "Offerings",
+        "announcements": "Announcements",
+        "contact": "Contact"
+    },
+    "readMore": "Read more",
+    "arrowBack": "Back to home page",
+    "linkFooter": "Contact",
+    "footer": {
+        "title": "Divine Worship",
+        "official": "The official website of the Monastery of the Most Holy Mother of God (Horne Oresany)",
+        "workdays": {
+            "title": "Working day",
+            "elems": [
+                {
+                    "time": "05:00",
+                    "title": "Divinum Officium"
+                },
+                {
+                    "time": "06:00",
+                    "title": "Morning Prayers"
+                },
+                {
+                    "time": "variable",
+                    "title": "Tertia - 15m before the Holy Mass"
+                },
+                {
+                    "time": "variable",
+                    "title": "The Holy Mass"
+                },
+                {
+                    "time": "12:10",
+                    "title": "Sexta"
+                },
+                {
+                    "time": "12:30",
+                    "title": "Lunch"
+                },
+                {
+                    "time": "14:15",
+                    "title": "Nona, rosary"
+                },
+                {
+                    "time": "16:45",
+                    "title": "Vespers"
+                },
+                {
+                    "time": "19:00",
+                    "title": "Dinner"
+                },
+                {
+                    "time": "20:00",
+                    "title": "Completorium"
+                }
+            ]
+        },
+        "holidays": {
+            "title": "Holiday",
+            "elems": [
+                {
+                    "time": "05:30",
+                    "title": "Divinum Officium"
+                },
+                {
+                    "time": "07:00",
+                    "title": "Morning Prayers"
+                },
+                {
+                    "time": "08:30",
+                    "title": "Tertia"
+                },
+                {
+                    "time": "09:00",
+                    "title": "The Holy Mass"
+                },
+                {
+                    "time": "11:40",
+                    "title": "Sexta"
+                },
+                {
+                    "time": "12:00",
+                    "title": "Lunch"
+                },
+                {
+                    "time": "15:00",
+                    "title": "Nona, rosary including adoration"
+                },
+                {
+                    "time": "17:00",
+                    "title": "Vespers"
+                },
+                {
+                    "time": "18:30",
+                    "title": "Dinner"
+                },
+                {
+                    "time": "20:00",
+                    "title": "Completorium"
+                }
+            ]
+        }
+    }
+}

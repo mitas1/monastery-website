@@ -1,23 +1,23 @@
-import { useRouter } from "next/router";
-
-import { withTranslation, Link } from "../lib/i18n";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import useTranslation from 'next-translate/useTranslation';
 
 const MENU_ITEMS = [
     {
-        href: "/",
-        tKey: "home",
+        href: '/',
+        tKey: 'home',
     },
     {
-        href: "/offerings",
-        tKey: "offerings",
+        href: '/offerings',
+        tKey: 'offerings',
     },
     {
-        href: "/announcements",
-        tKey: "announcements",
+        href: '/announcements',
+        tKey: 'announcements',
     },
     {
-        href: "/contact",
-        tKey: "contact",
+        href: '/contact',
+        tKey: 'contact',
     },
 ];
 
@@ -25,51 +25,42 @@ export const NavLink = ({
     href,
     onClick,
     label,
-    tabIndex=0,
+    tabIndex = 0,
     active = false,
     inverse = false,
     small = false,
+    ...rest
 }) => {
-    let classes = ["link"];
+    let classes = ['link'];
 
     if (active) {
-        classes.push("active");
+        classes.push('active');
     }
 
     if (inverse) {
-        classes.push("inverse");
+        classes.push('inverse');
     }
 
     if (small) {
-        classes.push("small");
+        classes.push('small');
     }
 
-    classes = classes.join(" ");
+    classes = classes.join(' ');
 
     return (
         <>
-            {href ? (
-                <Link href={href}>
-                    <a tabIndex={tabIndex} className={classes}>
-                        {label}
-                    </a>
-                </Link>
-            ) : (
-                <a
-                    onClick={onClick}
-                    tabIndex={tabIndex}
-                    className={classes}
-                >
+            <Link href={href} {...rest}>
+                <a tabIndex={tabIndex} className={classes}>
                     {label}
                 </a>
-            )}
+            </Link>
             <style jsx>{`
                 .link {
                     align-items: center;
                     color: #666666;
                     cursor: pointer;
                     display: flex;
-                    font-family: "Roboto", sans-serif;
+                    font-family: 'Roboto', sans-serif;
                     font-weight: 500;
                     height: 80px;
                     padding: 0 18px;
@@ -104,11 +95,15 @@ export const NavLink = ({
     );
 };
 
-export default withTranslation("header")(({ t, smartphone, inverse }) => {
-    const { pathname } = useRouter(null);
+export default ({ smartphone, inverse }) => {
+    const { t } = useTranslation('common');
+
+    const {
+        asPath
+    } = useRouter();
 
     return (
-        <div className={`${smartphone && "smartphone"} menu`}>
+        <div className={`${smartphone && 'smartphone'} menu`}>
             {MENU_ITEMS.map((item, index) => (
                 <NavLink
                     inverse={inverse}
@@ -116,8 +111,8 @@ export default withTranslation("header")(({ t, smartphone, inverse }) => {
                     key={index}
                     small={smartphone}
                     href={item.href}
-                    active={pathname === item.href}
-                    label={t(item.tKey)}
+                    active={asPath === item.href}
+                    label={t(`menu.${item.tKey}`)}
                 />
             ))}
             <style jsx>{`
@@ -146,4 +141,4 @@ export default withTranslation("header")(({ t, smartphone, inverse }) => {
             `}</style>
         </div>
     );
-});
+};

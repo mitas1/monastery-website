@@ -1,25 +1,26 @@
-import React from "react";
-import { withTranslation } from "../lib/i18n";
+import useTranslation from 'next-translate/useTranslation';
 
-import { CONTENT_WIDTH } from "../constants";
+import { CONTENT_WIDTH } from '../constants';
 
-export default withTranslation("footer")(({ background, t }) => {
+export default ({ background }) => {
+    const { t } = useTranslation('common');
+
     return (
         <footer
             className={
-                background ? "footer-container background" : "footer-container"
+                background ? 'footer-container background' : 'footer-container'
             }
         >
             {background && (
                 <div className="footer-wrapper">
                     <div className="footer-table">
-                        <h1 className="heading">{t("title")}</h1>
+                        <h1 className="heading">{t('footer.title')}</h1>
                         <div className="row">
                             <div className="column">
                                 <h2 className="subheading">
-                                    {t("workdays.title")}
+                                    {t('footer.workdays.title')}
                                 </h2>
-                                {t("workdays.elems").map((elem, index) => (
+                                {t('footer.workdays.elems', {}, { returnObjects: true }).map((elem, index) => (
                                     <div className="inner-row" key={index}>
                                         <span className="time">
                                             {elem.time}
@@ -32,9 +33,9 @@ export default withTranslation("footer")(({ background, t }) => {
                             </div>
                             <div className="column">
                                 <h2 className="subheading">
-                                    {t("holidays.title")}
+                                    {t('footer.holidays.title')}
                                 </h2>
-                                {t("holidays.elems").map((elem, index) => (
+                                {t('footer.holidays.elems', {}, { returnObjects: true }).map((elem, index) => (
                                     <div className="inner-row" key={index}>
                                         <span className="time">
                                             {elem.time}
@@ -52,7 +53,7 @@ export default withTranslation("footer")(({ background, t }) => {
             <div className="footer">
                 <div className="footer-wrapper bottom">
                     <span>2018 / benediktinky.sk</span>
-                    <span>{t("official")}</span>
+                    <span>{t('footer.official')}</span>
                 </div>
             </div>
             <style jsx>{`
@@ -65,7 +66,7 @@ export default withTranslation("footer")(({ background, t }) => {
                     overflow: auto;
                 }
                 .footer-container.background {
-                    background-image: url("/images/footer.jpg");
+                    background-image: url('/images/footer.jpg');
                     background-size: cover;
                 }
                 .footer-wrapper {
@@ -87,11 +88,11 @@ export default withTranslation("footer")(({ background, t }) => {
                 }
                 .footer-table {
                     margin: 0 0 160px 390px;
-                    font-family: "Roboto", sans-serif;
+                    font-family: 'Roboto', sans-serif;
                 }
                 .heading {
                     color: #fff;
-                    font-family: "Martel", serif;
+                    font-family: 'Martel', serif;
                     font-size: 50px;
                     font-weight: 300;
                     margin: 130px 0 100px 0;
@@ -120,7 +121,7 @@ export default withTranslation("footer")(({ background, t }) => {
                 }
                 .time {
                     display: inline-block;
-                    font-family: "Roboto", sans-serif;
+                    font-family: 'Roboto', sans-serif;
                     font-size: 17px;
                     font-weight: 700;
                     width: 100px;
@@ -166,9 +167,9 @@ export default withTranslation("footer")(({ background, t }) => {
                     .footer-wrapper.bottom span {
                         margin: 0;
                         padding: 0;
-                    }                
+                    }
                 }
             `}</style>
         </footer>
     );
-});
+};

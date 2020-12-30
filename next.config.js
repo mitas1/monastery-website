@@ -1,8 +1,3 @@
-require('dotenv').config();
+const nextTranslate = require('next-translate');
 
-module.exports = {
-    env: {
-        SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
-        SANITY_DATASET: process.env.SANITY_DATASET
-    }
-};
+module.exports = nextTranslate();

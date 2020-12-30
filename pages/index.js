@@ -1,28 +1,16 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
+import fs from 'fs';
+import Head from 'next/head';
+import Link from 'next/link';
 
+import useTranslation from 'next-translate/useTranslation';
 
-import { ParallaxProvider } from "react-scroll-parallax";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
-import { withTranslation } from "../lib/i18n";
+import { NarrowMarkdown, Subheading, Paragraph } from '../components/Markdown';
+import Baner from '../components/Baner';
+import { Content, Layout } from '../components/Layout';
 
-import { NarrowMarkdown, Subheading, Paragraph } from "../components/Markdown";
-import Baner from "../components/Baner";
-import Content from "../components/Content";
-import Layout from "../components/Layout";
-
-const AboutUs = withTranslation("aboutus")(({ t }) => (
-    <NarrowMarkdown>{t("__content")}</NarrowMarkdown>
-));
-
-const ShortArticle = ({
-    title,
-    text,
-    number,
-    readMore,
-    pathname,
-}) => (
+const ShortArticle = ({ title, text, number, readMore, pathname }) => (
     <article className="short-article">
         <span className="number">{number}</span>
         <h1 className="heading">{title}</h1>
@@ -48,7 +36,7 @@ const ShortArticle = ({
             }
             .heading {
                 font-size: 28px;
-                font-family: "Martel", serif;
+                font-family: 'Martel', serif;
                 font-weight: 600;
                 margin: 0 0 8px;
             }
@@ -71,8 +59,8 @@ const ShortArticle = ({
                 margin: 0 0 0 8px;
                 display: flex;
                 align-self: center;
-                content: "";
-                background-image: url("/images/arrow.svg");
+                content: '';
+                background-image: url('/images/arrow.svg');
                 background-repeat: no-repeat;
             }
             @media screen and (max-width: 992px) {
@@ -89,27 +77,31 @@ const ShortArticle = ({
 
 const ShortArticleWithAside = ({ t }) => (
     <article id="test" className="short-article-with-aside">
-        <img className="aside-image" src="/images/benedikt.jpg" alt="Detail: Kopf des Hl. Benedikt, Fra Angelico" />
+        <img
+            className="aside-image"
+            src="/images/benedikt.jpg"
+            alt="Detail: Kopf des Hl. Benedikt, Fra Angelico"
+        />
         <div className="wrapper">
-            <Subheading text={t("shortArticleWithAside.subtitle")} />
+            <Subheading text={t('index:shortArticleWithAside.subtitle')} />
             <h1 className="heading">
-                {t("shortArticleWithAside.title")}
+                {t('index:shortArticleWithAside.title')}
             </h1>
             <div className="text">
-                <Paragraph>{t("shortArticleWithAside.text")}</Paragraph>
+                <Paragraph>{t('index:shortArticleWithAside.text')}</Paragraph>
             </div>
             <span className="title">
                 <Subheading
-                    text={t("shortArticleWithAside.acronym.title")}
+                    text={t('index:shortArticleWithAside.acronym.title')}
                     inline
                 />
                 <span className="acronym">
-                    {t("shortArticleWithAside.acronym.text")}
+                    {t('index:shortArticleWithAside.acronym.text')}
                 </span>
             </span>
         </div>
         <div className="image-title">
-            <i>{t("shortArticleWithAside.imageLabel")}</i>
+            <i>{t('index:shortArticleWithAside.imageLabel')}</i>
         </div>
         <style jsx>{`
             .short-article-with-aside {
@@ -119,7 +111,7 @@ const ShortArticleWithAside = ({ t }) => (
             }
             .heading {
                 display: block;
-                font-family: "Martel", serif;
+                font-family: 'Martel', serif;
                 font-weight: 600;
                 width: 300px;
                 line-height: 1;
@@ -173,7 +165,9 @@ const ShortArticleWithAside = ({ t }) => (
     </article>
 );
 
-const Index = ({ t }) => {
+const Index = ({ content }) => {
+    const { t } = useTranslation('common');
+
     return (
         <ParallaxProvider>
             <Head>
@@ -189,21 +183,33 @@ const Index = ({ t }) => {
                     <div className="short-articles-wrapper">
                         <ShortArticle
                             number="01"
-                            pathname="/monasterylife"
-                            {...t("article01")}
-                            readMore={t("readMore")}
+                            pathname="/monastery-life"
+                            {...t(
+                                'index:article01',
+                                {},
+                                { returnObjects: true }
+                            )}
+                            readMore={t('readMore')}
                         />
                         <ShortArticle
                             number="02"
                             pathname="/guests"
-                            {...t("article02")}
-                            readMore={t("readMore")}
+                            {...t(
+                                'index:article02',
+                                {},
+                                { returnObjects: true }
+                            )}
+                            readMore={t('readMore')}
                         />
                         <ShortArticle
                             number="03"
                             pathname="/experiences"
-                            {...t("article03")}
-                            readMore={t("readMore")}
+                            {...t(
+                                'index:article03',
+                                {},
+                                { returnObjects: true }
+                            )}
+                            readMore={t('readMore')}
                         />
                     </div>
                 </Content>
@@ -213,7 +219,7 @@ const Index = ({ t }) => {
                     </Content>
                 </div>
                 <Content>
-                    <AboutUs />
+                    <NarrowMarkdown content={content} />
                 </Content>
                 <style jsx>{`
                     .short-articles-wrapper {
@@ -235,8 +241,13 @@ const Index = ({ t }) => {
     );
 };
 
-Index.getInitialProps = async () => ({
-    namespacesRequired: ["index", "aboutus", "footer", "header"],
-});
+export async function getStaticProps({ locale }) {
+    const rawContent = fs.readFileSync(
+        `${process.cwd()}/locales/${locale}/aboutus.md`,
+        'utf8'
+    );
 
-export default withTranslation("index")(Index);
+    return { props: { content: rawContent } };
+}
+
+export default Index;

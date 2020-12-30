@@ -1,13 +1,14 @@
-import React from "react";
-import Head from "next/head";
-import moment from "moment";
+import React from 'react';
+import Head from 'next/head';
+import moment from 'moment';
 
-import sanity from "../lib/sanity";
-import { withTranslation } from "../lib/i18n";
+import useTranslation from 'next-translate/useTranslation';
 
-import { Wrapper, Heading } from "../components/Preamble";
-import Layout from "../components/Layout";
-import BlockContent from "@sanity/block-content-to-react";
+import sanity from '../lib/sanity';
+
+import { Wrapper, Heading } from '../components/Preamble';
+import { Layout } from '../components/Layout';
+import BlockContent from '@sanity/block-content-to-react';
 
 const Announcement = ({ content }) => (
     <div className="rich-text">
@@ -29,7 +30,7 @@ const Announcement = ({ content }) => (
             }
             .rich-text :global(h1),
             .rich-text :global(h2) {
-                font-family: "Martel", serif;
+                font-family: 'Martel', serif;
                 margin: 16px 0 8px;
             }
             .rich-text :global(ul) {
@@ -47,8 +48,10 @@ const Announcement = ({ content }) => (
     </div>
 );
 
-const Announcements = ({ t, item }) => {
-    const date = moment(item.publishedAt).format("D. MMMM YYYY");
+const Announcements = ({ item }) => {
+    const { t } = useTranslation('common');
+
+    const date = moment(item.publishedAt).format('D. MMMM YYYY');
 
     return (
         <Layout>
@@ -56,7 +59,7 @@ const Announcements = ({ t, item }) => {
                 <title>{t('title')}</title>
             </Head>
             <Wrapper>
-                <Heading title={t("heading")}></Heading>
+                <Heading title={t('heading')}></Heading>
                 <div className="date-wrapper">
                     Aktualizované: <strong>{date}</strong>
                     <br />
@@ -91,7 +94,6 @@ const Announcements = ({ t, item }) => {
 
 Announcements.getInitialProps = async () => {
     return {
-        namespacesRequired: ["announcements", "footer", "header"],
         item: await sanity.fetch(`
         *[_type == "announcement"]{
             title,
@@ -103,4 +105,4 @@ Announcements.getInitialProps = async () => {
     };
 };
 
-export default withTranslation("announcements")(Announcements);
+export default Announcements;

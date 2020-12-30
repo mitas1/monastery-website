@@ -1,12 +1,12 @@
-import React from "react";
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 
-import { withTranslation } from "../lib/i18n";
+import useTranslation from 'next-translate/useTranslation';
 
-import { CONTENT_WIDTH } from "../constants";
-import { Subheading } from "../components/Markdown";
-import { Wrapper, Heading } from "../components/Preamble";
-import Layout from "../components/Layout";
+import { CONTENT_WIDTH } from '../constants';
+import { Subheading } from '../components/Markdown';
+import { Wrapper, Heading } from '../components/Preamble';
+import { Layout } from '../components/Layout';
 
 const CircleIcon = ({ src }) => (
     <div className="wrapper">
@@ -26,107 +26,107 @@ const CircleIcon = ({ src }) => (
     </div>
 );
 
-const Contact = ({ t }) => (
-    <Layout>
-        <Head>
-            <title>{t('title')}</title>
-        </Head>
-        <Wrapper>
-            <Heading title={t("heading")} />
-        </Wrapper>
-        <div className="column-wrapper">
-            <div className="column">
-                <CircleIcon src="/images/location.svg" />
-                <div className="column-content">
-                    <Subheading text={t("address.title")} />
-                    <p
-                        className="paragraph"
-                        dangerouslySetInnerHTML={{
-                            __html: t("address.text", {
-                                escapeInterpolation: true,
-                            }),
-                        }}
-                    />
-                    <Subheading text={t("bankAccount.title")} />
-                    {t("bankAccount.text")}
+const Contact = () => {
+    const { t } = useTranslation('contact');
+
+    return (
+        <Layout>
+            <Head>
+                <title>{t('title')}</title>
+            </Head>
+            <Wrapper>
+                <Heading title={t('heading')} />
+            </Wrapper>
+            <div className="column-wrapper">
+                <div className="column">
+                    <CircleIcon src="/images/location.svg" />
+                    <div className="column-content">
+                        <Subheading text={t('address.title')} />
+                        <p
+                            className="paragraph"
+                            dangerouslySetInnerHTML={{
+                                __html: t('address.text', {
+                                    escapeInterpolation: true,
+                                }),
+                            }}
+                        />
+                        <Subheading text={t('bankAccount.title')} />
+                        {t('bankAccount.text')}
+                    </div>
+                </div>
+                <div className="column">
+                    <CircleIcon src="/images/tel.svg" />
+                    <div className="column-content">
+                        <Subheading text={t('tel.title')} />
+                        {t('tel.text')}
+                    </div>
+                </div>
+                <div className="column">
+                    <CircleIcon src="/images/mail.svg" />
+                    <div className="column-content">
+                        <Subheading text={t('email.title')} />
+                        {t('email.text')}
+                    </div>
                 </div>
             </div>
-            <div className="column">
-                <CircleIcon src="/images/tel.svg" />
-                <div className="column-content">
-                    <Subheading text={t("tel.title")} />
-                    {t("tel.text")}
-                </div>
+            <div className="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5290.7719196383005!2d17.448451!3d48.46831!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd34656e8201f7ce4!2zS2zDocWhdG9yIE5hanN2w6R0ZWrFoWVqIEJvaG9yb2RpxI1reQ!5e0!3m2!1sen!2ssk!4v1571779579264!5m2!1sen!2ssk"
+                    width={1150}
+                    height={550}
+                    frameBorder={0}
+                    allowFullScreen={true}
+                ></iframe>
             </div>
-            <div className="column">
-                <CircleIcon src="/images/mail.svg" />
-                <div className="column-content">
-                    <Subheading text={t("email.title")} />
-                    {t("email.text")}
-                </div>
-            </div>
-        </div>
-        <div className="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5290.7719196383005!2d17.448451!3d48.46831!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd34656e8201f7ce4!2zS2zDocWhdG9yIE5hanN2w6R0ZWrFoWVqIEJvaG9yb2RpxI1reQ!5e0!3m2!1sen!2ssk!4v1571779579264!5m2!1sen!2ssk"
-                width={1150}
-                height={550}
-                frameBorder={0}
-                allowFullScreen={true}
-            ></iframe>
-        </div>
-        <style jsx>{`
-            .column-wrapper {
-                display: flex;
-                width: ${CONTENT_WIDTH};
-                margin: 0 auto;
-            }
-            .column {
-                flex: 1;
-                display: block;
-            }
-            .column-content {
-                float: left;
-                width: 260px;
-                font-family: "Roboto", sans-serif;
-                font-size: 14px;
-                margin: 0 0 0 20px;
-            }
-            .paragraph {
-                margin: 0 0 20px;
-            }
-            .map {
-                background-color: #e5e3df;
-                margin: 40px auto;
-                height: 550px;
-                width: ${CONTENT_WIDTH};
-            }
-            .map iframe {
-                border: 0;
-            }
-            @media screen and (max-width: 992px) {
+            <style jsx>{`
                 .column-wrapper {
-                    width: 100%;
-                    flex-direction: column;
-                    padding: 24px;
-                    box-sizing: border-box;
+                    display: flex;
+                    width: ${CONTENT_WIDTH};
+                    margin: 0 auto;
                 }
                 .column {
-                    padding: 0 0 48px;
+                    flex: 1;
+                    display: block;
+                }
+                .column-content {
+                    float: left;
+                    width: 260px;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 14px;
+                    margin: 0 0 0 20px;
+                }
+                .paragraph {
+                    margin: 0 0 20px;
                 }
                 .map {
-                    width: 100%;
+                    background-color: #e5e3df;
+                    margin: 40px auto;
+                    height: 550px;
+                    width: ${CONTENT_WIDTH};
                 }
                 .map iframe {
-                    width: 100%;
+                    border: 0;
                 }
-            }
-        `}</style>
-    </Layout>
-);
+                @media screen and (max-width: 992px) {
+                    .column-wrapper {
+                        width: 100%;
+                        flex-direction: column;
+                        padding: 24px;
+                        box-sizing: border-box;
+                    }
+                    .column {
+                        padding: 0 0 48px;
+                    }
+                    .map {
+                        width: 100%;
+                    }
+                    .map iframe {
+                        width: 100%;
+                    }
+                }
+            `}</style>
+        </Layout>
+    );
+};
 
-Contact.getInitialProps = async () => ({
-    namespacesRequired: ["contact", "footer", "header"],
-});
-
-export default withTranslation("contact")(Contact);
+export default Contact;

@@ -6,8 +6,6 @@ import Router from "next/router";
 
 import "@material/react-drawer/dist/drawer.css";
 
-import { appWithTranslation } from "../lib/i18n";
-
 Router.events.on("routeChangeStart", url => {
     NProgress.start();
 });
@@ -40,4 +38,4 @@ class MyApp extends App {
     }
 }
 
-export default appWithTranslation(MyApp);
+export default MyApp;

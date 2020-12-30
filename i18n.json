@@ -1,0 +1,9 @@
+{
+    "locales": ["en", "sk"],
+    "defaultLocale": "en",
+    "pages": {
+        "*": ["common"],
+        "/contact": ["contact"],
+        "/": ["index"]
+    }
+}

@@ -1,5 +1,5 @@
 ---
-title: Skúsenosti | Benediktínky | SK
+title: Skúsenosti
 metaDescription: Poďte ku mne všetci, ktorí sa namáhate a ste preťažení, a ja vás posilním.
 preamble:
     title: Skúsenosti

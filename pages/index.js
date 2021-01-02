@@ -1,42 +1,114 @@
-import fs from 'fs';
-import Head from 'next/head';
-import Link from 'next/link';
+import css from "styled-jsx/css";
+import Image from "next/image";
+import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
-import useTranslation from 'next-translate/useTranslation';
+import Baner from "../components/Baner";
+import Button from "../components/Button";
+import sanity from "../lib/sanity";
+import { Content, ContentRight, Layout } from "../components/Layout";
+import { Heading } from "../components/Layout";
+import { paragraphStyles } from "../components/ArticleContent";
 
-import { ParallaxProvider } from 'react-scroll-parallax';
+import { SANITY_AVAILABLE_LOCALES, SANITY_ORDER_BY } from "../constants";
+import { formatDate } from "../utils";
 
-import { NarrowMarkdown, Subheading, Paragraph } from '../components/Markdown';
-import Baner from '../components/Baner';
-import { Content, Layout } from '../components/Layout';
+const styles = css`
+    .markdown {
+        padding: 48px 24px;
+    }
+    .markdown :global(p) {
+        ${paragraphStyles}
+        font-size: 20px;
+        font-weight: 300;
+    }
+    .markdown :global(h1) {
+        display: block;
+        font-family: "Martel", serif;
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 1.5;
+        position: relative;
+    }
+    @media screen and (min-width: 992px) {
+        .markdown {
+            width: 500px;
+            margin: 60px 0 130px 0;
+        }
+        .markdown :global(h1) {
+            max-width: 400px;
+        }
+        .markdown :global(h1)::before {
+            background-image: url("/images/quote.svg");
+            background-repeat: no-repeat;
+            content: "";
+            display: block;
+            height: 60px;
+            margin: 4px 0 0 -60px;
+            position: absolute;
+            width: 100px;
+        }
+    }
+`;
 
-const ShortArticle = ({ title, text, number, readMore, pathname }) => (
-    <article className="short-article">
-        <span className="number">{number}</span>
-        <h1 className="heading">{title}</h1>
-        <p className="text">{text}</p>
-        <Link href={pathname}>
+export const ShortArticle = ({
+    title,
+    text,
+    number,
+    author,
+    date,
+    readMore,
+    href,
+    inverse,
+}) => (
+    <article className={inverse ? "short-article inverse" : "short-article"}>
+        {number ? (
+            <span className="number">{number}</span>
+        ) : (
+            <span className="meta">
+                {formatDate(date)}
+                {author && (
+                    <>
+                        <span className="dot">·</span>
+                        {author}
+                    </>
+                )}
+            </span>
+        )}
+        <Link href={href}>
+            <a className="text-link">
+                <h1 className="heading">{title}</h1>
+                <p className="text">{text}</p>
+            </a>
+        </Link>
+        <Link href={href}>
             <a className="link">{readMore}</a>
         </Link>
         <style jsx>{`
+            .meta {
+                color: #777;
+                font-size: 14px;
+                line-height: 2;
+            }
+            .dot {
+                margin: 0 8px;
+            }
             .short-article {
                 color: #0c1a24;
                 flex: 1;
-                padding: 0 70px 0 50px;
-                margin: 50px 0 58px;
-                border-left: 1px dotted #979797;
+                padding: 0 24px 0 16px;
+                margin: 16px 0 24px;
             }
-            .short-article:first-child {
-                padding: 0 80px 0 16px;
-                border-left: none;
+            .short-article.inverse {
+                color: #fff;
             }
             .number {
                 font-size: 10px;
-                color: #757c81;
+                color: #848b90;
             }
             .heading {
                 font-size: 28px;
-                font-family: 'Martel', serif;
+                font-family: "Martel", serif;
                 font-weight: 600;
                 margin: 0 0 8px;
             }
@@ -47,11 +119,24 @@ const ShortArticle = ({ title, text, number, readMore, pathname }) => (
                 line-height: 30px;
                 padding: 0;
             }
+            .inverse .text {
+                color: #fff;
+            }
             .link {
                 margin: 26px 0;
                 color: #006cb9;
                 text-decoration: none;
                 display: flex;
+            }
+            .inverse .link {
+                color: #fff;
+            }
+            .text-link {
+                text-decoration: none;
+                color: #333;
+            }
+            .inverse .text-link {
+                color: #fff;
             }
             .link::after {
                 width: 25px;
@@ -59,15 +144,20 @@ const ShortArticle = ({ title, text, number, readMore, pathname }) => (
                 margin: 0 0 0 8px;
                 display: flex;
                 align-self: center;
-                content: '';
-                background-image: url('/images/arrow.svg');
+                content: "";
+                background-image: url("/images/arrow.svg");
                 background-repeat: no-repeat;
             }
-            @media screen and (max-width: 992px) {
-                .short-article,
+            @media screen and (min-width: 992px) {
+                .short-article {
+                    margin: 50px 0 58px;
+                    padding: 0 70px 0 50px;
+                    border-left: 1px dotted #979797;
+                    max-width: 33%;
+                    box-sizing: border-box;
+                }
                 .short-article:first-child {
-                    padding: 8px 24px;
-                    margin: 0;
+                    padding: 0 80px 0 16px;
                     border-left: none;
                 }
             }
@@ -75,179 +165,222 @@ const ShortArticle = ({ title, text, number, readMore, pathname }) => (
     </article>
 );
 
-const ShortArticleWithAside = ({ t }) => (
-    <article id="test" className="short-article-with-aside">
-        <img
-            className="aside-image"
-            src="/images/benedikt.jpg"
-            alt="Detail: Kopf des Hl. Benedikt, Fra Angelico"
-        />
-        <div className="wrapper">
-            <Subheading text={t('index:shortArticleWithAside.subtitle')} />
-            <h1 className="heading">
-                {t('index:shortArticleWithAside.title')}
-            </h1>
-            <div className="text">
-                <Paragraph>{t('index:shortArticleWithAside.text')}</Paragraph>
-            </div>
-            <span className="title">
-                <Subheading
-                    text={t('index:shortArticleWithAside.acronym.title')}
-                    inline
-                />
-                <span className="acronym">
-                    {t('index:shortArticleWithAside.acronym.text')}
-                </span>
-            </span>
-        </div>
-        <div className="image-title">
-            <i>{t('index:shortArticleWithAside.imageLabel')}</i>
-        </div>
+const Paragraph = ({ children }) => (
+    <p>
+        {children}
         <style jsx>{`
-            .short-article-with-aside {
-                background-color: #fafafa;
-                overflow: auto;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 1.6;
+            margin: 0 0 24px;
+            max-width: 450px;
+        `}</style>
+    </p>
+);
+
+const ShortArticleWithAside = ({ t }) => (
+    <section id="test" className="wrapper">
+        <aside className="image">
+            <Image
+                layout="fill"
+                objectFit="cover"
+                className="aside-image"
+                src="/images/benedikt.jpg"
+                alt="Detail: Kopf des Hl. Benedikt, Fra Angelico"
+            />
+        </aside>
+        <article className="article">
+            <Heading level={3} element="span">
+                {t("index:shortArticleWithAside.subtitle")}
+            </Heading>
+            <Heading level={1}>
+                {t("index:shortArticleWithAside.title")}
+            </Heading>
+            <Paragraph>{t("index:shortArticleWithAside.text")}</Paragraph>
+            <span className="title">
+                <Heading level={3} element="span">
+                    {t("index:shortArticleWithAside.acronym.title")}
+                </Heading>
+                <strong className="acronym">
+                    {t("index:shortArticleWithAside.acronym.text")}
+                </strong>
+            </span>
+            <div className="image-title">
+                <i>{t("index:shortArticleWithAside.imageLabel")}</i>
+            </div>
+        </article>
+
+        <style jsx>{`
+            .article {
+                padding: 48px 24px;
+            }
+            .image {
                 position: relative;
+                width: 100%;
+                height: 500px;
             }
-            .heading {
-                display: block;
-                font-family: 'Martel', serif;
-                font-weight: 600;
-                width: 300px;
-                line-height: 1;
-                font-size: 50px;
-                padding: 10px 0 10px;
+
+            .title > :global(h3) {
+                display: inline;
             }
-            .aside-image {
-                float: left;
-                width: 390px;
-            }
-            .wrapper {
-                padding: 90px 0 70px 114px;
-                overflow: hidden;
-            }
-            .text {
-                max-width: 420px;
-            }
-            .acronym {
-                margin: 0 0 0 20px;
-                font-size: 16px;
-                line-height: 20px;
-            }
+
             .image-title {
-                padding: 0 0 0 114px;
+                padding: 48px 0 0 0;
                 overflow: hidden;
                 font-size: 12px;
             }
-            @media screen and (max-width: 992px) {
-                .heading {
-                    width: 100%;
-                    padding: 0;
+            .acronym {
+                margin: 0 0 0 24px;
+            }
+
+            @media screen and (min-width: 992px) {
+                .article {
+                    padding: 90px 110px;
                 }
-                .aside-image {
-                    width: 100%;
-                }
-                .wrapper {
-                    padding: 48px 24px;
-                    float: left;
-                }
-                .title {
-                    display: none;
+                .image {
+                    width: 390px;
+                    height: 600px;
                 }
                 .image-title {
-                    display: none;
+                    padding: 64px 0 0 0;
                 }
-                .text {
-                    width: 100%;
+                .wrapper {
+                    display: flex;
                 }
             }
         `}</style>
-    </article>
+    </section>
 );
 
-const Index = ({ content }) => {
-    const { t } = useTranslation('common');
+export const ThreeColumnWrapper = ({ inverse, children }) => (
+    <div className={inverse ? "inverse wrapper" : "wrapper"}>
+        <Content>
+            <div className="content">{children}</div>
+        </Content>
+        <style jsx>{`
+            .wrapper {
+                padding: 24px;
+            }
+            .inverse.wrapper {
+                background: #222;
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+            }
+            @media screen and (min-width: 992px) {
+                .content {
+                    flex-direction: row;
+                }
+            }
+        `}</style>
+    </div>
+);
+
+const Index = ({ news }) => {
+    const { t } = useTranslation("common");
 
     return (
-        <ParallaxProvider>
-            <Head>
-                <title>{t('title')}</title>
-                <meta name="description" content={t('metaDescription')} />
-            </Head>
-            <Layout
-                header={{ addTopListener: true }}
-                footer={{ background: true }}
-            >
-                <Baner />
+        <Layout header={{ addTopListener: true }} footer={{ background: true }}>
+            <Baner />
+            {news && news.length > 0 && (
+                <>
+                    <ThreeColumnWrapper>
+                        {news.map(
+                            ({
+                                title,
+                                bodyPreview,
+                                author,
+                                publishedAt,
+                                slug,
+                                _id,
+                            }) => (
+                                <ShortArticle
+                                    key={_id}
+                                    date={publishedAt}
+                                    href={`/post/news/${slug.current}`}
+                                    title={title}
+                                    author={author}
+                                    text={bodyPreview}
+                                    readMore={t("readMore")}
+                                />
+                            )
+                        )}
+                    </ThreeColumnWrapper>
+                    {news.length > 3 && <div className="button">
+                        <Button href="/post/news">
+                            {t("index:news.button")}
+                        </Button>
+                    </div>}
+                </>
+            )}
+            <ThreeColumnWrapper inverse>
+                <ShortArticle
+                    inverse
+                    number="01"
+                    href="/monastery-life"
+                    {...t("index:article01", {}, { returnObjects: true })}
+                    readMore={t("readMore")}
+                />
+                <ShortArticle
+                    inverse
+                    number="02"
+                    href="/guests"
+                    {...t("index:article02", {}, { returnObjects: true })}
+                    readMore={t("readMore")}
+                />
+                <ShortArticle
+                    inverse
+                    number="03"
+                    href="/experiences"
+                    {...t("index:article03", {}, { returnObjects: true })}
+                    readMore={t("readMore")}
+                />
+            </ThreeColumnWrapper>
+            <div className="content-gray">
                 <Content>
-                    <div className="short-articles-wrapper">
-                        <ShortArticle
-                            number="01"
-                            pathname="/monastery-life"
-                            {...t(
-                                'index:article01',
-                                {},
-                                { returnObjects: true }
-                            )}
-                            readMore={t('readMore')}
-                        />
-                        <ShortArticle
-                            number="02"
-                            pathname="/guests"
-                            {...t(
-                                'index:article02',
-                                {},
-                                { returnObjects: true }
-                            )}
-                            readMore={t('readMore')}
-                        />
-                        <ShortArticle
-                            number="03"
-                            pathname="/experiences"
-                            {...t(
-                                'index:article03',
-                                {},
-                                { returnObjects: true }
-                            )}
-                            readMore={t('readMore')}
-                        />
+                    <ShortArticleWithAside t={t} />
+                </Content>
+            </div>
+            <Content>
+                <ContentRight>
+                    <div className="markdown">
+                        <Heading>{t("index:aboutus.title")}</Heading>
+                        <Paragraph>{t("index:aboutus.text")}</Paragraph>
                     </div>
-                </Content>
-                <div className="content-gray">
-                    <Content>
-                        <ShortArticleWithAside t={t} />
-                    </Content>
-                </div>
-                <Content>
-                    <NarrowMarkdown content={content} />
-                </Content>
-                <style jsx>{`
-                    .short-articles-wrapper {
-                        display: flex;
-                        flex-direction: row;
-                    }
-                    .content-gray {
-                        background-color: #fafafa;
-                    }
-                    @media screen and (max-width: 992px) {
-                        .short-articles-wrapper {
-                            flex-direction: column;
-                            margin: 16px 0;
-                        }
-                    }
-                `}</style>
-            </Layout>
-        </ParallaxProvider>
+                </ContentRight>
+            </Content>
+            <style jsx>{styles}</style>
+            <style jsx>{`
+                .button {
+                    margin: 0 0 48px;
+                    text-align: center;
+                }
+                .content-gray {
+                    background-color: #fafafa;
+                }
+            `}</style>
+        </Layout>
     );
 };
 
 export async function getStaticProps({ locale }) {
-    const rawContent = fs.readFileSync(
-        `${process.cwd()}/locales/${locale}/aboutus.md`,
-        'utf8'
-    );
-
-    return { props: { content: rawContent } };
+    if (SANITY_AVAILABLE_LOCALES.includes(locale)) {
+        return {
+            props: {
+                news: await sanity.fetch(`*[_type == "post" && "news" in categories[]->slug.current]{
+                    _id,
+                    title,
+                    'author': author->name,
+                    bodyPreview,
+                    slug,
+                    publishedAt
+                } ${SANITY_ORDER_BY} [0...3]`),
+            },
+            revalidate: 1,
+        };
+    }
+    return {};
 }
 
 export default Index;

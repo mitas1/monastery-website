@@ -1,5 +1,5 @@
 ---
-title: Experiences | Benedictines | SK
+title: Experiences
 metaDescription: Come to me, all you who are weary and burdened, and I will give you rest.
 preamble:
     title: Experiences
@@ -9,7 +9,7 @@ preamble:
     img: /images/offerings.jpg
 ---
 
-## Kláštor z pohľadu návštevníkov
+## Monastery from a visitor´s perspective
 
 ### Nela
 

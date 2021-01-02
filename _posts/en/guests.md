@@ -1,5 +1,5 @@
 ---
-title: Receiving guests | Benedictines | SK
+title: Receiving guests
 metaDescription: >-
     The monastery welcomes those who desire to deepen their relationship with God, to participate
     in our liturgy, to talk or to rest in silence. With God´s help and through our benefactors we

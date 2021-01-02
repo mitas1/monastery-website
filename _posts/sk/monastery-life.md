@@ -1,5 +1,5 @@
 ---
-title:  Život v kláštore | Benediktínky | SK
+title:  Život v kláštore
 metaDescription: >-
     Deň sa začína modlitbou o piatej. Modlitbami, omšou a osobným rozjímaním, je potom popretkávaný
     až do večera. Čas majú mníšky vyčlenený aj na prácu v záhrade, kuchyni a na maľovanie paškálnych

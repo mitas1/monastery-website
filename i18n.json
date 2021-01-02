@@ -1,9 +1,8 @@
 {
     "locales": ["en", "sk"],
-    "defaultLocale": "en",
+    "defaultLocale": "sk",
     "pages": {
         "*": ["common"],
-        "/announcements": ["announcements"],
         "/contact": ["contact"],
         "/": ["index"]
     }

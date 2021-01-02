@@ -1,5 +1,5 @@
 ---
-title: Life in a Monastery | Benedictines | SK
+title: Life in a Monastery
 metaDescription: >-
     The day starts with the morning prayers at 5 a.m. Prayers, Holy Mass and contemplation are the
     most important part of the day. Nuns spend time also working in the garden, in the kitchen and

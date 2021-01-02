@@ -1,5 +1,5 @@
 ---
-title: Zbierka na dokončenie kláštora | Benediktínky | SK
+title: Zbierka na dokončenie kláštora
 metaDescription: >-
     Ďakujeme za každý príspevok. Za našich dobrodincov sa každý deň modlíme a raz za mesiac je na
     ich úmysel slúžená svätá omša. Dvakrát do roka organizujeme pre záujemcov s radov našich darcov
@@ -31,10 +31,10 @@ a&nbsp; raz za&nbsp;mesiac je&nbsp;na&nbsp;ich úmysel slúžená sv.&nbsp;omša
 > „Pôsobením poveternostných vplyvov dochádza ku postupnému znehodnoteniu
 > nedokončených častí stavby.”
 
-<div class="image-full">
+<figure class="image">
     <img src="/images/article01-1.jpg">
-    <p>Kláštor najsvätejšej Bohorodičky (Horné orešany)</p>
-</div>
+    <figcaption>Kláštor najsvätejšej Bohorodičky (Horné orešany)</figcaption>
+</figure>
 
 # Architektúra stavby
 
@@ -85,15 +85,15 @@ je&nbsp;volaný k&nbsp;tomu, aby&nbsp;sa neodcudzil v&nbsp;takom spôsobe život
 ktorý nie je&nbsp;jeho; ale aby&nbsp;sa vrátil do&nbsp;vlastného sveta
 a&nbsp;povolania.
 
-<div class="image-side-by-side">
-    <div class="left">
+<div class="image side-by-side">
+    <figure class="left">
         <img src="/images/article01-2.jpg">
-        <p>Vonkajšia stavba</p>
-    </div>
-    <div class="right">
+        <figcaption>Vonkajšia stavba</figcaption>
+    </figure>
+    <figure class="right">
         <img src="/images/article01-3.jpg">
-        <p>Interiér kostola</p>
-    </div>
+        <figcaption>Interiér kostola</figcaption>
+    </figure>
 </div>
 
 ### Kostol
@@ -119,10 +119,10 @@ umožňuje ‚kontemplovať otvorené nebo’ (porov. Sk 7,56) a&nbsp;‚myslie�
 na&nbsp;veci čo sú hore’ (porov. Kol 3,2), vychádza z&nbsp;Krista, ukrytého
 v&nbsp;bohostánku.
 
-<div class="image-full">
+<figure class="image">
     <img src="/images/article01-4.jpg">
-    <p>Kláštor najsvätejšej Bohorodičky (Horné orešany)</p>
-</div>
+    <figcaption>Kláštor najsvätejšej Bohorodičky (Horné orešany)</figcaption>
+</figure>
 
 ### Kláštorný dvor
 
@@ -170,3 +170,5 @@ bude položené k&nbsp;Ježišovým nohám a&nbsp;zúrodnené modlitbou: budeme 
 navzájom zrkadlom, pohnútkou k&nbsp;obnove a&nbsp;rastu…k svetlu.
 
 Toto dielo môžete podporiť finančne zaslaním príspevku na číslo:
+
+**IBAN: SK80 1111 0000 0066 2697 3004**

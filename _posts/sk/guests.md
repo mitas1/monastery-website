@@ -1,5 +1,5 @@
 ---
-title: Prijíjmanie hostí | Benediktínky | SK
+title: Prijíjmanie hostí
 metaDescription: >-
     Kláštor umožňuje prijať hostí, tzn. kohokoľvek, kto túži prehĺbiť svoj vzťah s Bohom, zúčastniť
     sa našej liturgie, porozprávať sa alebo odpočinúť si v tichu. S Božou pomocou sa nám skrze

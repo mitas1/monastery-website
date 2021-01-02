@@ -1,6 +1,4 @@
 {
-    "title": "Benediktínky | SK",
-    "metaDescription": "Sme mníšska komunita ktorá žije podľa Reguly, napísanej sv. Benediktom pred 1600 rokmi. Hľadáme Boha a jeho milosrdenstvo v očisťovaní srdca a v sesterskej láske.",
     "readMore": "Čítať viac",
     "offerings": {
         "title": {
@@ -8,6 +6,9 @@
             "secondLine": "kláštora"
         },
         "readMore": "Viac o projekte"
+    },
+    "news": {
+        "button": "Zobraziť staršie príspevky"
     },
     "article01": {
         "title": "Život v kláštore",
@@ -30,5 +31,9 @@
             "text": "OSB (Ordo sancti Benedicti)"
         },
         "imageLabel": "— Detail: Kopf des Hl. Benedikt, Fra Angelico\n"
+    },
+    "aboutus": {
+        "title": "Aby bol vo všetkom oslávený Boh",
+        "text": "Keďže sme klauzúrna komunita, svoju činnosť vykonávame v exteriéri a interiéri kláštora: je to spoločná modlitba sedemkrát za deň, ktorá sa predlžuje do osobnej modlitby. Lectio Divina (rozjímavé čítanie Svätého písma), ktoré jeden deň v týždni ponúkame aj veriacim."
     }
 }

@@ -6,11 +6,15 @@ import { useRouter } from 'next/router';
 import Menu, { NavLink } from './Menu';
 import { LANGUAGES, LANGUAGES_LABELS } from '../constants';
 import { CONTENT_WIDTH } from '../constants';
+import Image from 'next/image';
 
-const Header = ({ addTopListener, handleDrawer }) => {
+export interface HeaderProps {
+    addTopListener: boolean;
+    handleDrawer: () => void;
+}
+
+const Header = ({ addTopListener, handleDrawer }: HeaderProps) => {
     const { t, lang } = useTranslation('common');
-
-    const { pathname } = useRouter(null);
 
     const [isTop, setIsTop] = React.useState(false);
 
@@ -33,13 +37,13 @@ const Header = ({ addTopListener, handleDrawer }) => {
     const otherLanguage = LANGUAGES.filter((_lang) => _lang != lang)[0];
 
     return (
-        <div className={isTop ? 'header-wrapper top' : 'header-wrapper'}>
+        <div className={isTop ? 'wrapper top' : 'wrapper'}>
             <header className="header">
                 <Link href="/">
                     <a className="title">benediktinky.sk</a>
                 </Link>
                 <nav className="menu">
-                    <Menu t={t} inverse={isTop} />
+                    <Menu inverse={isTop} />
                     <div className="spacer" />
                     {LANGUAGES.map((_lang, key) => (
                         <NavLink
@@ -52,56 +56,44 @@ const Header = ({ addTopListener, handleDrawer }) => {
                         />
                     ))}
                 </nav>
-                <div className="smartphone-menu">
+                <div className="small-menu">
                     <Link href="/" locale={otherLanguage}>
-                        <a className="smartphone-language">
+                        <a className="small-language">
                             {LANGUAGES_LABELS[otherLanguage]}
                         </a>
                     </Link>
                     <a onClick={handleDrawer}>
-                        <img src="/images/menu.svg" />
+                        <Image width={24} height={24} src="/images/menu.svg" />
                     </a>
                 </div>
             </header>
             <style jsx>{`
-                .header-wrapper {
+                .wrapper {
                     background-color: #fff;
                     border-bottom: 1px solid #ecedee;
                     position: fixed;
                     top: 0;
                     transition: all 0.2s;
                     width: 100%;
-                    z-index: 1;
-                }
-                .header-wrapper.top {
-                    background-color: transparent;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                    z-index: 2;
                 }
                 .header {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 80px;
                     align-items: center;
                     box-sizing: border-box;
-                    display: flex;
-                    height: 80px;
-                    justify-content: space-between;
                     margin: 0 auto;
-                    width: ${CONTENT_WIDTH};
-                    z-index: 1;
-                }
-                .top .title {
-                    color: #fff;
+                    width: 100%;
+                    padding: 0 24px;
                 }
                 .title {
                     color: #000;
                     font-family: 'Martel', serif;
+                    letter-spacing: 0.06em;
                     font-size: 16px;
-                    font-weight: 900;
+                    font-weight: 700;
                     text-decoration: none;
-                }
-                .menu {
-                    display: flex;
-                    float: right;
-                    font-size: 14px;
-                    height: 80px;
                 }
                 .spacer {
                     background-color: #ecedee;
@@ -109,33 +101,40 @@ const Header = ({ addTopListener, handleDrawer }) => {
                     margin: 31px 10px;
                     width: 1px;
                 }
-                .smartphone-menu {
+                .small-language {
+                    text-decoration: none;
+                    color: #000;
+                    line-height: 24px;
+                    margin: 0 16px 0;
+                    padding: 0 16px;
+                    border-right: 1px solid rgba(0, 0, 0, 0.3);
+                }
+                .menu {
                     display: none;
                 }
-                @media screen and (max-width: 992px) {
-                    .header {
-                        width: 100%;
-                        padding: 0 24px;
-                    }
-                    .menu {
-                        display: none;
-                    }
-                    .smartphone-menu {
-                        display: flex;
-                    }
-                    .smartphone-language {
-                        text-decoration: none;
-                        color: #000;
-                        line-height: 24px;
-                        margin: 0 16px 0;
-                        padding: 0 16px;
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                    }
-                    .header-wrapper.top {
-                        background-color: #fff;
+                .small-menu {
+                    display: flex;
+                }
+
+                @media screen and (min-width: 992px) {
+                    .wrapper.top {
+                        background-color: transparent;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
                     }
                     .top .title {
-                        color: #000;
+                        color: #fff;
+                    }
+                    .menu {
+                        display: flex;
+                        float: right;
+                        font-size: 14px;
+                        height: 80px;
+                    }
+                    .small-menu {
+                        display: none;
+                    }
+                    .header {
+                        width: ${CONTENT_WIDTH};
                     }
                 }
             `}</style>

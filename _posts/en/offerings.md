@@ -1,5 +1,5 @@
 ---
-title: Offerings for the completion of the monastery | Benedictines | SK
+title: Offerings for the completion of the monastery
 metaDescription: >-
     Thank you for each contribution. We pray for our benefactors daily and once a month a Holy Mass
     is celebrated for their intentions. We organize for those who are interested among our
@@ -31,10 +31,10 @@ financially or with your prayers!
 > "Exposure to weather leads to deterioration in the unfinished parts of the
 > monastery"
 
-<div class="image-full">
+<figure class="image">
     <img src="/images/article01-1.jpg">
-    <p>The Monastery of the Most Holy Mother of God (Horne Oresany)</p>
-</div>
+    <figcaption>The Monastery of the Most Holy Mother of God (Horne Oresany)</figcaption>
+</figure>
 
 # Monastic architecture
 
@@ -81,15 +81,15 @@ the monastery revealing to the body and to the soul “from your river of
 delights” (Psalm 36:9), because the guest is called to not enter the way of life
 which is not his life but to return to his own world and vocation.
 
-<div class="image-side-by-side">
-    <div class="left">
+<div class="image side-by-side">
+    <figure class="left">
         <img src="/images/article01-2.jpg">
-        <p>External composition</p>
-    </div>
-    <div class="right">
+        <figcaption>External composition</figcaption>
+    </figure>
+    <figure class="right">
         <img src="/images/article01-3.jpg">
-        <p>Interior of the Church</p>
-    </div>
+        <figcaption>Interior of the Church</figcaption>
+    </figure>
 </div>
 
 ### Church architecture
@@ -113,10 +113,10 @@ dynamics of Christ&#39;s Resurrection. This light beam, which allows us to
 “contemplate the opened heaven” and “to think of things that are above”, comes
 from Christ, hidden in the tabernacle.
 
-<div class="image-full">
+<figure class="image">
     <img src="/images/article01-4.jpg">
-    <p>The Monastery of the Most Holy Mother of God (Horne Oresany)</p>
-</div>
+    <figcaption>The Monastery of the Most Holy Mother of God (Horne Oresany)</figcaption>
+</figure>
 
 ### The Monastery courtyard
 
@@ -163,3 +163,5 @@ restoration and to growth ... to light.
 
 Voluntary offerings for the completion of the monastery can be sent to the
 following bank account:
+
+**IBAN: SK80 1111 0000 0066 2697 3004**

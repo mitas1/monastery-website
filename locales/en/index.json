@@ -1,6 +1,4 @@
 {
-    "title": "Benedictines | SK",
-    "metaDescription": "We are a community of nuns following the Rule of Saint Benedict written 1600 years ago. We are searching for God and his mercy through the purification of the heart, work and sisterly love.",
     "readMore": "Read more",
     "offerings": {
         "title": {
@@ -30,5 +28,9 @@
             "text": "OSB (Ordo sancti Benedicti)"
         },
         "imageLabel": "— Detail: Kopf des Hl. Benedikt, Fra Angelico\n"
+    },
+    "aboutus": {
+        "title": "May God be glorified in all things!",
+        "text": "Since we are closed community, we perform our activities in the exterior and the interior of the Monastery - the common prayers performed seven times per day, which are followed by the personal prayers. Lectio Divina (contemplative reading of the Holly Bible), which is available to believers once per week as well."
     }
 }

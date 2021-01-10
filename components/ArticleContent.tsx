@@ -40,7 +40,6 @@ export interface ArticleFooterProps {
 export const paragraphStyles = `
     display: block;
     font-family: Roboto, serif;
-    font-weight: 400;
     line-height: 1.8;
     margin-bottom: 32px;
 `;
@@ -53,21 +52,18 @@ const contentStyles = css`
     .content :global(h1) {
         font-family: Martel, serif;
         font-size: 40px;
-        font-weight: 600;
         line-height: 1.5;
         text-align: center;
     }
     .content :global(h2) {
         font-family: Martel, serif;
         font-size: 23px;
-        font-weight: 400;
         line-height: 1.5;
     }
     .content :global(h3) {
         color: rgb(87, 87, 87);
         font-family: Roboto, serif;
         font-size: 13px;
-        font-weight: 500;
         line-height: 1.5;
         margin-bottom: 16px;
         padding: 10px 0px;
@@ -77,6 +73,7 @@ const contentStyles = css`
     .content :global(h1),
     .content :global(h2),
     .content :global(h3) {
+        font-weight: 600;
         margin-top: 24px;
         margin-bottom: 16px;
     }
@@ -93,7 +90,7 @@ const contentStyles = css`
         float: left;
         font-family: "Martel", serif;
         font-size: 50px;
-        font-weight: 400;
+        font-weight: 600;
         padding-left: 3px;
         padding-right: 8px;
         margin-bottom: -22px;

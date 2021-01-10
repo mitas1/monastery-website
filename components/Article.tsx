@@ -62,7 +62,6 @@ const Blockquote = ({ children }) => {
                 display: block;
                 font-size: 14px;
                 font-style: italic;
-                font-weight: 400;
                 line-height: 26px;
                 margin: 0 0 16px 0;
                 max-width: 520px;

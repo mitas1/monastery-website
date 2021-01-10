@@ -131,7 +131,7 @@ const Footer = ({ background }: FooterProps) => {
                     display: inline-block;
                     font-family: 'Roboto', sans-serif;
                     font-size: 17px;
-                    font-weight: 700;
+                    font-weight: 500;
                     width: 100px;
                 }
                 .title {

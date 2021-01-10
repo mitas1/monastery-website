@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
-import { useRouter } from 'next/router';
 
 import Menu, { NavLink } from './Menu';
 import { LANGUAGES, LANGUAGES_LABELS } from '../constants';
@@ -63,7 +62,7 @@ const Header = ({ addTopListener, handleDrawer }: HeaderProps) => {
                         </a>
                     </Link>
                     <a onClick={handleDrawer}>
-                        <Image width={24} height={24} src="/images/menu.svg" />
+                        <Image width={24} height={24} alt={t('burger_menu')} src="/images/menu.svg" />
                     </a>
                 </div>
             </header>
@@ -90,6 +89,7 @@ const Header = ({ addTopListener, handleDrawer }: HeaderProps) => {
                 .title {
                     color: #000;
                     font-family: 'Martel', serif;
+                    font-weight: 600;
                     letter-spacing: 0.06em;
                     font-size: 16px;
                     font-weight: 700;

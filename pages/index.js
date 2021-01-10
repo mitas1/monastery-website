@@ -26,7 +26,7 @@ const styles = css`
         display: block;
         font-family: "Martel", serif;
         font-size: 33px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.5;
         position: relative;
     }

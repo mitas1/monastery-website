@@ -61,6 +61,7 @@ const Baner = () => {
                     color: #fff;
                     position: relative;
                     font-family: 'Martel', serif;
+                    font-weight: 600;
                     box-sizing: border-box;
                     font-size: 30px;
                     margin: 0 0 48px;

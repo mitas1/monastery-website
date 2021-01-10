@@ -31,16 +31,18 @@ export const Heading = ({
                 :global(h1) {
                     font-size: 50px;
                     font-family: "Martel", serif;
-                    font-weight: 300;
+                    font-weight: 600;
                     margin: 0 0 24px;
                     line-height: 1.3;
                 }
                 :global(h2) {
                     font-family: "Martel", serif;
+                    font-weight: 600;
                     font-size: 24px;
                 }
                 :global(h3) {
                     font-family: "Roboto", sans-serif;
+                    font-weight: 600;
                     font-size: 12px;
                     color: #777;
                     text-transform: uppercase;
@@ -101,7 +103,7 @@ export const Layout = ({
                 <title>{t("title")}</title>
                 <meta name="description" content={t("metaDescription")} />
                 <link
-                    href="https://fonts.googleapis.com/css?family=Martel:600,700,900|Roboto:300,300i,400,400i,500,700&display=swap"
+                    href="https://fonts.googleapis.com/css?family=Martel:600|Roboto:300,300i,400,400i,700&display=swap"
                     rel="stylesheet"
                 />
                 <meta

@@ -18,6 +18,7 @@ const ARTICLES_PER_PAGE = 2;
 const ShortArticle = ({
     author,
     bodyPreview,
+    locale,
     date,
     href,
     mainImage,
@@ -51,7 +52,7 @@ const ShortArticle = ({
                 </Link>
 
                 <p className="meta">
-                    <span className="date">{formatDate(date)}</span>
+                    <span className="date">{formatDate(date, locale)}</span>
                     <span className="dot">·</span>
                     <span className="author">{author}</span>
                 </p>
@@ -135,7 +136,7 @@ const Articles = ({ count, posts, category, skip }) => {
     const [loading, setLoading] = React.useState(false);
     const [cursor, setCursor] = React.useState(1);
 
-    const { t } = useTranslation("common");
+    const { t, lang } = useTranslation("common");
 
     React.useEffect(() => {
         setItems([...posts]);
@@ -179,6 +180,7 @@ const Articles = ({ count, posts, category, skip }) => {
                             items.map((item, i) => (
                                 <ShortArticle
                                     key={i}
+                                    locale={lang}
                                     mainImage={item.mainImage}
                                     author={item.author}
                                     date={item.publishedAt}

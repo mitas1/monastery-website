@@ -4,13 +4,13 @@ import Image from 'next/image';
 import { CONTENT_WIDTH } from '../constants';
 import { ContentRight, Heading } from './Layout';
 
-export interface FooterProps {
+export interface TFooterProps {
     background: boolean;
 }
 
 type TimeSheetElement = { time: string; title: string };
 
-const Footer = ({ background }: FooterProps) => {
+const Footer = ({ background }: TFooterProps) => {
     const { t } = useTranslation('common');
 
     return (

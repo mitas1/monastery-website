@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
+import Trans from 'next-translate/Trans'
 
 import { CONTENT_WIDTH } from '../constants';
 import { Header, ArticleWrapper } from '../components/Article';
@@ -46,14 +47,9 @@ const Contact = () => {
                         />
                         <div className="column-content">
                             <Heading level={3}>{t('address.title')}</Heading>
-                            <p
-                                className="paragraph"
-                                dangerouslySetInnerHTML={{
-                                    __html: t('address.text', {
-                                        escapeInterpolation: true,
-                                    }),
-                                }}
-                            />
+                            <Trans
+                                i18nKey="contact:address.text"
+                                components={[<p className="paragraph"/>, <br/>]}/>
                             <Heading level={3}>
                                 {t('bankAccount.title')}
                             </Heading>

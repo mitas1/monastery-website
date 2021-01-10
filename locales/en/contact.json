@@ -4,11 +4,11 @@
     "metaDescription": "Kláštor najsvätejšej Bohorodičky č.d. 841 919 03 Horné Orešany",
     "address": {
         "title": "Address",
-        "text": "Kláštor najsvätejšej Bohorodičky<br>\nč.d. 841<br>\n919 03 Horné Orešany\n"
+        "text": "<0>Kláštor najsvätejšej Bohorodičky<1/>č.d. 841<1/>919 03 Horné Orešany</0>"
     },
     "bankAccount": {
         "title": "Bank Account Number",
-        "text": "IBAN: SK80 1111 0000 0066 2697 3004\n"
+        "text": "IBAN: SK80 1111 0000 0066 2697 3004"
     },
     "tel": {
         "title": "Phone number",

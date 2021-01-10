@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import css from "styled-jsx/css";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,21 +53,32 @@ const styles = css`
 `;
 
 export const ShortArticle = ({
-    title,
-    text,
-    number,
     author,
     date,
-    readMore,
     href,
-    inverse,
+    inverse = false,
+    locale,
+    number,
+    readMore,
+    text,
+    title,
+}: {
+    author: string;
+    date?: string;
+    href: string;
+    inverse?: boolean;
+    locale?: string;
+    number?: string;
+    readMore: string;
+    text: string;
+    title: string;
 }) => (
     <article className={inverse ? "short-article inverse" : "short-article"}>
         {number ? (
             <span className="number">{number}</span>
         ) : (
             <span className="meta">
-                {formatDate(date)}
+                {formatDate(date, locale)}
                 {author && (
                     <>
                         <span className="dot">·</span>
@@ -252,7 +264,13 @@ const ShortArticleWithAside = ({ t }) => (
     </section>
 );
 
-export const ThreeColumnWrapper = ({ inverse, children }) => (
+export const ThreeColumnWrapper = ({
+    inverse,
+    children,
+}: {
+    inverse?: boolean;
+    children: ReactNode;
+}) => (
     <div className={inverse ? "inverse wrapper" : "wrapper"}>
         <Content>
             <div className="content">{children}</div>
@@ -278,10 +296,10 @@ export const ThreeColumnWrapper = ({ inverse, children }) => (
 );
 
 const Index = ({ news }) => {
-    const { t } = useTranslation("common");
+    const { t, lang } = useTranslation("common");
 
     return (
-        <Layout header={{ addTopListener: true }} footer={{ background: true }}>
+        <Layout addTopListener footer={{ background: true }}>
             <Baner />
             {news && news.length > 0 && (
                 <>
@@ -298,6 +316,7 @@ const Index = ({ news }) => {
                                 <ShortArticle
                                     key={_id}
                                     date={publishedAt}
+                                    locale={lang}
                                     href={`/post/news/${slug.current}`}
                                     title={title}
                                     author={author}
@@ -307,11 +326,13 @@ const Index = ({ news }) => {
                             )
                         )}
                     </ThreeColumnWrapper>
-                    {news.length > 3 && <div className="button">
-                        <Button href="/post/news">
-                            {t("index:news.button")}
-                        </Button>
-                    </div>}
+                    {news.length > 3 && (
+                        <div className="button">
+                            <Button href="/post/news">
+                                {t("index:news.button")}
+                            </Button>
+                        </div>
+                    )}
                 </>
             )}
             <ThreeColumnWrapper inverse>

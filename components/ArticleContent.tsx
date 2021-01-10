@@ -22,14 +22,14 @@ export interface TContent {
     html?: string;
 }
 
-export interface Other {
+export interface TOther {
     offset?: boolean;
-    footer: ArticleFooterProps;
+    footer: TArticleFooterProps;
 }
 
-export type ArticleProps = TContent & Other;
+export type TArticleProps = TContent & TOther;
 
-export interface ArticleFooterProps {
+export interface TArticleFooterProps {
     showContact?: boolean;
     back?: {
         href: string;
@@ -40,6 +40,7 @@ export interface ArticleFooterProps {
 export const paragraphStyles = `
     display: block;
     font-family: Roboto, serif;
+    font-weight: 400;
     line-height: 1.8;
     margin-bottom: 32px;
 `;
@@ -199,7 +200,7 @@ const serializers = {
     },
 };
 
-export const Footer = ({ showContact = false, back }: ArticleFooterProps) => {
+export const Footer = ({ showContact = false, back }: TArticleFooterProps) => {
     const { t } = useTranslation("common");
 
     return (
@@ -295,7 +296,7 @@ const PDFViewer = ({ url, title }: TFile) => {
     );
 };
 
-const ArticleContent = ({ html, body, offset, file, footer }: ArticleProps) => (
+const ArticleContent = ({ html, body, offset, file, footer }: TArticleProps) => (
     <>
         {(html || body) && (
             <article className={offset ? "content offset" : "content"}>

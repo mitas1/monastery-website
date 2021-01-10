@@ -3,8 +3,8 @@ import React, { ReactNode } from "react";
 import useTranslation from "next-translate/useTranslation";
 import Drawer from "@material/react-drawer";
 
-import Footer, { FooterProps } from "./Footer";
-import Header, { HeaderProps } from "../components/Header";
+import Footer, { TFooterProps } from "./Footer";
+import Header, { THeaderProps } from "../components/Header";
 import Menu from "./Menu";
 
 import { CONTENT_WIDTH, GA_TRACKING_ID } from "../constants";
@@ -85,12 +85,12 @@ export const ContentRight = ({ children }) => (
 
 export const Layout = ({
     children,
-    header,
+    addTopListener,
     footer,
 }: {
     children: React.ReactNode;
-    header?: HeaderProps;
-    footer?: FooterProps;
+    addTopListener?: boolean;
+    footer?: TFooterProps;
 }) => {
     const [open, setOpen] = React.useState(false);
 
@@ -137,7 +137,7 @@ export const Layout = ({
             >
                 <Menu small />
             </Drawer>
-            <Header {...header} handleDrawer={() => setOpen(!open)} />
+            <Header addTopListener={addTopListener} handleDrawer={() => setOpen(!open)} />
             {children}
             <Footer {...footer} />
             <style jsx>{`

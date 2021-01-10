@@ -7,12 +7,12 @@ import { LANGUAGES, LANGUAGES_LABELS } from '../constants';
 import { CONTENT_WIDTH } from '../constants';
 import Image from 'next/image';
 
-export interface HeaderProps {
+export interface THeaderProps {
     addTopListener: boolean;
     handleDrawer: () => void;
 }
 
-const Header = ({ addTopListener, handleDrawer }: HeaderProps) => {
+const Header = ({ addTopListener, handleDrawer }: THeaderProps) => {
     const { t, lang } = useTranslation('common');
 
     const [isTop, setIsTop] = React.useState(false);

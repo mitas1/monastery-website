@@ -6,19 +6,20 @@ import { Content, Heading, Layout } from "../components/Layout";
 import ArticleContent, {
     TContent,
     TFile,
-    ArticleFooterProps,
+    TArticleFooterProps,
 } from "./ArticleContent";
 import { formatDate } from "../utils";
 import { urlFor } from "../lib/sanity";
+import { useRouter } from "next/router";
 
-export interface ArticleProps {
+export interface TArticleProps {
     meta: {
         title: string;
         description: string;
     };
     file?: TFile;
     content: TContent;
-    footer?: ArticleFooterProps;
+    footer?: TArticleFooterProps;
     author: string;
     mainImage?: string;
     publishedAt?: string;
@@ -76,9 +77,11 @@ const Blockquote = ({ children }) => {
 };
 
 const LastUpdated = ({ date }) => {
+    const { locale } = useRouter();
+
     return (
         <div>
-            Aktualizované: <strong>{formatDate(date)}</strong>
+            Aktualizované: <strong>{formatDate(date, locale)}</strong>
             <style jsx>{`
                 margin: -4px 0 4px 0;
                 color: #666;
@@ -100,7 +103,7 @@ const Article = ({
     publishedAt,
     quote,
     title,
-}: ArticleProps) => {
+}: TArticleProps) => {
     const { t } = useTranslation("common");
     return (
         <Layout>

@@ -12,8 +12,8 @@ import { formatDate } from "../../../utils";
 import { Layout, Content, Heading } from "../../../components/Layout";
 import { urlFor } from "../../../lib/sanity";
 
-const INITIAL_COUNT_FETCHED = 2;
-const ARTICLES_PER_PAGE = 2;
+const INITIAL_COUNT_FETCHED = 10;
+const ARTICLES_PER_PAGE = 10;
 
 const ShortArticle = ({
     author,

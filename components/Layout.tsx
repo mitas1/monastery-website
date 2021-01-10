@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import React, { ReactNode } from 'react';
-import useTranslation from 'next-translate/useTranslation';
-import Drawer from '@material/react-drawer';
+import Head from "next/head";
+import React, { ReactNode } from "react";
+import useTranslation from "next-translate/useTranslation";
+import Drawer from "@material/react-drawer";
 
-import Footer, { FooterProps } from './Footer';
-import Header, { HeaderProps } from '../components/Header';
-import Menu from './Menu';
+import Footer, { FooterProps } from "./Footer";
+import Header, { HeaderProps } from "../components/Header";
+import Menu from "./Menu";
 
-import { CONTENT_WIDTH } from '../constants';
+import { CONTENT_WIDTH, GA_TRACKING_ID } from "../constants";
 
 export const Heading = ({
     level = 1,
@@ -15,11 +15,11 @@ export const Heading = ({
     element,
 }: {
     level?: number;
-    element?: 'span';
+    element?: "span";
     children: ReactNode;
 }) => {
     if (![1, 2, 3].includes(level)) {
-        throw 'Level needs to be within 1-3';
+        throw "Level needs to be within 1-3";
     }
 
     return React.createElement(
@@ -30,17 +30,17 @@ export const Heading = ({
             <style jsx>{`
                 :global(h1) {
                     font-size: 50px;
-                    font-family: 'Martel', serif;
+                    font-family: "Martel", serif;
                     font-weight: 300;
                     margin: 0 0 24px;
                     line-height: 1.3;
                 }
                 :global(h2) {
-                    font-family: 'Martel', serif;
+                    font-family: "Martel", serif;
                     font-size: 24px;
                 }
                 :global(h3) {
-                    font-family: 'Roboto', sans-serif;
+                    font-family: "Roboto", sans-serif;
                     font-size: 12px;
                     color: #777;
                     text-transform: uppercase;
@@ -92,14 +92,14 @@ export const Layout = ({
 }) => {
     const [open, setOpen] = React.useState(false);
 
-    const { t } = useTranslation('common');
+    const { t } = useTranslation("common");
 
     return (
         <div className="content">
             <Head>
                 <meta charSet="UTF-8" />
-                <title>{t('title')}</title>
-                <meta name="description" content={t('metaDescription')} />
+                <title>{t("title")}</title>
+                <meta name="description" content={t("metaDescription")} />
                 <link
                     href="https://fonts.googleapis.com/css?family=Martel:600,700,900|Roboto:300,300i,400,400i,500,700&display=swap"
                     rel="stylesheet"
@@ -111,6 +111,20 @@ export const Layout = ({
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
+                />
+                <script
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+                />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', '${GA_TRACKING_ID}');
+                        `,
+                    }}
                 />
             </Head>
             <Drawer
@@ -142,7 +156,7 @@ export const Layout = ({
                     }
                     body {
                         background: #fafafa;
-                        font-family: 'Roboto', sans-serif;
+                        font-family: "Roboto", sans-serif;
                     }
                     #nprogress {
                         pointer-events: none;

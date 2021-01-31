@@ -72,7 +72,7 @@ const Post = ({ post, category }: { post: TPost; category: Categories }) => {
             <Article
                 {...rest}
                 content={{ body }}
-                author={author.name}
+                author={author && author.name}
                 meta={{ title: rest.title, description: bodyPreview }}
                 footer={{
                     back: {

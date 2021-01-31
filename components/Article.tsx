@@ -20,7 +20,7 @@ export interface TArticleProps {
     file?: TFile;
     content: TContent;
     footer?: TArticleFooterProps;
-    author: string;
+    author?: string;
     mainImage?: string;
     publishedAt?: string;
     quote?: string;

@@ -104,7 +104,7 @@ export async function getStaticProps({
     locale,
     preview,
 }) {
-    const sanityClient = preview ? sanity : sanityPreview;
+    const sanityClient = preview ? sanityPreview : sanity;
 
     if (!SANITY_AVAILABLE_LOCALES.includes(locale)) {
         return {};

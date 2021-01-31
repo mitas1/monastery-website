@@ -1,13 +1,13 @@
-import React from 'react';
-import DefaultErrorPage from 'next/error';
-import { useRouter } from 'next/router';
+import React from "react";
+import DefaultErrorPage from "next/error";
+import { useRouter } from "next/router";
 
-import Article from '../../../components/Article';
-import { Layout } from '../../../components/Layout';
-import Spinner from '../../../components/Spinner';
-import { SANITY_AVAILABLE_LOCALES, SANITY_ORDER_BY } from '../../../constants';
-import sanity from '../../../lib/sanity';
-import Head from 'next/head';
+import Article from "../../../components/Article";
+import { Layout } from "../../../components/Layout";
+import Spinner from "../../../components/Spinner";
+import { SANITY_AVAILABLE_LOCALES, SANITY_ORDER_BY } from "../../../constants";
+import sanity, { sanityPreview } from "../../../lib/sanity";
+import Head from "next/head";
 
 interface TPost {
     _id: string;
@@ -20,14 +20,14 @@ interface TPost {
     };
 }
 
-type Categories = 'news' | 'announcements';
+type Categories = "news" | "announcements";
 
 const getFooterTitleForCategory = (category: Categories): string => {
     switch (category) {
-        case 'announcements':
-            return 'Zobraziť staršie oznamy';
-        case 'news':
-            return 'Naspäť';
+        case "announcements":
+            return "Zobraziť staršie oznamy";
+        case "news":
+            return "Naspäť";
     }
 };
 
@@ -85,7 +85,7 @@ const Post = ({ post, category }: { post: TPost; category: Categories }) => {
     );
 };
 
-const queryFields = `
+export const POST_QUERY_FIELDS = `
     _id,
     title,
     body,
@@ -99,18 +99,24 @@ const queryFields = `
     'author': author->{name}
 `;
 
-export async function getStaticProps({ params: { slug, category }, locale }) {
+export async function getStaticProps({
+    params: { slug, category },
+    locale,
+    preview,
+}) {
+    const sanityClient = preview ? sanity : sanityPreview;
+
     if (!SANITY_AVAILABLE_LOCALES.includes(locale)) {
         return {};
     }
 
-    if (slug === 'latest') {
+    if (slug === "latest") {
         return {
             props: {
                 category,
-                post: await sanity.fetch(`
+                post: await sanityClient.fetch(`
                     *[_type == "post" && "${category}" in categories[]->slug.current] {
-                        ${queryFields}
+                        ${POST_QUERY_FIELDS}
                     } ${SANITY_ORDER_BY} [0]
                 `),
             },
@@ -121,9 +127,9 @@ export async function getStaticProps({ params: { slug, category }, locale }) {
     return {
         props: {
             category,
-            post: await sanity.fetch(`
+            post: await sanityClient.fetch(`
                 *[_type == "post" && slug.current == "${slug}"]{
-                    ${queryFields}
+                    ${POST_QUERY_FIELDS}
                 } [0]
             `),
         },
@@ -156,8 +162,8 @@ export async function getStaticPaths() {
 
         paths.push({
             params: {
-                slug: 'latest',
-                category: 'announcements',
+                slug: "latest",
+                category: "announcements",
             },
             locale,
         });

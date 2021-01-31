@@ -10,7 +10,7 @@ export default async (req, res) => {
         *[_type == "post" && slug.current == "${req.query.slug}"]{
             _id,
             title,
-            publishAt,
+            publishedAt,
             body,
             'slug': slug.current,
             'category': categories[0]->slug.current,
@@ -21,7 +21,7 @@ export default async (req, res) => {
         return res.status(401).json({ message: "Invalid slug" });
     }
 
-    if (!(post.category && post.title && post.body && post.publishAt)) {
+    if (!(post.category && post.title && post.body && post.publishedAt)) {
         return res.status(401).json({ message: "Required fields are missing" });
     }
 

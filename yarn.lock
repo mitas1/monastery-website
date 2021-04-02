@@ -1838,7 +1838,7 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next-translate@^1.0.1:
+next-translate@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/next-translate/-/next-translate-1.0.5.tgz#0c48d25ab4bc05ed1cd8c24f03d95cd9b36e184a"
   integrity sha512-DD9vsY6/7XYlaOhlJRQvT2TD5joif2x047TZwVPMg5wXBbdach+ryAfBdxEpq4i1tksi/u6ul1/TcSXfpgklIw==

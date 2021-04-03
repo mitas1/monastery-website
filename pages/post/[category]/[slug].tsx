@@ -128,7 +128,9 @@ export async function getStaticProps({
         props: {
             category,
             post: await sanityClient.fetch(`
-                *[_type == "post" && slug.current == "${slug}"]{
+                *[${
+                    preview ? '_id in path("drafts.**") &&' : ""
+                } _type == "post" && slug.current == "${slug}"]{
                     ${POST_QUERY_FIELDS}
                 } [0]
             `),

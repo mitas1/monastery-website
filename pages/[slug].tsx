@@ -1,6 +1,6 @@
-import Article from '../components/Article';
-import markdownToHtml from '../lib/markdownToHtml';
-import { getPostBySlug, getPostSlugsByLacale } from '../lib/api';
+import Article from "../components/Article";
+import markdownToHtml from "../lib/markdownToHtml";
+import { getPostBySlug, getPostSlugsByLacale } from "../lib/api";
 
 const MarkdownPost = ({ data: { title, metaDescription, preamble }, html }) => {
     return (
@@ -18,7 +18,12 @@ const MarkdownPost = ({ data: { title, metaDescription, preamble }, html }) => {
     );
 };
 
-export async function getStaticProps({ locale, params: { slug } }) {
+export async function getStaticProps({ locale, preview, params: { slug } }) {
+    if (preview) {
+        console.error("Unexpected preview mode");
+        return { notFound: true };
+    }
+
     const { data, content } = getPostBySlug(slug, locale);
 
     const html = await markdownToHtml(content);

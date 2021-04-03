@@ -31,6 +31,14 @@ const getFooterTitleForCategory = (category: Categories): string => {
     }
 };
 
+const constructQuery = (drafts: boolean, slug: string) => `
+        *[${
+            drafts ? '_id in path("drafts.**") &&' : ""
+        } _type == "post" && slug.current == "${slug}"]{
+            ${POST_QUERY_FIELDS}
+        } [0]
+    `;
+
 const Post = ({ post, category }: { post: TPost; category: Categories }) => {
     const title = getFooterTitleForCategory(category);
 
@@ -124,16 +132,20 @@ export async function getStaticProps({
         };
     }
 
+    let post;
+
+    if (preview) {
+        post = await sanityClient.fetch(constructQuery(true, slug));
+    }
+
+    if (!post) {
+        post = await sanityClient.fetch(constructQuery(false, slug));
+    }
+
     return {
         props: {
             category,
-            post: await sanityClient.fetch(`
-                *[${
-                    preview ? '_id in path("drafts.**") &&' : ""
-                } _type == "post" && slug.current == "${slug}"]{
-                    ${POST_QUERY_FIELDS}
-                } [0]
-            `),
+            post,
         },
         revalidate: 1,
     };

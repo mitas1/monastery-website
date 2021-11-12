@@ -3,9 +3,7 @@ import { ReactNode } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import Link from 'next/link';
-import css from 'styled-jsx/css';
 
-import { paragraphStyles } from '../components/ArticleContent';
 import Baner from '../components/Baner';
 import Button from '../components/Button';
 import {
@@ -20,44 +18,6 @@ import {
 } from '../constants';
 import sanity from '../lib/sanity';
 import { formatDate } from '../utils';
-
-const styles = css`
-    .markdown {
-        padding: 48px 24px;
-    }
-    .markdown :global(p) {
-        ${paragraphStyles}
-        font-size: 20px;
-        font-weight: 300;
-    }
-    .markdown :global(h1) {
-        display: block;
-        font-family: "Martel", serif;
-        font-size: 33px;
-        font-weight: 600;
-        line-height: 1.5;
-        position: relative;
-    }
-    @media screen and (min-width: 992px) {
-        .markdown {
-            width: 500px;
-            margin: 60px 0 130px 0;
-        }
-        .markdown :global(h1) {
-            max-width: 400px;
-        }
-        .markdown :global(h1)::before {
-            background-image: url("/images/quote.svg");
-            background-repeat: no-repeat;
-            content: "";
-            display: block;
-            height: 60px;
-            margin: 4px 0 0 -60px;
-            position: absolute;
-            width: 100px;
-        }
-    }
-`;
 
 export const ShortArticle = ({
     author,
@@ -103,97 +63,12 @@ export const ShortArticle = ({
         <Link href={href}>
             <a className="link">{readMore}</a>
         </Link>
-        <style jsx>{`
-            .meta {
-                color: #777;
-                font-size: 14px;
-                line-height: 2;
-            }
-            .dot {
-                margin: 0 8px;
-            }
-            .short-article {
-                color: #0c1a24;
-                flex: 1;
-                padding: 0 24px 0 16px;
-                margin: 16px 0 24px;
-            }
-            .short-article.inverse {
-                color: #fff;
-            }
-            .number {
-                font-size: 10px;
-                color: #848b90;
-            }
-            .heading {
-                font-size: 28px;
-                font-family: "Martel", serif;
-                font-weight: 600;
-                margin: 0 0 8px;
-            }
-            .text {
-                color: #6c767b;
-                font-size: 16px;
-                font-weight: 300;
-                line-height: 30px;
-                padding: 0;
-            }
-            .inverse .text {
-                color: #fff;
-            }
-            .link {
-                margin: 26px 0;
-                color: #006cb9;
-                text-decoration: none;
-                display: flex;
-            }
-            .inverse .link {
-                color: #fff;
-            }
-            .text-link {
-                text-decoration: none;
-                color: #333;
-            }
-            .inverse .text-link {
-                color: #fff;
-            }
-            .link::after {
-                width: 25px;
-                height: 8px;
-                margin: 0 0 0 8px;
-                display: flex;
-                align-self: center;
-                content: "";
-                background-image: url("/images/arrow.svg");
-                background-repeat: no-repeat;
-            }
-            @media screen and (min-width: 992px) {
-                .short-article {
-                    margin: 50px 0 58px;
-                    padding: 0 70px 0 50px;
-                    border-left: 1px dotted #979797;
-                    max-width: 33%;
-                    box-sizing: border-box;
-                }
-                .short-article:first-child {
-                    padding: 0 80px 0 16px;
-                    border-left: none;
-                }
-            }
-        `}</style>
     </article>
 );
 
 const Paragraph = ({ children }) => (
     <p>
         {children}
-        <style jsx>{`
-            font-size:22px;
-            font-weight: 300;
-            line-height: 1.6;
-            margin: 0 0 24px;
-            max-width: 450px;
-        `}</style>
     </p>
 );
 
@@ -228,46 +103,6 @@ const ShortArticleWithAside = ({ t }) => (
                 <i>{t("index:shortArticleWithAside.imageLabel")}</i>
             </div>
         </article>
-
-        <style jsx>{`
-            .article {
-                padding: 48px 24px;
-            }
-            .image {
-                position: relative;
-                width: 100%;
-                height: 500px;
-            }
-
-            .title > :global(h3) {
-                display: inline;
-            }
-
-            .image-title {
-                padding: 48px 0 0 0;
-                overflow: hidden;
-                font-size: 12px;
-            }
-            .acronym {
-                margin: 0 0 0 24px;
-            }
-
-            @media screen and (min-width: 992px) {
-                .article {
-                    padding: 90px 110px;
-                }
-                .image {
-                    width: 390px;
-                    height: 600px;
-                }
-                .image-title {
-                    padding: 64px 0 0 0;
-                }
-                .wrapper {
-                    display: flex;
-                }
-            }
-        `}</style>
     </section>
 );
 
@@ -282,23 +117,6 @@ export const ThreeColumnWrapper = ({
         <Content>
             <div className="content">{children}</div>
         </Content>
-        <style jsx>{`
-            .wrapper {
-                padding: 24px;
-            }
-            .inverse.wrapper {
-                background: #222;
-            }
-            .content {
-                display: flex;
-                flex-direction: column;
-            }
-            @media screen and (min-width: 992px) {
-                .content {
-                    flex-direction: row;
-                }
-            }
-        `}</style>
     </div>
 );
 
@@ -378,16 +196,6 @@ const Index = ({ news }) => {
                     </div>
                 </ContentRight>
             </Content>
-            <style jsx>{styles}</style>
-            <style jsx>{`
-                .button {
-                    margin: 0 0 48px;
-                    text-align: center;
-                }
-                .content-gray {
-                    background-color: #fafafa;
-                }
-            `}</style>
         </Layout>
     );
 };

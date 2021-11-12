@@ -1,27 +1,20 @@
+import Trans from 'next-translate/Trans';
+import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import Image from 'next/image';
-import useTranslation from 'next-translate/useTranslation';
-import Trans from 'next-translate/Trans'
 
-import { CONTENT_WIDTH } from '../constants';
-import { Header, ArticleWrapper } from '../components/Article';
-import { Layout, Heading } from '../components/Layout';
+import {
+  ArticleWrapper,
+  Header,
+} from '../components/Article';
+import {
+  Heading,
+  Layout,
+} from '../components/Layout';
 
 const CircleIcon = (props) => (
     <div className="wrapper">
         <Image {...props} />
-        <style jsx>{`
-            .wrapper {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background-color: #262626;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                float: left;
-            }
-        `}</style>
     </div>
 );
 
@@ -88,52 +81,6 @@ const Contact = () => {
                         allowFullScreen={true}
                     ></iframe>
                 </div>
-                <style jsx>{`
-                    .wrapper {
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        padding: 24px;
-                        box-sizing: border-box;
-                    }
-                    .column {
-                        padding: 0 0 48px;
-                    }
-                    .column-content {
-                        float: left;
-                        width: 260px;
-                        font-family: 'Roboto', sans-serif;
-                        font-size: 14px;
-                        margin: 0 0 0 20px;
-                    }
-                    .map iframe {
-                        border: 0;
-                        width: 100%;
-                    }
-                    .map {
-                        width: 100%;
-                    }
-                    @media screen and (min-width: 992px) {
-                        .wrapper {
-                            width: ${CONTENT_WIDTH};
-                            margin: 0 auto;
-                            flex-direction: row;
-                        }
-                        .map {
-                            background-color: #e5e3df;
-                            margin: 40px auto;
-                            height: 550px;
-                            width: ${CONTENT_WIDTH};
-                        }
-                        .column {
-                            flex: 1;
-                            display: block;
-                        }
-                        .paragraph {
-                            margin: 0 0 20px;
-                        }
-                    }
-                `}</style>
             </ArticleWrapper>
         </Layout>
     );

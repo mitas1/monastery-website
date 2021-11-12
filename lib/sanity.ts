@@ -1,10 +1,11 @@
-import sanityClient from "@sanity/client";
-import imageUrlBuilder from "@sanity/image-url";
+import sanityClient from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url';
+
 import {
-    SANITY_DATASET,
-    SANITY_PROJECT_ID,
-    SANITY_SECRET_TOKEN,
-} from "../constants";
+  SANITY_DATASET,
+  SANITY_PROJECT_ID,
+  SANITY_SECRET_TOKEN,
+} from '../constants';
 
 export const sanityPreview = sanityClient({
     projectId: SANITY_PROJECT_ID,

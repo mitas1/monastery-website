@@ -1,13 +1,14 @@
-import Head from "next/head";
-import React, { ReactNode } from "react";
-import useTranslation from "next-translate/useTranslation";
-import Drawer from "@material/react-drawer";
+import React, { ReactNode } from 'react';
 
-import Footer, { TFooterProps } from "./Footer";
-import Header, { THeaderProps } from "../components/Header";
-import Menu from "./Menu";
+import useTranslation from 'next-translate/useTranslation';
+import Head from 'next/head';
 
-import { CONTENT_WIDTH, GA_TRACKING_ID } from "../constants";
+import Drawer from '@material/react-drawer';
+
+import Header from '../components/Header';
+import { GA_TRACKING_ID } from '../constants';
+import Footer, { TFooterProps } from './Footer';
+import Menu from './Menu';
 
 export const Heading = ({
     level = 1,
@@ -27,33 +28,6 @@ export const Heading = ({
         null,
         <>
             {children}
-            <style jsx>{`
-                :global(h1) {
-                    font-size: 50px;
-                    font-family: "Martel", serif;
-                    font-weight: 600;
-                    margin: 0 0 24px;
-                    line-height: 1.3;
-                }
-                :global(h2) {
-                    font-family: "Martel", serif;
-                    font-weight: 600;
-                    font-size: 24px;
-                }
-                :global(h3) {
-                    font-family: "Roboto", sans-serif;
-                    font-weight: 600;
-                    font-size: 12px;
-                    color: #777;
-                    text-transform: uppercase;
-                    margin: 0 0 8px 0;
-                }
-                @media screen and (min-width: 992px) {
-                    :global(h1) {
-                        line-height: 1.4;
-                    }
-                }
-            `}</style>
         </>
     );
 };
@@ -61,25 +35,12 @@ export const Heading = ({
 export const Content = ({ children }) => (
     <div>
         {children}
-        <style jsx>{`
-            width: 100%;
-
-            @media screen and (min-width: 992px) {
-                width: ${CONTENT_WIDTH};
-                margin: 0 auto;
-            }
-        `}</style>
     </div>
 );
 
 export const ContentRight = ({ children }) => (
     <div>
         {children}
-        <style jsx>{`
-            @media screen and (min-width: 992px) {
-                margin: 0 0 0 390px;
-            }
-        `}</style>
     </div>
 );
 
@@ -140,58 +101,6 @@ export const Layout = ({
             <Header addTopListener={addTopListener} handleDrawer={() => setOpen(!open)} />
             {children}
             <Footer {...footer} />
-            <style jsx>{`
-                .content {
-                    background-color: #fff;
-                    display: block;
-                    position: relative;
-                }
-                :global(.drawer) {
-                    top: 0;
-                }
-            `}</style>
-            <style global jsx>
-                {`
-                    * {
-                        margin: 0;
-                        padding: 0;
-                    }
-                    body {
-                        background: #fafafa;
-                        font-family: "Roboto", sans-serif;
-                    }
-                    #nprogress {
-                        pointer-events: none;
-                        position: relative;
-                        z-index: 9999999;
-                    }
-
-                    #nprogress .bar {
-                        background: #29d;
-                        height: 2px;
-                        left: 0;
-                        position: fixed;
-                        top: 0;
-                        width: 100%;
-                        z-index: 3;
-                    }
-
-                    #nprogress .peg {
-                        -ms-transform: rotate(3deg) withNamespaces(0px, -4px);
-                        -webkit-transform: rotate(3deg)
-                            withNamespaces(0px, -4px);
-                        box-shadow: 0 0 10px #29d, 0 0 5px #29d;
-                        display: block;
-                        height: 100%;
-                        opacity: 1;
-                        position: absolute;
-                        right: 0px;
-                        transform: rotate(3deg) withNamespaces(0px, -4px);
-                        width: 100px;
-                        z-index: 3;
-                    }
-                `}
-            </style>
         </div>
     );
 };

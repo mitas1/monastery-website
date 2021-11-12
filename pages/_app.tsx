@@ -1,8 +1,8 @@
-import NProgress from 'nprogress';
-import Router from 'next/router';
-
 import '@material/react-drawer/dist/drawer.css';
 import 'react-medium-image-zoom/dist/styles.css';
+
+import Router from 'next/router';
+import NProgress from 'nprogress';
 
 Router.events.on('routeChangeStart', () => {
     NProgress.start();

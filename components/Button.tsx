@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import css from 'styled-jsx/css';
 import { ReactNode } from 'react';
+
+import Link from 'next/link';
 
 interface TButton {
     children: ReactNode;
@@ -10,31 +10,6 @@ interface TButton {
     className?: string;
     secondary?: boolean;
 }
-
-const styles = css`
-    .button {
-        display: inline-block;
-        background-color: #006cb9;
-        border-radius: 3px;
-        color: #fff;
-        font-size: 15px;
-        font-weight: 500;
-        padding: 24px 45px;
-        text-decoration: none;
-    }
-    .icon {
-        margin: 0 0 0 16px;
-    }
-    .button.secondary {
-        color: #0c1a24;
-        border-radius: 3px;
-        background-color: #fff;
-    }
-    .button:hover {
-        box-shadow: 0 1px 5px #777;
-        cursor: pointer;
-    }
-`;
 
 const Button = ({
     children,
@@ -55,7 +30,6 @@ const Button = ({
         <a {...rest} className={classStr}>
             {children}
             {icon && <i className="icon">{icon}</i>}
-            <style jsx>{styles}</style>
         </a>
     );
 

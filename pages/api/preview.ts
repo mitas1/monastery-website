@@ -1,5 +1,5 @@
-import { PREVIEW_URL_SECRET } from "../../constants";
-import { sanityPreview } from "../../lib/sanity";
+import { PREVIEW_URL_SECRET } from '../../constants';
+import { sanityPreview } from '../../lib/sanity';
 
 export default async (req, res) => {
     if (req.query.secret !== PREVIEW_URL_SECRET || !req.query.slug) {

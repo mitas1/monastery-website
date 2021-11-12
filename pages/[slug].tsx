@@ -1,6 +1,9 @@
-import Article from "../components/Article";
-import markdownToHtml from "../lib/markdownToHtml";
-import { getPostBySlug, getPostSlugsByLacale } from "../lib/api";
+import Article from '../components/Article';
+import {
+  getPostBySlug,
+  getPostSlugsByLacale,
+} from '../lib/api';
+import markdownToHtml from '../lib/markdownToHtml';
 
 const MarkdownPost = ({ data: { title, metaDescription, preamble }, html }) => {
     return (

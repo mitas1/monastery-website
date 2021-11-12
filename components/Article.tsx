@@ -1,16 +1,20 @@
-import Head from "next/head";
-import Image from "next/image";
-import useTranslation from "next-translate/useTranslation";
+import useTranslation from 'next-translate/useTranslation';
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-import { Content, Heading, Layout } from "../components/Layout";
+import {
+  Content,
+  Heading,
+  Layout,
+} from '../components/Layout';
+import { urlFor } from '../lib/sanity';
+import { formatDate } from '../utils';
 import ArticleContent, {
-    TContent,
-    TFile,
-    TArticleFooterProps,
-} from "./ArticleContent";
-import { formatDate } from "../utils";
-import { urlFor } from "../lib/sanity";
-import { useRouter } from "next/router";
+  TArticleFooterProps,
+  TContent,
+  TFile,
+} from './ArticleContent';
 
 export interface TArticleProps {
     meta: {
@@ -30,28 +34,12 @@ export interface TArticleProps {
 export const Header = ({ children }) => (
     <header>
         {children}
-        <style jsx>{`
-            @media screen and (min-width: 992px) {
-                position: relative;
-                text-align: center;
-                max-width: 600px;
-                margin: 0 auto;
-            }
-        `}</style>
     </header>
 );
 
 export const ArticleWrapper = ({ children }) => (
     <header>
         {children}
-        <style jsx>{`
-            margin: 80px auto 0 auto;
-            padding: 24px;
-
-            @media screen and (min-width: 992px) {
-                padding: 64px 24px;
-            }
-        `}</style>
     </header>
 );
 
@@ -59,19 +47,6 @@ const Blockquote = ({ children }) => {
     return (
         <blockquote>
             {children}
-            <style jsx>{`
-                display: block;
-                font-size: 14px;
-                font-style: italic;
-                line-height: 26px;
-                margin: 0 0 16px 0;
-                max-width: 520px;
-
-                @media screen and (min-width: 992px) {
-                    text-align: center;
-                    margin: 0 auto 20px auto;
-                }
-            `}</style>
         </blockquote>
     );
 };
@@ -82,13 +57,6 @@ const LastUpdated = ({ date }) => {
     return (
         <div>
             Aktualizované: <strong>{formatDate(date, locale)}</strong>
-            <style jsx>{`
-                margin: -4px 0 4px 0;
-                color: #666;
-                @media screen and (min-width: 992px) {
-                    margin: -4px 0 8px 0;
-                }
-            `}</style>
         </div>
     );
 };
@@ -142,39 +110,6 @@ const Article = ({
                     />
                 </ArticleWrapper>
             </Content>
-            <style jsx>{`
-                .author {
-                    color: #666;
-                    font-weight: 500;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                }
-                .mainImage {
-                    width: 100%;
-                    height: 300px;
-                    position: relative;
-                    margin: 24px 0;
-                    background-color: #efefef;
-                }
-                @media screen and (min-width: 992px) {
-                    .header {
-                        position: relative;
-                        text-align: center;
-                        max-width: 600px;
-                        margin: 0 auto;
-                    }
-                    .mainImage {
-                        height: 600px;
-                    }
-                    .content.offset {
-                        margin-top: -200px;
-                        background: #fff;
-                        padding: 80px;
-                        z-index: 1;
-                        position: relative;
-                    }
-                }
-            `}</style>
         </Layout>
     );
 };

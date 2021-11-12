@@ -11,6 +11,7 @@
         "@material/react-drawer": "0.15.0",
         "@sanity/block-content-to-react": "3.0.0",
         "@sanity/client": "2.21.10",
+        "classnames": "^2.3.1",
         "gray-matter": "4.0.3",
         "i18next": "21.4.2",
         "moment": "2.29.1",

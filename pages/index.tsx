@@ -1,18 +1,25 @@
-import { ReactNode } from "react";
-import css from "styled-jsx/css";
-import Image from "next/image";
-import Link from "next/link";
-import useTranslation from "next-translate/useTranslation";
+import { ReactNode } from 'react';
 
-import Baner from "../components/Baner";
-import Button from "../components/Button";
-import sanity from "../lib/sanity";
-import { Content, ContentRight, Layout } from "../components/Layout";
-import { Heading } from "../components/Layout";
-import { paragraphStyles } from "../components/ArticleContent";
+import useTranslation from 'next-translate/useTranslation';
+import Image from 'next/image';
+import Link from 'next/link';
+import css from 'styled-jsx/css';
 
-import { SANITY_AVAILABLE_LOCALES, SANITY_ORDER_BY } from "../constants";
-import { formatDate } from "../utils";
+import { paragraphStyles } from '../components/ArticleContent';
+import Baner from '../components/Baner';
+import Button from '../components/Button';
+import {
+  Content,
+  ContentRight,
+  Heading,
+  Layout,
+} from '../components/Layout';
+import {
+  SANITY_AVAILABLE_LOCALES,
+  SANITY_ORDER_BY,
+} from '../constants';
+import sanity from '../lib/sanity';
+import { formatDate } from '../utils';
 
 const styles = css`
     .markdown {
@@ -181,7 +188,7 @@ const Paragraph = ({ children }) => (
     <p>
         {children}
         <style jsx>{`
-            font-size: 22px;
+            font-size:22px;
             font-weight: 300;
             line-height: 1.6;
             margin: 0 0 24px;

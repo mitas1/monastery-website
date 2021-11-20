@@ -1,0 +1,16 @@
+.banner {
+    @apply h-[550px];
+    @apply relative;
+    @apply overflow-hidden;
+    background-color: #72695f;
+}
+
+.heading {
+    @apply absolute;
+    @apply flex items-center justify-center;
+    @apply left-0 right-0 bottom-0 top-0;
+    @apply font-serif;
+    @apply mt-[50px];
+    @apply text-center;
+    @apply p-8;
+}

@@ -1,0 +1,13 @@
+.imageLayout {
+    @apply flex-row-reverse sm:flex-row flex space-x-6 space-x-reverse sm:space-x-8 justify-end;
+}
+
+.image {
+    @apply relative w-[100px] h-[100px] sm:w-[250px] sm:h-[150px] flex flex-shrink-0;
+}
+
+@screen sm {
+    .normalLayout {
+        max-width: 33.33333%;
+    }
+}

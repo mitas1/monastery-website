@@ -1,28 +1,18 @@
-import React from "react";
-import DefaultErrorPage from "next/error";
-import { useRouter } from "next/router";
+import React, { FC } from 'react';
 
-import Article from "../../../components/Article";
-import { Layout } from "../../../components/Layout";
-import Spinner from "../../../components/Spinner";
-import { SANITY_AVAILABLE_LOCALES, SANITY_ORDER_BY } from "../../../constants";
-import sanity, { sanityPreview } from "../../../lib/sanity";
-import Head from "next/head";
+import { Article } from '@components/content';
+import createSanityApi from '@lib/sanity/api';
+import { SANITY_CONFIG } from '@lib/sanity/config';
+import { Post } from '@lib/sanity/types';
 
-interface TPost {
-    _id: string;
-    title: string;
-    body: object;
-    bodyPreview: string;
-    publishedAt: string;
-    author: {
-        name: string;
-    };
+type Category = "news" | "announcements";
+
+interface PostProps {
+    post: Post;
+    category: Category;
 }
 
-type Categories = "news" | "announcements";
-
-const getFooterTitleForCategory = (category: Categories): string => {
+const getFooterTitleForCategory = (category: Category): string => {
     switch (category) {
         case "announcements":
             return "Zobraziť staršie oznamy";
@@ -31,102 +21,49 @@ const getFooterTitleForCategory = (category: Categories): string => {
     }
 };
 
-const constructQuery = (drafts: boolean, slug: string) => `
-        *[${
-            drafts ? '_id in path("drafts.**") &&' : ""
-        } _type == "post" && slug.current == "${slug}"]{
-            ${POST_QUERY_FIELDS}
-        } [0]
-    `;
-
-const Post = ({ post, category }: { post: TPost; category: Categories }) => {
+const Post: FC<PostProps> = ({ post, category }) => {
     const title = getFooterTitleForCategory(category);
 
-    const router = useRouter();
-
-    if (router.isFallback) {
-        return (
-            <Layout>
-                <div className="wrapper">
-                    <Spinner />
-                    <style jsx>{`
-                        .wrapper {
-                            display: flex;
-                            align-items: center;
-                            height: calc(100vh - 60px);
-                            box-sizing: border-box;
-                        }
-                    `}</style>
-                </div>
-            </Layout>
-        );
-    }
-
-    if (!post) {
-        return (
-            <>
-                <Head>
-                    <meta name="robots" content="noindex" />
-                </Head>
-                <DefaultErrorPage statusCode={404} />
-            </>
-        );
-    }
-
-    const { author, body, bodyPreview, ...rest } = post;
+    const { author, body, bodyPreview, ...postProps } = post;
 
     return (
-        <>
-            <Article
-                {...rest}
-                content={{ body }}
-                author={author && author.name}
-                meta={{ title: rest.title, description: bodyPreview }}
-                footer={{
-                    back: {
+        <Article
+            author={author?.name}
+            meta={{ title: postProps.title, description: bodyPreview }}
+            {...postProps}
+            renderProps={{
+                sanityBody: body,
+                links: {
+                    backLink: {
                         href: `/post/${category}`,
                         title,
                     },
-                }}
-            />
-        </>
+                },
+            }}
+        />
     );
 };
-
-export const POST_QUERY_FIELDS = `
-    _id,
-    title,
-    body,
-    bodyPreview,
-    'file': {
-        'url': file.asset->url,
-        'title': file.title,
-    },
-    mainImage,
-    publishedAt,
-    'author': author->{name}
-`;
 
 export async function getStaticProps({
     params: { slug, category },
     locale,
     preview,
 }) {
-    const sanityClient = preview ? sanityPreview : sanity;
+    const sanityApi = createSanityApi(preview);
 
-    if (!SANITY_AVAILABLE_LOCALES.includes(locale)) {
-        return {};
+    if (!SANITY_CONFIG.availableLocales.includes(locale)) {
+        return {
+            notFound: true,
+        };
     }
 
     if (slug === "latest") {
+        const post = await sanityApi.getPost({ categorySlug: category });
+
         return {
             props: {
                 category,
-                post: await sanityClient.fetch(`
-                    *[_type == "post" && "${category}" in categories[]->slug.current] {
-                        ${POST_QUERY_FIELDS}
-                    } ${SANITY_ORDER_BY} [0]
-                `),
+                post,
             },
             revalidate: 1,
         };
@@ -135,11 +72,11 @@ export async function getStaticProps({
     let post;
 
     if (preview) {
-        post = await sanityClient.fetch(constructQuery(true, slug));
+        post = await sanityApi.getPost({ draft: true, postSlug: slug });
     }
 
     if (!post) {
-        post = await sanityClient.fetch(constructQuery(false, slug));
+        post = await sanityApi.getPost({ draft: false, postSlug: slug });
     }
 
     return {
@@ -154,14 +91,11 @@ export async function getStaticProps({
 export async function getStaticPaths() {
     const paths = [];
 
-    const posts = await sanity.fetch(`
-        *[_type == "post"]{
-            slug,
-            'categories': categories[]->slug,
-        } ${SANITY_ORDER_BY}
-    `);
+    const sanityApi = createSanityApi();
 
-    SANITY_AVAILABLE_LOCALES.forEach((locale) => {
+    const posts = await sanityApi.getPostsCategories();
+
+    SANITY_CONFIG.availableLocales.forEach((locale) => {
         posts.forEach(({ slug, categories }) => {
             categories.forEach((category) => {
                 paths.push({
@@ -183,7 +117,7 @@ export async function getStaticPaths() {
         });
     });
 
-    return { paths, fallback: true };
+    return { paths, fallback: "blocking" };
 }
 
 export default Post;

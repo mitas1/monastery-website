@@ -1,0 +1,120 @@
+.content :global(h1),
+.content :global(h2),
+.content :global(h3),
+.content :global(h4),
+.content :global(p),
+.content :global(blockquote),
+.content :global(ul),
+.content :global(figure) {
+    @apply mb-4;
+}
+
+.content :global(h1),
+.content :global(h2),
+.content :global(h3),
+.content :global(h4) {
+    @apply mt-8;
+}
+
+.content :global(*:first-child) {
+    @apply mt-0;
+}
+
+.content :global(h1) {
+    @apply text-4xl;
+    @apply text-center;
+}
+
+.content :global(h2) {
+    @apply text-xl;
+}
+
+.content :global(h3) {
+    @apply text-sm;
+    @apply text-center;
+    @apply uppercase;
+    @apply text-gray-500;
+}
+
+.content :global(h1),
+.content :global(h2) {
+    @apply font-serif;
+}
+.content :global(h3),
+.content :global(h4) {
+    @apply font-sans;
+    @apply text-center;
+}
+
+.content :global(p) {
+    @apply leading-8;
+}
+
+.content :global(blockquote) {
+    @apply italic;
+    @apply border-l border-gray-300;
+    @apply mb-8;
+    @apply pl-8;
+}
+.content :global(ul) {
+    @apply list-disc;
+    @apply list-inside;
+}
+.content :global(.image) {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply m-auto;
+}
+.content :global(.image.side-by-side) {
+    @apply sm:flex-row;
+    @apply relative;
+    @apply sm:space-x-8;
+}
+
+.content :global(figcaption) {
+    @apply text-sm;
+    @apply my-2;
+    @apply text-gray-500;
+    @apply text-center;
+}
+.content :global(.image.side-by-side > *) {
+    @apply p-0;
+}
+
+.content :global(.image.side-by-side img) {
+    max-height: 470px;
+}
+
+.content :global(.zoomImage) {
+    width: calc(100vw - 48px);
+    max-width: 600px;
+    height: 250px;
+}
+.content :global(.zoomWrapper) {
+    margin: 32px 0;
+}
+
+.dropCap :global(> div > p:first-child:first-letter) {
+    @apply float-left;
+    @apply text-5xl;
+    @apply font-serif;
+    @apply mt-3;
+    @apply mr-2;
+    @apply -mb-2;
+}
+
+@screen sm {
+    .content.narrow {
+        @apply bg-white;
+        @apply max-w-3xl;
+        @apply mx-auto;
+        @apply p-20;
+        @apply z-10;
+        @apply relative;
+    }
+    .content.narrow :global(.image) {
+        margin: 0 0 0 -208px;
+        width: 68rem;
+    }
+}

@@ -1,12 +1,12 @@
 ---
 title: Skúsenosti
-metaDescription: Poďte ku mne všetci, ktorí sa namáhate a ste preťažení, a ja vás posilním.
-preamble:
+meta:
     title: Skúsenosti
-    text: >
-        „Poďte ku mne všetci, ktorí sa namáhate a ste preťažení, a ja vás posilním.”
-    author: (Mt 11,28)
-    img: /images/offerings.jpg
+    description: Poďte ku mne všetci, ktorí sa namáhate a ste preťažení, a ja vás posilním.
+quote: >
+    „Poďte ku mne všetci, ktorí sa namáhate a ste preťažení, a ja vás posilním.”
+author: (Mt 11,28)
+mainImage: /images/offerings.jpg
 ---
 
 ## Kláštor z pohľadu návštevníkov

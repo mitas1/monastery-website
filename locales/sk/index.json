@@ -2,8 +2,8 @@
     "readMore": "Čítať viac",
     "offerings": {
         "title": {
-            "firstLine": "Zbierka na dokončenie",
-            "secondLine": "kláštora"
+            "firstLine": "Kláštor",
+            "secondLine": "najsvätejšej Bohorodičky"
         },
         "readMore": "Viac o projekte"
     },
@@ -12,15 +12,15 @@
     },
     "article01": {
         "title": "Život v kláštore",
-        "text": "Modlitba a pokánie: najdôležitejšou prácou mníšok je uskutočňovať neustálu modlitbu v mene celého ľudstva.\n"
+        "bodyPreview": "Modlitba a pokánie: najdôležitejšou prácou mníšok je uskutočňovať neustálu modlitbu v mene celého ľudstva.\n"
     },
     "article02": {
         "title": "Prijímanie hostí",
-        "text": "Prijímame hostí. Kohokoľvek, kto túži prehĺbiť svoj vzťah s Bohom, zúčastniť sa našej liturgie, porozprávať sa alebo odpočinúť si v tichu.\n"
+        "bodyPreview": "Prijímame hostí. Kohokoľvek, kto túži prehĺbiť svoj vzťah s Bohom, zúčastniť sa našej liturgie, porozprávať sa alebo odpočinúť si v tichu.\n"
     },
     "article03": {
         "title": "Skúsenosti",
-        "text": "Kláštor z pohľadu návštevníkov.\n"
+        "bodyPreview": "Kláštor z pohľadu návštevníkov.\n"
     },
     "shortArticleWithAside": {
         "title": "Benediktínky",

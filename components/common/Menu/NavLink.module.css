@@ -1,0 +1,11 @@
+.navLink {
+    @apply h-full flex items-center p-4 text-sm;
+
+    &.active {
+        @apply border-b border-black;
+
+        &.inverse {
+            @apply border-white bg-white bg-opacity-5;
+        }
+    }
+}

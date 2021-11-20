@@ -1,0 +1,12 @@
+.map {
+    @apply w-full;
+
+
+
+    & .iframe {
+        @apply w-full;
+        @apply h-[300px] sm:h-[550px];
+
+        background-color: #e5e3df;
+    }
+}

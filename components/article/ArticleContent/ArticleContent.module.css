@@ -6,14 +6,14 @@
 .content :global(blockquote),
 .content :global(ul),
 .content :global(figure) {
-    @apply mt-4;
+    @apply mb-4;
 }
 
-.content :global(p),
-.content :global(blockquote),
-.content :global(ul),
-.content :global(figure) {
-    @apply mb-8;
+.content :global(h1),
+.content :global(h2),
+.content :global(h3),
+.content :global(h4) {
+    @apply mt-8;
 }
 
 .content :global(*:first-child) {
@@ -53,6 +53,7 @@
 .content :global(blockquote) {
     @apply italic;
     @apply border-l border-gray-300;
+    @apply mb-8;
     @apply pl-8;
 }
 .content :global(ul) {
@@ -63,7 +64,7 @@
     @apply flex;
     @apply flex-col;
     @apply items-center;
-    @apply mx-auto;
+    @apply m-auto;
 }
 .content :global(.image.side-by-side) {
     @apply sm:flex-row;
@@ -113,7 +114,7 @@
         @apply relative;
     }
     .content.narrow :global(.image) {
-        @apply ml-[-208px];
+        margin: 0 0 0 -208px;
         width: 68rem;
     }
 }

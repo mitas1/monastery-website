@@ -23,10 +23,6 @@ export function usePosts(
     const hasMore = currentPage * POSTS_PER_PAGE < totalCount;
 
     const loadMore = useCallback(async () => {
-        console.log(
-            skip + currentPage * POSTS_PER_PAGE,
-            skip + (currentPage + 1) * POSTS_PER_PAGE
-        );
         return await sanityApi.getPosts(
             categorySlug,
             skip + currentPage * POSTS_PER_PAGE,

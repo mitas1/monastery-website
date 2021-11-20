@@ -14,20 +14,17 @@ export function usePosts(
     initialState: any,
     totalCount: number
 ) {
-    const [currentPage, setCurrentPage] = useState(() => {
-        if (!initialState) {
-            return 1;
-        }
-        return Math.ceil(initialState.length / POSTS_PER_PAGE);
-    });
+    const skip = initialState.length;
+
+    const [currentPage, setCurrentPage] = useState(1);
 
     const hasMore = currentPage * POSTS_PER_PAGE < totalCount;
 
     const loadMore = useCallback(async () => {
         return await sanityApi.getPosts(
             categorySlug,
-            currentPage * POSTS_PER_PAGE,
-            (currentPage + 1) * POSTS_PER_PAGE
+            skip + currentPage * POSTS_PER_PAGE,
+            skip + (currentPage + 1) * POSTS_PER_PAGE
         );
     }, [currentPage]);
 

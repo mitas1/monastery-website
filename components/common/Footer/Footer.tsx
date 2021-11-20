@@ -65,7 +65,7 @@ const Footer: FC<FooterProps> = ({ type = "simple" }) => {
                             <h1 className="font-serif text-5xl pb-4">
                                 {t("footer.title")}
                             </h1>
-                            <div className="flex flex-col sm:flex-row space-y-4">
+                            <div className="flex flex-col sm:flex-row space-y-4 space-x-8">
                                 {renderTimeSheetsTable(
                                     "footer.workdays.title",
                                     "footer.workdays.elems"

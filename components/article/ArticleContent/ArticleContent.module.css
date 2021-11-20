@@ -16,6 +16,19 @@
     @apply mt-8;
 }
 
+.content {
+    & :global(h1 + h1),
+    & :global(h1 + h2),
+    & :global(h1 + h3),
+    & :global(h1 + h4),
+    & :global(h2 + h1),
+    & :global(h2 + h2),
+    & :global(h2 + h3),
+    & :global(h2 + h4) {
+        @apply mt-0;
+    }
+}
+
 .content :global(*:first-child) {
     @apply mt-0;
 }

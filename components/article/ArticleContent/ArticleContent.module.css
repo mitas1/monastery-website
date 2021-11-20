@@ -52,6 +52,7 @@
 
 .content :global(blockquote) {
     @apply italic;
+    @apply leading-8;
     @apply border-l border-gray-300;
     @apply mb-8;
     @apply pl-8;

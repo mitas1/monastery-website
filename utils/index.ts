@@ -1,7 +1,9 @@
-import moment from "moment";
+import 'moment/locale/sk';
+
+import moment from 'moment';
 
 export const formatDate = (date, locale = "en") =>
-    moment(date).locale(locale).format("D. MMMM YYYY");
+    moment(date).locale(locale).format("LL");
 
 export const isPathActive = (path: string, currentPath: string): boolean => {
     if (path == "/") {

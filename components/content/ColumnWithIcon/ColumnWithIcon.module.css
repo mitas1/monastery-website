@@ -1,0 +1,14 @@
+.root {
+    @apply flex w-full;
+}
+
+.iconCircle {
+    @apply bg-gray-800 rounded-full flex items-center justify-center w-14 h-14 mr-4 flex-shrink-0;
+}
+.content {
+    @apply text-sm space-y-2;
+}
+
+@screen sm {
+    max-width: 33.33333%;
+}

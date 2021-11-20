@@ -1,19 +1,19 @@
 ---
 title: Zbierka na dokončenie kláštora
-metaDescription: >-
-    Ďakujeme za každý príspevok. Za našich dobrodincov sa každý deň modlíme a raz za mesiac je na
-    ich úmysel slúžená svätá omša. Dvakrát do roka organizujeme pre záujemcov s radov našich darcov
-    duchovnú.
-showIban: true
-preamble:
+meta:
     title: Zbierka na dokončenie exteriéru kláštora
-    text: >
-        „Ďakujeme za každý príspevok. Za našich dobrodincov sa každý deň modlíme a
-        raz za mesiac je na ich úmysel slúžená svätá omša. Dvakrát do roka
-        organizujeme pre záujemcov s radov našich darcov duchovnú obnovu v našom
-        kláštore.”
-    author: Sestry benediktínky
-    img: /images/offerings.jpg
+    description: >-
+        Ďakujeme za každý príspevok. Za našich dobrodincov sa každý deň modlíme a raz za mesiac je
+        na ich úmysel slúžená svätá omša. Dvakrát do roka organizujeme pre záujemcov s radov našich
+        darcov duchovnú.
+quote: >
+    „Ďakujeme za každý príspevok. Za našich dobrodincov sa každý deň modlíme a
+    raz za mesiac je na ich úmysel slúžená svätá omša. Dvakrát do roka
+    organizujeme pre záujemcov s radov našich darcov duchovnú obnovu v našom
+    kláštore.”
+author: Sestry benediktínky
+mainImage: /images/offerings.jpg
+showIban: true
 ---
 
 Kláštor najsvätejšej Bohorodičky bol založený v&nbsp;r.&nbsp;2006 Kláštorom

@@ -1,0 +1,19 @@
+.navLink {
+    @apply h-full flex items-center p-4 text-sm;
+
+    &.mobile {
+        @apply text-white;
+    }
+
+    &.active {
+        @apply border-b border-black;
+
+        &.inverse {
+            @apply border-white bg-white bg-opacity-5;
+        }
+
+        &.mobile {
+            @apply border-none bg-gray-700;
+        }
+    }
+}

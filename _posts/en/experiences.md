@@ -1,12 +1,11 @@
 ---
 title: Experiences
-metaDescription: Come to me, all you who are weary and burdened, and I will give you rest.
-preamble:
+meta:
     title: Experiences
-    text: >
-        “Come to me, all you who are weary and burdened, and I will give you rest.”
-    author: (Matthew 11:28)
-    img: /images/offerings.jpg
+    description: Come to me, all you who are weary and burdened, and I will give you rest.
+quote: “Come to me, all you who are weary and burdened, and I will give you rest.”
+author: (Matthew 11:28)
+mainImage: /images/offerings.jpg
 ---
 
 ## Monastery from a visitor´s perspective

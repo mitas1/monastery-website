@@ -1,32 +1,15 @@
-import Article from "../components/Article";
-import markdownToHtml from "../lib/markdownToHtml";
-import { getPostBySlug, getPostSlugsByLacale } from "../lib/api";
+import { Article } from '@components/content';
+import {
+  getPostBySlug,
+  getPostSlugsByLacale,
+} from '@lib/api';
 
-const MarkdownPost = ({ data: { title, metaDescription, preamble }, html }) => {
-    return (
-        <>
-            <Article
-                title={preamble.title}
-                meta={{ title, description: metaDescription }}
-                mainImage={preamble.img}
-                quote={preamble.text}
-                author={preamble.author}
-                footer={{ showContact: true }}
-                content={{ html }}
-            />
-        </>
-    );
-};
+const MarkdownPost = ({ data, html }) => (
+    <Article {...data} html={html} links={{ contactLink: true }} dropCap />
+);
 
-export async function getStaticProps({ locale, preview, params: { slug } }) {
-    if (preview) {
-        console.error("Unexpected preview mode");
-        return { notFound: true };
-    }
-
-    const { data, content } = getPostBySlug(slug, locale);
-
-    const html = await markdownToHtml(content);
+export async function getStaticProps({ locale, params: { slug } }) {
+    const { data, html } = await getPostBySlug(slug, locale);
 
     return { props: { data, html } };
 }

@@ -1,5 +1,6 @@
+.env
 .next/
+.vscode/
 node_modules/
 out/
 public/static/locales/
-.env

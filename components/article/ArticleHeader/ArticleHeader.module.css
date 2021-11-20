@@ -1,0 +1,14 @@
+.header {
+    @apply pb-8;
+    @apply space-y-2;
+}
+
+@screen sm {
+    .header {
+        @apply m-auto;
+        @apply text-center;
+        @apply space-y-4;
+        @apply py-14;
+        width: 600px;
+    }
+}

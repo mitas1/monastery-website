@@ -1,16 +1,17 @@
 ---
 title: Life in a Monastery
-metaDescription: >-
-    The day starts with the morning prayers at 5 a.m. Prayers, Holy Mass and contemplation are the
-    most important part of the day. Nuns spend time also working in the garden, in the kitchen and
-    painting the Paschal candles, which represent the main source of income for the Monastery.
-preamble:
+meta:
     title: Life in a Monastery
-    text: >
-        “What, dear brothers, is sweeter than the voice of the Lord calling to us? See
-        how the Lord in His love shows us the way of life.”
-    author: St. Benedict
-    img: /images/article01.jpg
+    description: >-
+        The day starts with the morning prayers at 5 a.m. Prayers, Holy Mass and contemplation are
+        the most important part of the day. Nuns spend time also working in the garden, in the
+        kitchen and painting the Paschal candles, which represent the main source of income for the
+        Monastery.
+quote: >
+    “What, dear brothers, is sweeter than the voice of the Lord calling to us? See
+    how the Lord in His love shows us the way of life.”
+author: St. Benedict
+mainImage: /images/article01.jpg
 ---
 
 ## The most important task of nuns is to pray constantly on behalf of all mankind.

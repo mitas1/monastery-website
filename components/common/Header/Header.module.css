@@ -1,0 +1,19 @@
+.header {
+    @apply border-b;
+    @apply border-gray-100;
+    @apply fixed;
+    @apply top-0;
+    @apply z-20;
+    @apply inset-x-0;
+    @apply text-black;
+    @apply px-10;
+    @apply bg-white bg-opacity-95;
+    @apply transition-colors;
+}
+
+.header.top {
+    @apply sm:bg-transparent;
+    @apply sm:border-white;
+    @apply sm:border-opacity-20;
+    @apply sm:text-white;
+}

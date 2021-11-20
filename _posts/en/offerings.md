@@ -1,18 +1,18 @@
 ---
-title: Offerings for the completion of the monastery
-metaDescription: >-
-    Thank you for each contribution. We pray for our benefactors daily and once a month a Holy Mass
-    is celebrated for their intentions. We organize for those who are interested among our
-    benefactors a spiritual renewal in our monastery twice a year.
+title: Offerings for the completion of the monastery building
+meta:
+    title: Offerings for the completion of the monastery
+    description: >-
+        Thank you for each contribution. We pray for our benefactors daily and once a month a Holy
+        Mass is celebrated for their intentions. We organize for those who are interested among our
+        benefactors a spiritual renewal in our monastery twice a year.
+quote: >
+    “Thank you for each contribution. We pray for our benefactors daily and once a month a
+    Holy Mass is celebrated for their intentions. We organize for those who are interested
+    among our benefactors a spiritual renewal in our monastery twice a year.”
+author: The Benedictine sisters
+mainImage: /images/offerings.jpg
 showIban: true
-preamble:
-    title: Offerings for the completion of the monastery building
-    text: >
-        “Thank you for each contribution. We pray for our benefactors daily and once a month a
-        Holy Mass is celebrated for their intentions. We organize for those who are interested
-        among our benefactors a spiritual renewal in our monastery twice a year.”
-    author: The Benedictine sisters
-    img: /images/offerings.jpg
 ---
 
 This monastery of the Most Holy Mother of God was founded in the year 2006 by
@@ -82,11 +82,11 @@ delights” (Psalm 36:9), because the guest is called to not enter the way of li
 which is not his life but to return to his own world and vocation.
 
 <div class="image side-by-side">
-    <figure class="left">
+    <figure>
         <img src="/images/article01-2.jpg">
         <figcaption>External composition</figcaption>
     </figure>
-    <figure class="right">
+    <figure>
         <img src="/images/article01-3.jpg">
         <figcaption>Interior of the Church</figcaption>
     </figure>

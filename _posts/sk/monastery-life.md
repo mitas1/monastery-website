@@ -1,17 +1,16 @@
 ---
 title:  Život v kláštore
-metaDescription: >-
-    Deň sa začína modlitbou o piatej. Modlitbami, omšou a osobným rozjímaním, je potom popretkávaný
-    až do večera. Čas majú mníšky vyčlenený aj na prácu v záhrade, kuchyni a na maľovanie paškálnych
-    sviec, ktoré sú hlavným zdrojom činnosti benediktínok. Denný režim má svoj pravidelný rytmus v
-    striedaní modlitby a práce, čo vychádza z tradície púštnych otcov.
-preamble:
-    title: Život v kláštore
-    text: >
-        „Čo je nám sladšie, najdrahší bratia, nad Pánov hlas, ktorý nás pozýva? Hľa svojou vernou
-        láskou nám Pán ukazuje cestu života.“
-    author: Sv. Benedikt
-    img: /images/article01.jpg
+meta:
+    description: >-
+        Deň sa začína modlitbou o piatej. Modlitbami, omšou a osobným rozjímaním, je potom
+        popretkávaný až do večera. Čas majú mníšky vyčlenený aj na prácu v záhrade, kuchyni a na
+        maľovanie paškálnych sviec, ktoré sú hlavným zdrojom činnosti benediktínok. Denný režim má
+        svoj pravidelný rytmus v striedaní modlitby a práce, čo vychádza z tradície púštnych otcov.
+quote: >
+    „Čo je nám sladšie, najdrahší bratia, nad Pánov hlas, ktorý nás pozýva? Hľa svojou vernou
+    láskou nám Pán ukazuje cestu života.“
+author: Sv. Benedikt
+mainImage: /images/article01.jpg
 ---
 
 ## Najdôležitejšou prácou mníšok je uskutočňovať neustálu modlitbu v mene celého ľudstva.

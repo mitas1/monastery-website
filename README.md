@@ -16,11 +16,11 @@ Deployed by [Vercel](https://vercel.com/).
 Firstly, install the app dependencies:
 
 ```
-$ npm install
+$ yarn install
 ```
 
 To build and serve the app run:
 
 ```
-$ npm run dev
+$ yarn dev
 ```

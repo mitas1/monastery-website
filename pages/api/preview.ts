@@ -1,28 +1,17 @@
-import { PREVIEW_URL_SECRET } from "../../constants";
-import { sanityPreview } from "../../lib/sanity";
+import createSanityApi from '@lib/sanity/api';
+import { SANITY_CONFIG } from '@lib/sanity/config';
 
 export default async (req, res) => {
-    if (req.query.secret !== PREVIEW_URL_SECRET || !req.query.slug) {
+    if (req.query.secret !== SANITY_CONFIG.previewUrl || !req.query.slug) {
         return res.status(401).json({ message: "Invalid token" });
     }
 
-    const post = await sanityPreview.fetch(`
-        *[_type == "post" && slug.current == "${req.query.slug}"]{
-            _id,
-            title,
-            publishedAt,
-            body,
-            'slug': slug.current,
-            'category': categories[0]->slug.current,
-        }[0]
-    `);
+    const post = await createSanityApi(true).getPost({
+        postSlug: req.query.slug,
+    });
 
-    if (!post || !post.slug) {
+    if (!post?.slug) {
         return res.status(401).json({ message: "Invalid slug" });
-    }
-
-    if (!(post.category && post.title && post.body && post.publishedAt)) {
-        return res.status(401).json({ message: "Required fields are missing" });
     }
 
     res.setPreviewData({});

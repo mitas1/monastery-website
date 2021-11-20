@@ -47,10 +47,6 @@ export async function getStaticProps({ params: { category } }) {
     const totalCount = await sanityApi.getPostsCount(category);
     const fetchedCategory = await sanityApi.getCategory(category);
 
-    console.log(
-        `Fetching articles: ${articles.length}, ${JSON.stringify(articles)}`
-    );
-
     return {
         props: {
             articles,

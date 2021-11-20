@@ -4,18 +4,18 @@ import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
 import Image from 'next/image';
 
+import { ArticleContent } from '@components/article';
+import {
+  ArticleContentProps,
+} from '@components/article/ArticleContent/ArticleContent';
 import { ArticleHeader } from '@components/article/ArticleHeader';
 import {
   ArticleHeaderProps,
 } from '@components/article/ArticleHeader/ArticleHeader';
-import ArticleRenderer, {
-  ArticleRendererProps,
-} from '@components/article/ArticleRenderer/ArticleRenderer';
 import {
   CenterBox,
   Layout,
 } from '@components/common';
-import { Post } from '@lib/sanity/types';
 import { urlFor } from '@lib/sanity/urlFor';
 
 import styles from './Article.module.css';
@@ -25,20 +25,22 @@ export interface Meta {
     description?: string;
 }
 
-export interface ArticleProps
-    extends ArticleHeaderProps,
-        Omit<Post, "author" | "publishedAt"> {
+export interface ArticleProps extends ArticleHeaderProps, ArticleContentProps {
     meta?: Meta;
-    renderProps: ArticleRendererProps;
+    mainImage?: string;
 }
 
 const Article: FC<ArticleProps> = ({
     meta,
-    renderProps,
     mainImage,
-    ...headerProps
+    title,
+    quote,
+    publishedAt,
+    author,
+    ...contentProps
 }) => {
     const { t } = useTranslation("common");
+
     return (
         <Layout>
             <Head>
@@ -50,21 +52,26 @@ const Article: FC<ArticleProps> = ({
                 />
             </Head>
             <CenterBox className="p-8">
-                <ArticleHeader {...headerProps} />
+                <ArticleHeader
+                    title={title}
+                    quote={quote}
+                    publishedAt={publishedAt}
+                    author={author}
+                />
                 {mainImage && (
                     <div className={styles.heroImage}>
                         <Image
                             layout="fill"
                             objectFit="cover"
                             src={
-                                renderProps.html
+                                contentProps.html
                                     ? mainImage
                                     : urlFor(mainImage).width(1150).toString()
                             }
                         />
                     </div>
                 )}
-                <ArticleRenderer {...renderProps} offset={!!mainImage} />
+                <ArticleContent {...contentProps} offset={!!mainImage} />
             </CenterBox>
         </Layout>
     );

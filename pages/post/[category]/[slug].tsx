@@ -28,16 +28,14 @@ const Post: FC<PostProps> = ({ post, category }) => {
 
     return (
         <Article
+            {...postProps}
             author={author?.name}
             meta={{ title: postProps.title, description: bodyPreview }}
-            {...postProps}
-            renderProps={{
-                sanityBody: body,
-                links: {
-                    backLink: {
-                        href: `/post/${category}`,
-                        title,
-                    },
+            sanityBody={body}
+            links={{
+                backLink: {
+                    href: `/post/${category}`,
+                    title,
                 },
             }}
         />

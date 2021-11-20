@@ -5,10 +5,7 @@ import {
 } from '@lib/api';
 
 const MarkdownPost = ({ data, html }) => (
-    <Article
-        {...data}
-        renderProps={{ html, links: { contactLink: true }, dropCap: true }}
-    />
+    <Article {...data} html={html} links={{ contactLink: true }} dropCap />
 );
 
 export async function getStaticProps({ locale, params: { slug } }) {

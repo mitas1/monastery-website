@@ -5,8 +5,6 @@ import {
 import { SANITY_CONFIG } from './config';
 import { Post } from './types';
 
-export const POSTS_PER_PAGE = 10;
-
 export default function createSanityApi(preview = false) {
     const client = preview ? sanityClient : sanityPreviewClient;
 
@@ -46,8 +44,9 @@ export default function createSanityApi(preview = false) {
     async function getPosts(
         categorySlug: string,
         from = 0,
-        to = POSTS_PER_PAGE
+        to = SANITY_CONFIG.postsPerPage - 1
     ) {
+        console.log("fetching ...", from, to);
         return (await client.fetch(`
             *[_type == "post" && "${categorySlug}" in categories[]->slug.current]{
                 _id,

@@ -2,8 +2,6 @@ import sanity from '@sanity/client';
 
 import { SANITY_CONFIG } from './config';
 
-export const POSTS_PER_PAGE = 10;
-
 export const sanityPreviewClient = sanity({
     apiVersion: SANITY_CONFIG.apiVersion,
     projectId: SANITY_CONFIG.projectId,

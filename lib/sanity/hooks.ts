@@ -7,7 +7,9 @@ import {
 import { useAsyncCallback } from 'react-async-hook';
 
 import { sanityApi } from './api';
-import { POSTS_PER_PAGE } from './client';
+import { SANITY_CONFIG } from './config';
+
+const POSTS_PER_PAGE = SANITY_CONFIG.postsPerPage;
 
 export function usePosts(
     categorySlug: string,
@@ -16,11 +18,15 @@ export function usePosts(
 ) {
     const skip = initialState.length;
 
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(0);
 
     const hasMore = currentPage * POSTS_PER_PAGE < totalCount;
 
     const loadMore = useCallback(async () => {
+        console.log(
+            skip + currentPage * POSTS_PER_PAGE,
+            skip + (currentPage + 1) * POSTS_PER_PAGE
+        );
         return await sanityApi.getPosts(
             categorySlug,
             skip + currentPage * POSTS_PER_PAGE,

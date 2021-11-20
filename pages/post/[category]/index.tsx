@@ -18,7 +18,11 @@ const sanityApi = createSanityApi();
 const Articles = ({ articles: ssrArticles, category, totalCount }) => {
     const { t } = useTranslation("common");
 
-    const { posts } = usePosts(category.slug.current, ssrArticles, totalCount);
+    const { posts, loadMore } = usePosts(
+        category.slug.current,
+        ssrArticles,
+        totalCount
+    );
 
     return (
         <Layout>
@@ -37,6 +41,7 @@ const Articles = ({ articles: ssrArticles, category, totalCount }) => {
                         />
                     ))}
                 </div>
+                <button onClick={loadMore}>Load more</button>
             </CenterBox>
         </Layout>
     );

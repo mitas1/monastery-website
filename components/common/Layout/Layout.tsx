@@ -52,7 +52,7 @@ const Layout: FC<LayoutProps> = ({
                 />
             </Head>
             {open ? (
-                <Sidebar onClose={() => setOpen(false)}>
+                <Sidebar className="bg-gray-800" onClose={() => setOpen(false)}>
                     <Menu type="mobile" />
                 </Sidebar>
             ) : null}

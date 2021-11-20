@@ -14,11 +14,12 @@ import classNames from 'classnames';
 import styles from './Sidebar.module.css';
 
 interface SidebarProps {
+    className?: string;
     children: any;
     onClose: () => void;
 }
 
-const Sidebar: FC<SidebarProps> = ({ children, onClose }) => {
+const Sidebar: FC<SidebarProps> = ({ className, children, onClose }) => {
     const sidebarRef = useRef() as React.MutableRefObject<HTMLDivElement>;
     const contentRef = useRef() as React.MutableRefObject<HTMLDivElement>;
 
@@ -47,7 +48,7 @@ const Sidebar: FC<SidebarProps> = ({ children, onClose }) => {
 
     return (
         <div
-            className={classNames(styles.root)}
+            className={styles.root}
             ref={sidebarRef}
             onKeyDown={onKeyDownSidebar}
             tabIndex={1}
@@ -56,7 +57,10 @@ const Sidebar: FC<SidebarProps> = ({ children, onClose }) => {
                 <div className={styles.backdrop} onClick={onClose} />
                 <section className="absolute inset-y-0 left-0 max-w-full flex outline-none">
                     <div className="h-full w-full md:w-screen md:max-w-md">
-                        <div className={styles.sidebar} ref={contentRef}>
+                        <div
+                            className={classNames(className, styles.sidebar)}
+                            ref={contentRef}
+                        >
                             {children}
                         </div>
                     </div>

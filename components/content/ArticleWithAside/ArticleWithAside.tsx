@@ -5,6 +5,7 @@ import {
   Heading,
   Paragraph,
 } from '@components/ui';
+import stBenedictImage from '@public/images/benedikt.jpg';
 
 const ArticleWithAside = () => {
     const { t } = useTranslation();
@@ -13,11 +14,11 @@ const ArticleWithAside = () => {
         <section className="flex flex-col sm:flex-row">
             <div className="relative w-full h-[600px] sm:h-auto sm:w-1/3">
                 <Image
+                    src={stBenedictImage}
                     layout="fill"
                     objectFit="cover"
-                    className="aside-image"
-                    src="/images/benedikt.jpg"
                     alt="Detail: Kopf des Hl. Benedikt, Fra Angelico"
+                    placeholder="blur"
                 />
             </div>
             <article className="px-8 py-10 sm:px-24 sm:py-32 sm:w-2/3">

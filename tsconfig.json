@@ -18,6 +18,7 @@
         "paths": {
             "@components/*": ["components/*"],
             "@lib/*": ["lib/*"],
+            "@public/*": ["public/*"],
             "@constants": ["constants/index"]
         }
     },

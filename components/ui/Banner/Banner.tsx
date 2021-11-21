@@ -2,6 +2,7 @@ import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 
 import { CenterBox } from '@components/common';
+import backgroundImage from '@public/images/background.jpg';
 
 import styles from './Banner.module.css';
 
@@ -13,10 +14,11 @@ const Banner = () => {
     return (
         <section className={styles.banner}>
             <Image
-                src="/images/background.jpg"
+                src={backgroundImage}
                 alt="Kláštor najsvätejšej Bohorodičky"
                 layout="fill"
                 objectFit="cover"
+                placeholder="blur"
             />
             <CenterBox>
                 <div className={styles.heading}>

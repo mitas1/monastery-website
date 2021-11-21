@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 
+import footerImage from '@public/images/footer.jpg';
+
 import { CenterBox } from '../';
 
 export interface FooterProps {
@@ -54,11 +56,12 @@ const Footer: FC<FooterProps> = ({ type = "simple" }) => {
             {type === "timesheets" && (
                 <>
                     <Image
-                        src="/images/footer.jpg"
+                        src={footerImage}
                         alt="hero image"
                         className="hero-image"
                         layout="fill"
                         objectFit="cover"
+                        placeholder="blur"
                     />
                     <section className="relative py-8 sm:py-20">
                         <CenterBox layout="text">

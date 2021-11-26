@@ -5,6 +5,7 @@
         "home": "Domov",
         "news": "Zo života kláštora",
         "announcements": "Aktuality",
+        "word-from-the-monastery": "Slovo z kláštora",
         "offerings": "Zbierka",
         "contact": "Kontakt"
     },
@@ -13,22 +14,23 @@
     "arrowBack": "Späť na hlavnú stránku",
     "linkFooter": "Kontakt",
     "footer": {
-        "title": "Bohoslužby",
+        "title": "Liturgia hodín",
         "official": "Oficiálna stránka benediktínskeho kláštora v Horných Orešanoch",
+        "link": "Aktuálne sv. omše:  horneoresany.sk/klastor",
         "workdays": {
-            "title": "Pracovné dni",
+            "title": "Pondelok - Piatok",
             "elems": [
                 {
                     "time": "05:00",
-                    "title": "Ofícium"
+                    "title": "Posv.čítanie"
                 },
                 {
-                    "time": "06:00",
+                    "time": "06:45",
                     "title": "Ranné chvály"
                 },
                 {
                     "time": "variabilné",
-                    "title": "Tercia - 15 min pred sv. omšou"
+                    "title": "Tercia - po sv. omši"
                 },
                 {
                     "time": "variabilné",
@@ -39,20 +41,12 @@
                     "title": "Sexta"
                 },
                 {
-                    "time": "12:30",
-                    "title": "Obed"
-                },
-                {
                     "time": "14:15",
-                    "title": "Nona, ruženec"
+                    "title": "Nona a ruženec"
                 },
                 {
-                    "time": "16:45",
+                    "time": "17:00",
                     "title": "Vešpery"
-                },
-                {
-                    "time": "19:00",
-                    "title": "Večera"
                 },
                 {
                     "time": "20:00",
@@ -65,7 +59,7 @@
             "elems": [
                 {
                     "time": "05:30",
-                    "title": "Ofícium"
+                    "title": "Posv.čítanie"
                 },
                 {
                     "time": "07:00",
@@ -84,20 +78,12 @@
                     "title": "Sexta"
                 },
                 {
-                    "time": "12:00",
-                    "title": "Obed"
-                },
-                {
                     "time": "15:00",
-                    "title": "Nona, ruženec s adoráciou"
+                    "title": "Nona a ruženec s adoráciou"
                 },
                 {
                     "time": "17:00",
-                    "title": "Vešpery"
-                },
-                {
-                    "time": "18:30",
-                    "title": "Večera"
+                    "title": "Poklona a Vešpery"
                 },
                 {
                     "time": "20:00",

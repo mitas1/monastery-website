@@ -6,6 +6,7 @@
         "news": "News",
         "offerings": "Offerings",
         "announcements": "Announcements",
+        "slovo-z-klastora": "Word from the Monastery",
         "contact": "Contact"
     },
     "burger_img_alt": "Menu icon",
@@ -13,22 +14,23 @@
     "arrowBack": "Back to home page",
     "linkFooter": "Contact",
     "footer": {
-        "title": "Divine Worship",
+        "title": "Liturgy of the Hours",
         "official": "The official website of the Monastery of the Most Holy Mother of God (Horne Oresany)",
+        "link": "Holy Mass schedule: horneoresany.sk/klastor",
         "workdays": {
-            "title": "Working day",
+            "title": "Monday to Friday",
             "elems": [
                 {
                     "time": "05:00",
                     "title": "Divinum Officium"
                 },
                 {
-                    "time": "06:00",
+                    "time": "06:45",
                     "title": "Morning Prayers"
                 },
                 {
                     "time": "variable",
-                    "title": "Tertia - 15m before the Holy Mass"
+                    "title": "Tertia - after the Holy Mass"
                 },
                 {
                     "time": "variable",
@@ -39,20 +41,12 @@
                     "title": "Sexta"
                 },
                 {
-                    "time": "12:30",
-                    "title": "Lunch"
-                },
-                {
                     "time": "14:15",
-                    "title": "Nona, rosary"
+                    "title": "Nona and rosary"
                 },
                 {
-                    "time": "16:45",
+                    "time": "17:00",
                     "title": "Vespers"
-                },
-                {
-                    "time": "19:00",
-                    "title": "Dinner"
                 },
                 {
                     "time": "20:00",
@@ -61,7 +55,7 @@
             ]
         },
         "holidays": {
-            "title": "Holiday",
+            "title": "Feast Day",
             "elems": [
                 {
                     "time": "05:30",
@@ -77,27 +71,19 @@
                 },
                 {
                     "time": "09:00",
-                    "title": "The Holy Mass"
+                    "title": "Holy Mass"
                 },
                 {
                     "time": "11:40",
                     "title": "Sexta"
                 },
                 {
-                    "time": "12:00",
-                    "title": "Lunch"
-                },
-                {
                     "time": "15:00",
-                    "title": "Nona, rosary including adoration"
+                    "title": "Nona and rosary with adoration"
                 },
                 {
                     "time": "17:00",
                     "title": "Vespers"
-                },
-                {
-                    "time": "18:30",
-                    "title": "Dinner"
                 },
                 {
                     "time": "20:00",

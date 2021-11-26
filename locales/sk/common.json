@@ -1,109 +1,95 @@
 {
-    "title": "Benediktínky | Slovensko",
-    "metaDescription": "Sme mníšska komunita ktorá žije podľa Reguly, napísanej sv. Benediktom pred 1600 rokmi. Hľadáme Boha a jeho milosrdenstvo v očisťovaní srdca a v sesterskej láske.",
-    "menu": {
-        "home": "Domov",
-        "news": "Zo života kláštora",
-        "announcements": "Aktuality",
-        "offerings": "Zbierka",
-        "contact": "Kontakt"
-    },
-    "burger_img_alt": "Ikona menu",
-    "readMore": "Čítať viac",
-    "arrowBack": "Späť na hlavnú stránku",
-    "linkFooter": "Kontakt",
-    "footer": {
-        "title": "Bohoslužby",
-        "official": "Oficiálna stránka benediktínskeho kláštora v Horných Orešanoch",
-        "workdays": {
-            "title": "Pracovné dni",
-            "elems": [
-                {
-                    "time": "05:00",
-                    "title": "Ofícium"
-                },
-                {
-                    "time": "06:00",
-                    "title": "Ranné chvály"
-                },
-                {
-                    "time": "variabilné",
-                    "title": "Tercia - 15 min pred sv. omšou"
-                },
-                {
-                    "time": "variabilné",
-                    "title": "Svätá omša"
-                },
-                {
-                    "time": "12:10",
-                    "title": "Sexta"
-                },
-                {
-                    "time": "12:30",
-                    "title": "Obed"
-                },
-                {
-                    "time": "14:15",
-                    "title": "Nona, ruženec"
-                },
-                {
-                    "time": "16:45",
-                    "title": "Vešpery"
-                },
-                {
-                    "time": "19:00",
-                    "title": "Večera"
-                },
-                {
-                    "time": "20:00",
-                    "title": "Kompletórium"
-                }
-            ]
+  "title": "Benediktínky | Slovensko",
+  "metaDescription": "Sme mníšska komunita ktorá žije podľa Reguly, napísanej sv. Benediktom pred 1600 rokmi. Hľadáme Boha a jeho milosrdenstvo v očisťovaní srdca a v sesterskej láske.",
+  "menu": {
+    "home": "Domov",
+    "news": "Zo života kláštora",
+    "announcements": "Aktuality",
+    "word-from-the-monastery": "Slovo z kláštora",
+    "offerings": "Zbierka",
+    "contact": "Kontakt"
+  },
+  "burger_img_alt": "Ikona menu",
+  "readMore": "Čítať viac",
+  "arrowBack": "Späť na hlavnú stránku",
+  "linkFooter": "Kontakt",
+  "footer": {
+    "title": "Liturgia hodín",
+    "official": "Oficiálna stránka benediktínskeho kláštora v Horných Orešanoch",
+    "link": "Aktuálne sv. omše:  horneoresany.sk/klastor",
+    "workdays": {
+      "title": "Pondelok - Piatok",
+      "elems": [
+        {
+          "time": "05:00",
+          "title": "Posv.čítanie"
         },
-        "holidays": {
-            "title": "Sviatok",
-            "elems": [
-                {
-                    "time": "05:30",
-                    "title": "Ofícium"
-                },
-                {
-                    "time": "07:00",
-                    "title": "Ranné chvály"
-                },
-                {
-                    "time": "08:30",
-                    "title": "Tercia"
-                },
-                {
-                    "time": "09:00",
-                    "title": "Svätá omša"
-                },
-                {
-                    "time": "11:40",
-                    "title": "Sexta"
-                },
-                {
-                    "time": "12:00",
-                    "title": "Obed"
-                },
-                {
-                    "time": "15:00",
-                    "title": "Nona, ruženec s adoráciou"
-                },
-                {
-                    "time": "17:00",
-                    "title": "Vešpery"
-                },
-                {
-                    "time": "18:30",
-                    "title": "Večera"
-                },
-                {
-                    "time": "20:00",
-                    "title": "Kompletórium"
-                }
-            ]
+        {
+          "time": "06:45",
+          "title": "Ranné chvály"
+        },
+        {
+          "time": "variabilné",
+          "title": "Tercia - po sv. omši"
+        },
+        {
+          "time": "variabilné",
+          "title": "Svätá omša"
+        },
+        {
+          "time": "12:10",
+          "title": "Sexta"
+        },
+        {
+          "time": "14:15",
+          "title": "Nona a ruženec"
+        },
+        {
+          "time": "17:00",
+          "title": "Vešpery"
+        },
+        {
+          "time": "20:00",
+          "title": "Kompletórium"
         }
+      ]
+    },
+    "holidays": {
+      "title": "Sviatok",
+      "elems": [
+        {
+          "time": "05:30",
+          "title": "Posv.čítanie"
+        },
+        {
+          "time": "07:00",
+          "title": "Ranné chvály"
+        },
+        {
+          "time": "08:30",
+          "title": "Tercia"
+        },
+        {
+          "time": "09:00",
+          "title": "Svätá omša"
+        },
+        {
+          "time": "11:40",
+          "title": "Sexta"
+        },
+        {
+          "time": "15:00",
+          "title": "Nona a ruženec s adoráciou"
+        },
+        {
+          "time": "17:00",
+          "title": "Poklona a Vešpery"
+        },
+        {
+          "time": "20:00",
+          "title": "Kompletórium"
+        }
+      ]
     }
+  }
 }

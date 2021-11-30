@@ -28,6 +28,7 @@ const Layout: FC<LayoutProps> = ({
     return (
         <>
             <Head>
+                <link rel="shortcut icon" href="/favicon.ico" />
                 <meta charSet="UTF-8" />
                 <title>{t("title")}</title>
                 <meta

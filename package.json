@@ -4,6 +4,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "predev": "yarn exec -- generate-favicons --source images/favicon.svg --destination ./public",
+        "prebuild": "yarn exec -- generate-favicons --source images/favicon.svg --destination ./public",
         "start": "next start"
     },
     "license": "ISC",
@@ -28,6 +30,7 @@
         "@types/node": "16.11.7",
         "@types/react": "17.0.34",
         "autoprefixer": "^10.4.0",
+        "modern-favicons": "^1.0.1",
         "postcss": "^8.3.11",
         "postcss-nested": "^5.0.6",
         "react-async-hook": "^4.0.0",

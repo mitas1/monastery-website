@@ -156,6 +156,6 @@
         }
     }
     .pdfViewer {
-        @apply block ml-[-6rem];
+        @apply block ml-[-6rem] mt-10;
     }
 }

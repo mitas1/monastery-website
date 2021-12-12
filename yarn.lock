@@ -4282,9 +4282,6 @@ react-medium-image-zoom@4.3.5:
     react-use "^17.2.1"
     tslib "^2.1.0"
 
-"react-pdf-viewer@file:../React-PDF-viewer":
-  version "0.0.1"
-
 react-pdf@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/react-pdf/-/react-pdf-5.5.0.tgz#8ab8b6d8f43b0861c494e149c69da4f1c80e63f1"

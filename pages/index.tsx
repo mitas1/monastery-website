@@ -2,22 +2,22 @@ import useTranslation from 'next-translate/useTranslation';
 
 import { ArticleFragment } from '@components/article';
 import {
-  CenterBox,
-  Grid,
-  Layout,
+    CenterBox,
+    Grid,
+    Layout,
 } from '@components/common';
 import { ArticleWithAside } from '@components/content';
 import {
-  Banner,
-  Heading,
-  Link,
-  Paragraph,
+    Banner,
+    Heading,
+    Link,
+    Paragraph,
 } from '@components/ui';
 import createSanityApi from '@lib/sanity/api';
 import { SANITY_CONFIG } from '@lib/sanity/config';
 
-const Index = ({ news }) => {
-    const { t, lang } = useTranslation("common");
+const Index = ({ news, newsCount }) => {
+    const { t } = useTranslation('common');
 
     return (
         <Layout transparentHeader imageFooter>
@@ -34,10 +34,10 @@ const Index = ({ news }) => {
                             />
                         ))}
                     </Grid>
-                    {news.length > 3 && (
-                        <div className="m-auto">
+                    {newsCount > 3 && (
+                        <div className="flex justify-center items-center mb-20">
                             <Link href="/post/news" style="button">
-                                {t("index:news.button")}
+                                {t('index:news.button')}
                             </Link>
                         </div>
                     )}
@@ -49,19 +49,19 @@ const Index = ({ news }) => {
                         inverse
                         number="01"
                         href="/monastery-life"
-                        {...t("index:article01", {}, { returnObjects: true })}
+                        {...t('index:article01', {}, { returnObjects: true })}
                     />
                     <ArticleFragment
                         inverse
                         number="02"
                         href="/guests"
-                        {...t("index:article02", {}, { returnObjects: true })}
+                        {...t('index:article02', {}, { returnObjects: true })}
                     />
                     <ArticleFragment
                         inverse
                         number="03"
                         href="/experiences"
-                        {...t("index:article03", {}, { returnObjects: true })}
+                        {...t('index:article03', {}, { returnObjects: true })}
                     />
                 </Grid>
             </CenterBox>
@@ -70,9 +70,9 @@ const Index = ({ news }) => {
             </CenterBox>
             <CenterBox className="space-y-4 py-10 sm:py-32" layout="text">
                 <Heading className="max-w-xs">
-                    {t("index:aboutus.title")}
+                    {t('index:aboutus.title')}
                 </Heading>
-                <Paragraph>{t("index:aboutus.text")}</Paragraph>
+                <Paragraph>{t('index:aboutus.text')}</Paragraph>
             </CenterBox>
         </Layout>
     );
@@ -82,11 +82,13 @@ export async function getStaticProps({ locale }) {
     const sanityApi = createSanityApi();
 
     if (SANITY_CONFIG.availableLocales.includes(locale)) {
-        const news = await sanityApi.getPosts("news", 0, 3);
+        const news = await sanityApi.getPosts('news', 0, 2);
+        const newsCount = await sanityApi.getPostsCount('news');
 
         return {
             props: {
                 news,
+                newsCount,
             },
             revalidate: 1,
         };

@@ -10,42 +10,42 @@ import { SANITY_CONFIG } from '@lib/sanity/config';
 import { isPathActive } from '../../../utils';
 
 interface MenuProps {
-    type?: "normal" | "mobile";
+    type?: 'normal' | 'mobile';
     inverse?: boolean;
 }
 
 const MENU_ITEMS = [
     {
-        href: "/",
-        tKey: "home",
+        href: '/',
+        tKey: 'home',
     },
     {
-        href: "/offerings",
-        tKey: "offerings",
+        href: '/offerings',
+        tKey: 'offerings',
     },
     {
-        href: "/post/news",
+        href: '/post/news',
         usesSanity: true,
-        tKey: "news",
+        tKey: 'news',
     },
     {
-        href: "/post/announcements/latest",
+        href: '/post/word-from-the-monastery/latest',
         usesSanity: true,
-        tKey: "announcements",
+        tKey: 'word-from-the-monastery',
     },
     {
-        href: "/contact",
-        tKey: "contact",
+        href: '/contact',
+        tKey: 'contact',
     },
 ];
 
 const Menu: FC<MenuProps> = ({ type, inverse }) => {
-    const { t } = useTranslation("common");
+    const { t } = useTranslation('common');
 
     const { asPath, locale } = useRouter();
 
     return (
-        <div className={classNames("flex", { "flex-col": type === "mobile" })}>
+        <div className={classNames('flex', { 'flex-col': type === 'mobile' })}>
             {MENU_ITEMS.map(
                 ({ href, tKey, usesSanity }, index) =>
                     (!usesSanity ||

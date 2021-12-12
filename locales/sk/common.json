@@ -4,7 +4,6 @@
     "menu": {
         "home": "Domov",
         "news": "Zo života kláštora",
-        "announcements": "Aktuality",
         "word-from-the-monastery": "Slovo z kláštora",
         "offerings": "Zbierka",
         "contact": "Kontakt"
@@ -12,6 +11,7 @@
     "burger_img_alt": "Ikona menu",
     "readMore": "Čítať viac",
     "arrowBack": "Späť na hlavnú stránku",
+    "downloadLink": "Stiahnuť PDF súbor",
     "linkFooter": "Kontakt",
     "footer": {
         "title": "Liturgia hodín",

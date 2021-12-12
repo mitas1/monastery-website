@@ -5,12 +5,12 @@
         "home": "Home",
         "news": "News",
         "offerings": "Offerings",
-        "announcements": "Announcements",
         "slovo-z-klastora": "Word from the Monastery",
         "contact": "Contact"
     },
     "burger_img_alt": "Menu icon",
     "readMore": "Read more",
+    "downloadLink": "Download PDF file",
     "arrowBack": "Back to home page",
     "linkFooter": "Contact",
     "footer": {

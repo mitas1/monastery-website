@@ -5,11 +5,12 @@ import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import Zoom from 'react-medium-image-zoom';
 
+import { PDFViewer } from '@components/react-pdf-viewer';
 import {
-  ArrowLink,
-  Button,
-  Link,
+    ArrowLink,
+    Link,
 } from '@components/ui';
+import DownloadLink from '@components/ui/Link/DownloadLink';
 import { urlFor } from '@lib/sanity/urlFor';
 import BlockContent from '@sanity/block-content-to-react';
 
@@ -66,17 +67,17 @@ const serializers = {
 };
 
 export const Links: FC<ArticleLinks> = ({ contactLink = false, backLink }) => {
-    const { t } = useTranslation("common");
+    const { t } = useTranslation('common');
 
     return (
         <footer className="flex flex-col sm:flex-row items-start sm:items-center space-y-8 sm:space-y-0 sm:space-x-8 mt-16">
             {contactLink && (
                 <Link style="button" href="/contact">
-                    {t("linkFooter")}
+                    {t('linkFooter')}
                 </Link>
             )}
-            <ArrowLink type="back" href={backLink?.href || "/"}>
-                {t("arrowBack")}
+            <ArrowLink type="back" href={backLink?.href || '/'}>
+                {t('arrowBack')}
             </ArrowLink>
         </footer>
     );
@@ -90,24 +91,6 @@ export const HTML: FC<HTMLProps> = ({ html }) => (
     />
 );
 
-const PDFViewer: FC<File> = ({ url, title }) => {
-    return (
-        <div className="wrapper">
-            <iframe
-                className="iframe"
-                src={`https://docs.google.com/viewer?url=${url}&embedded=true`}
-                frameBorder="0"
-            >
-                Stiahnuť PDF súbor
-            </iframe>
-            {title && <figcaption>{title}</figcaption>}
-            <div className="button">
-                <Button>Stiahnuť PDF súbor</Button>
-            </div>
-        </div>
-    );
-};
-
 const ArticleRenderer: FC<ArticleContentProps> = ({
     offset,
     dropCap,
@@ -116,6 +99,8 @@ const ArticleRenderer: FC<ArticleContentProps> = ({
     file,
     links,
 }) => {
+    const { t } = useTranslation('common');
+
     return (
         <article
             className={classNames(styles.content, styles.narrow, {
@@ -133,6 +118,21 @@ const ArticleRenderer: FC<ArticleContentProps> = ({
                         blocks={sanityBody}
                     />
                 ))}
+            {file && (
+                <>
+                    <PDFViewer
+                        width="50rem"
+                        height="900px"
+                        rootClassName={styles.pdfViewer}
+                        url={file.url}
+                    />
+                    <div className="m-auto text-center my-10">
+                        <DownloadLink href={file.url} download={file.name}>
+                            {t('downloadLink')}
+                        </DownloadLink>
+                    </div>
+                </>
+            )}
             {links && <Links {...links} />}
         </article>
     );

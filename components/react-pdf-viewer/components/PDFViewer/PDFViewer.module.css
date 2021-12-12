@@ -1,0 +1,23 @@
+.window {
+    @apply relative bg-gray-50;
+}
+
+.document {
+    @apply overflow-auto py-10 w-full h-full box-border text-center shadow-inner;
+}
+
+.page {
+    @apply inline-block mx-10 my-5 shadow;
+
+    & :global(.linkAnnotation) {
+        display: none;
+    }
+}
+
+.controlsWrapper {
+    @apply absolute bottom-10 left-0 right-0 flex items-center flex-col;
+
+    & .controls {
+        @apply bg-white shadow-md rounded-full overflow-hidden;
+    }
+}

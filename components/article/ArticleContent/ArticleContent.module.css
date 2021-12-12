@@ -30,7 +30,7 @@
         @apply mt-0;
     }
 
-    & :global(*:first-child) {
+    & :global(*:not(svg):not(div):first-child) {
         @apply mt-0;
     }
 
@@ -132,6 +132,10 @@
     }
 }
 
+.pdfViewer {
+    @apply hidden;
+}
+
 @screen sm {
     .content {
         &.offset {
@@ -150,5 +154,8 @@
                 width: 68rem;
             }
         }
+    }
+    .pdfViewer {
+        @apply block ml-[-6rem];
     }
 }

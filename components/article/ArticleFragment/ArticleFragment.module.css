@@ -8,6 +8,6 @@
 
 @screen sm {
     .normalLayout {
-        max-width: 33.33333%;
+        width: 33.33333%;
     }
 }

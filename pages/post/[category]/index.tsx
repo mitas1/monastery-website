@@ -6,8 +6,8 @@ import Head from 'next/head';
 import { ArticleFragment } from '@components/article';
 import { ArticleHeader } from '@components/article/ArticleHeader';
 import {
-  CenterBox,
-  Layout,
+    CenterBox,
+    Layout,
 } from '@components/common';
 import createSanityApi from '@lib/sanity/api';
 import { SANITY_CONFIG } from '@lib/sanity/config';

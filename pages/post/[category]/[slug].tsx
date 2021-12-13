@@ -5,7 +5,7 @@ import createSanityApi from '@lib/sanity/api';
 import { SANITY_CONFIG } from '@lib/sanity/config';
 import { Post } from '@lib/sanity/types';
 
-type Category = "news" | "announcements";
+type Category = 'news' | 'word-from-the-monastery';
 
 interface PostProps {
     post: Post;
@@ -14,10 +14,10 @@ interface PostProps {
 
 const getFooterTitleForCategory = (category: Category): string => {
     switch (category) {
-        case "announcements":
-            return "Zobraziť staršie oznamy";
-        case "news":
-            return "Naspäť";
+        case 'word-from-the-monastery':
+            return 'Zobraziť staršie oznamy';
+        case 'news':
+            return 'Naspäť';
     }
 };
 
@@ -55,7 +55,7 @@ export async function getStaticProps({
         };
     }
 
-    if (slug === "latest") {
+    if (slug === 'latest') {
         const post = await sanityApi.getPost({ categorySlug: category });
 
         return {
@@ -108,14 +108,14 @@ export async function getStaticPaths() {
 
         paths.push({
             params: {
-                slug: "latest",
-                category: "announcements",
+                slug: 'latest',
+                category: 'word-from-the-monastery',
             },
             locale,
         });
     });
 
-    return { paths, fallback: "blocking" };
+    return { paths, fallback: 'blocking' };
 }
 
 export default Post;

@@ -120,7 +120,7 @@ const ArticleRenderer: FC<ArticleContentProps> = ({
                         blocks={sanityBody}
                     />
                 ))}
-            {file && (
+            {file?.url && (
                 <>
                     <PDFViewer
                         width="50rem"

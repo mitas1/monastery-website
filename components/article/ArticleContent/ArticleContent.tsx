@@ -76,9 +76,11 @@ export const Links: FC<ArticleLinks> = ({ contactLink = false, backLink }) => {
                     {t('linkFooter')}
                 </Link>
             )}
-            <ArrowLink type="back" href={backLink?.href || '/'}>
-                {t('arrowBack')}
-            </ArrowLink>
+            {backLink && (
+                <ArrowLink type="back" href={backLink?.href || '/'}>
+                    {backLink.title}
+                </ArrowLink>
+            )}
         </footer>
     );
 };

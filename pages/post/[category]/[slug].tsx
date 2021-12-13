@@ -12,18 +12,7 @@ interface PostProps {
     category: Category;
 }
 
-const getFooterTitleForCategory = (category: Category): string => {
-    switch (category) {
-        case 'word-from-the-monastery':
-            return 'Zobraziť staršie oznamy';
-        case 'news':
-            return 'Naspäť';
-    }
-};
-
 const Post: FC<PostProps> = ({ post, category }) => {
-    const title = getFooterTitleForCategory(category);
-
     const { author, body, bodyPreview, ...postProps } = post;
 
     return (
@@ -35,7 +24,7 @@ const Post: FC<PostProps> = ({ post, category }) => {
             links={{
                 backLink: {
                     href: `/post/${category}`,
-                    title,
+                    title: 'Zobraziť všetky príspevky',
                 },
             }}
         />

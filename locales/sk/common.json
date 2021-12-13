@@ -10,7 +10,7 @@
     },
     "burger_img_alt": "Ikona menu",
     "readMore": "Čítať viac",
-    "arrowBack": "Späť na hlavnú stránku",
+    "arrowBack": "Zobraziť všetky príspevky",
     "downloadLink": "Stiahnuť PDF súbor",
     "linkFooter": "Kontakt",
     "footer": {
@@ -22,7 +22,7 @@
             "elems": [
                 {
                     "time": "05:00",
-                    "title": "Posv.čítanie"
+                    "title": "Posv. čítanie"
                 },
                 {
                     "time": "06:45",
@@ -59,7 +59,7 @@
             "elems": [
                 {
                     "time": "05:30",
-                    "title": "Posv.čítanie"
+                    "title": "Posv. čítanie"
                 },
                 {
                     "time": "07:00",

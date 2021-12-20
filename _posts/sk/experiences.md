@@ -6,7 +6,7 @@ meta:
 quote: >
     „Poďte ku mne všetci, ktorí sa namáhate a ste preťažení, a ja vás posilním.”
 author: (Mt 11,28)
-mainImage: /images/offerings.jpg
+mainImage: /images/experiences.jpg
 ---
 
 ## Kláštor z pohľadu návštevníkov

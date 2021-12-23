@@ -1,6 +1,6 @@
 import {
-  sanityClient,
-  sanityPreviewClient,
+    sanityClient,
+    sanityPreviewClient,
 } from './client';
 import { SANITY_CONFIG } from './config';
 import { Post } from './types';
@@ -18,12 +18,12 @@ export default function createSanityApi(preview = false) {
         categorySlug?: string;
     }) {
         return (await client.fetch(`
-              *[_type == "post" ${draft ? '&& _id in path("drafts.**")' : ""} ${
-            postSlug ? `&& slug.current == "${postSlug}"` : ""
+              *[_type == "post" ${draft ? '&& _id in path("drafts.**")' : ''} ${
+            postSlug ? `&& slug.current == "${postSlug}"` : ''
         } ${
             categorySlug
                 ? `&& "${categorySlug}" in categories[]->slug.current`
-                : ""
+                : ''
         }]{
                   _id,
                   title,
@@ -37,7 +37,7 @@ export default function createSanityApi(preview = false) {
                   publishedAt,
                   'category': categories[0]->slug.current,
                   'author': author->name
-              } [0]
+              } ${SANITY_CONFIG.orderBy} [0]
         `)) as Post;
     }
 

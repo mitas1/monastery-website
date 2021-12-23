@@ -37,6 +37,7 @@ export interface ArticleLinks {
 export interface ArticleContentProps {
     offset?: boolean;
     dropCap?: boolean;
+    wideOffset?: boolean;
     file?: File;
     html?: string;
     sanityBody?: object;
@@ -96,6 +97,7 @@ export const HTML: FC<HTMLProps> = ({ html }) => (
 const ArticleRenderer: FC<ArticleContentProps> = ({
     offset,
     dropCap,
+    wideOffset,
     html,
     sanityBody,
     file,
@@ -105,9 +107,10 @@ const ArticleRenderer: FC<ArticleContentProps> = ({
 
     return (
         <article
-            className={classNames(styles.content, styles.narrow, {
+            className={classNames(styles.content, {
                 [styles.dropCap]: dropCap,
                 [styles.offset]: offset,
+                [styles.wideOffset]: wideOffset,
             })}
         >
             {(html || sanityBody) &&

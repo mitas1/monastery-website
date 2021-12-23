@@ -5,7 +5,7 @@ meta:
     description: Come to me, all you who are weary and burdened, and I will give you rest.
 quote: “Come to me, all you who are weary and burdened, and I will give you rest.”
 author: (Matthew 11:28)
-mainImage: /images/offerings.jpg
+mainImage: /images/experiences.jpg
 ---
 
 ## Monastery from a visitor´s perspective

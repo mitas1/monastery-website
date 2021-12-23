@@ -6,15 +6,15 @@ import Image from 'next/image';
 
 import { ArticleContent } from '@components/article';
 import {
-  ArticleContentProps,
+    ArticleContentProps,
 } from '@components/article/ArticleContent/ArticleContent';
 import { ArticleHeader } from '@components/article/ArticleHeader';
 import {
-  ArticleHeaderProps,
+    ArticleHeaderProps,
 } from '@components/article/ArticleHeader/ArticleHeader';
 import {
-  CenterBox,
-  Layout,
+    CenterBox,
+    Layout,
 } from '@components/common';
 import { urlFor } from '@lib/sanity/urlFor';
 
@@ -39,12 +39,12 @@ const Article: FC<ArticleProps> = ({
     author,
     ...contentProps
 }) => {
-    const { t } = useTranslation("common");
+    const { t } = useTranslation('common');
 
     return (
         <Layout>
             <Head>
-                <title>{`${meta.title} | ${t("title")}`}</title>
+                <title>{`${meta.title} | ${t('title')}`}</title>
                 <meta
                     name="description"
                     content={meta.description}
@@ -71,7 +71,13 @@ const Article: FC<ArticleProps> = ({
                         />
                     </div>
                 )}
-                <ArticleContent {...contentProps} offset={!!mainImage} />
+                <ArticleContent
+                    {...contentProps}
+                    offset={!!mainImage}
+                    wideOffset={
+                        contentProps?.file?.url && !contentProps?.sanityBody
+                    }
+                />
             </CenterBox>
         </Layout>
     );

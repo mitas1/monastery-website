@@ -138,20 +138,25 @@
 
 @screen sm {
     .content {
+        @apply bg-white;
+        @apply max-w-3xl;
+        @apply mx-auto;
+        @apply p-20;
+        @apply z-10;
+        @apply relative;
+
+        & :global(.image) {
+            margin: 0 0 0 -208px;
+            width: 68rem;
+        }
         &.offset {
             @apply -mt-32;
         }
-        &.narrow {
-            @apply bg-white;
-            @apply max-w-3xl;
-            @apply mx-auto;
-            @apply p-20;
-            @apply z-10;
-            @apply relative;
+        &.wideOffset {
+            @apply p-0 -mt-40;
 
-            & :global(.image) {
-                margin: 0 0 0 -208px;
-                width: 68rem;
+            & .pdfViewer {
+                @apply block m-0;
             }
         }
     }

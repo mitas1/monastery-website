@@ -16,7 +16,7 @@ import {
 import createSanityApi from '@lib/sanity/api';
 import { SANITY_CONFIG } from '@lib/sanity/config';
 
-const Index = ({ news, newsCount }) => {
+const Home = ({ news, newsCount }) => {
     const { t } = useTranslation('common');
 
     return (
@@ -96,4 +96,4 @@ export async function getStaticProps({ locale }) {
     return {};
 }
 
-export default Index;
+export default Home;

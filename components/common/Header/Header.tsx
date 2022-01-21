@@ -1,7 +1,7 @@
 import React, {
-  FC,
-  useEffect,
-  useState,
+    FC,
+    useEffect,
+    useState,
 } from 'react';
 
 import classNames from 'classnames';
@@ -10,13 +10,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import {
-  CenterBox,
-  Menu,
-  NavLink,
+    CenterBox,
+    Menu,
+    NavLink,
 } from '@components/common';
 import {
-  LANGUAGES,
-  LANGUAGES_LABELS,
+    LANGUAGES,
+    LANGUAGES_LABELS,
 } from '@constants';
 
 import styles from './Header.module.css';

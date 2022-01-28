@@ -17,7 +17,7 @@
         "gray-matter": "4.0.3",
         "i18next": "21.4.2",
         "moment": "2.29.1",
-        "next": "12.0.7",
+        "next": "12.0.9",
         "next-translate": "1.2.0",
         "nprogress": "0.2.0",
         "react": "17.0.2",
